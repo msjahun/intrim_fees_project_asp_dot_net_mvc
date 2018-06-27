@@ -1,0 +1,52 @@
+@import url("normalize.css");
+@font-face{font-family:'MontserratRegular';src:url("./montserrat-regular.eot");src:url("./montserrat-regular.eot?#iefix") format('embedded-opentype'),url("./montserrat-regular.woff") format('woff'),url("./montserrat-regular.ttf") format('truetype'),url("./montserrat-regular.svg#MontserratRegular") format('svg');font-style:normal;font-weight:normal}
+@font-face{font-family:'MontserratBold';src:url("./montserrat-bold.eot");src:url("./montserrat-bold.eot?#iefix") format('embedded-opentype'),url("./montserrat-bold.woff") format('woff'),url("./montserrat-bold.ttf") format('truetype'),url("./montserrat-bold.svg#MontserratBold") format('svg');font-style:normal;font-weight:bold}
+
+
+a,.self{-webkit-transition:color .1s;-moz-transition:color .1s;-ms-transition:color .1s;-o-transition:color .1s;transition:color .1s}
+.self{color:#333;border-bottom:1px dotted #aaa;cursor:pointer;}
+.self:hover{color:#000}
+strong{font-family:'MontserratBold',Helvetica,Arial,sans-serif;font-weight:700}
+p{margin:0 0 8px}
+label{cursor:pointer}
+
+
+h1,h2,h3,h4{margin:0;font:bold 20px/60px 'MontserratBold',Helvetica,Arial,sans-serif}
+h2{height:60px;text-align:center;text-transform:uppercase}
+h4{font-size:18px;line-height:24px}
+ul{margin:0;padding:0;list-style:none}
+table{width:100%;margin-bottom:21px}
+th,td{padding:11px 20px 12px;vertical-align:top;font-weight:normal;text-align:left;border-bottom:2px solid #e7e5e0;}
+thead th,thead td{background:#f3f2ef}
+
+
+.skin-section{float:left;padding:4px 0 31px 57px;line-height:18px;}
+.skin-section h4{padding-bottom:18px;}
+.skin-polaris .skin-section h4{color:#959ba2}
+.skin-futurico .skin-section h4{color:#a0a0a0}
+.skin-section .list{float:left;padding-right:60px;}
+.skin-section .list li{position:relative;padding-bottom:15px}
+.skin-minimal .skin-section .list li{padding-left:38px}
+.skin-square .skin-section .list li{padding-left:42px}
+
+
+
+.skin-flat .skin-section .list li,.skin-line .skin-section label{padding-left:40px}
+.skin-line .skin-section h4{padding-bottom:24px}
+.skin-line .skin-section .list{padding-right:40px;}
+.skin-line .skin-section .list li{padding-bottom:10px}
+.skin-polaris .skin-section .list li{padding-left:37px}
+.skin-futurico .skin-section .list li{padding-left:36px}
+
+
+.icheckbox_minimal,.icheckbox_minimal-red,.icheckbox_minimal-green,.icheckbox_minimal-blue,.icheckbox_minimal-aero,.icheckbox_minimal-grey,.icheckbox_minimal-orange,.icheckbox_minimal-yellow,.icheckbox_minimal-pink,.icheckbox_minimal-purple,.iradio_minimal,.iradio_minimal-red,.iradio_minimal-green,.iradio_minimal-blue,.iradio_minimal-aero,.iradio_minimal-grey,.iradio_minimal-orange,.iradio_minimal-yellow,.iradio_minimal-pink,.iradio_minimal-purple{position:absolute;top:1px;left:0}
+.skin input[type=checkbox],.skin input[type=radio]{position:absolute;top:2px;left:0}
+.icheckbox_square,.icheckbox_square-red,.icheckbox_square-green,.icheckbox_square-blue,.icheckbox_square-aero,.icheckbox_square-grey,.icheckbox_square-orange,.icheckbox_square-yellow,.icheckbox_square-pink,.icheckbox_square-purple,.iradio_square,.iradio_square-red,.iradio_square-green,.iradio_square-blue,.iradio_square-aero,.iradio_square-grey,.iradio_square-orange,.iradio_square-yellow,.iradio_square-pink,.iradio_square-purple{position:absolute;top:-1px;left:0}
+.icheckbox_flat,.icheckbox_flat-red,.icheckbox_flat-green,.icheckbox_flat-blue,.icheckbox_flat-aero,.icheckbox_flat-grey,.icheckbox_flat-orange,.icheckbox_flat-yellow,.icheckbox_flat-pink,.icheckbox_flat-purple,.iradio_flat,.iradio_flat-red,.iradio_flat-green,.iradio_flat-blue,.iradio_flat-aero,.iradio_flat-grey,.iradio_flat-orange,.iradio_flat-yellow,.iradio_flat-pink,.iradio_flat-purple{position:absolute;top:0;left:0}
+.icheckbox_polaris,.iradio_polaris{position:absolute;top:-4px;left:-6px}
+.icheckbox_futurico,.iradio_futurico{position:absolute;top:2px;left:0}
+.skin-states{float:right;padding-right:57px;padding-left:0;}
+.skin-states .state{cursor:default !important}
+.skin-states .list{padding-right:0}
+
+

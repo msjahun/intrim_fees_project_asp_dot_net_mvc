@@ -46,16 +46,33 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="System" />
     <Reference Include="System.Data" />
     <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http.Formatting, Version=5.2.3.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.WebApi.Client.5.2.3\lib\net45\System.Net.Http.Formatting.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
     <Reference Include="System.Web.DynamicData" />
     <Reference Include="System.Web.Entity" />
     <Reference Include="System.Web.ApplicationServices" />
     <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Core" />
     <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Web.Http, Version=5.2.3.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.WebApi.Core.5.2.3\lib\net45\System.Web.Http.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Http.WebHost, Version=5.2.3.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.WebApi.WebHost.5.2.3\lib\net45\System.Web.Http.WebHost.dll</HintPath>
+    </Reference>
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Web" />
     <Reference Include="System.Web.Extensions" />
@@ -145,12 +162,105 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="App_GlobalResources\Content.tr.designer.cs">
+      <DependentUpon>Content.tr.resx</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="App_GlobalResources\Content.en.designer.cs">
+      <DependentUpon>Content.en.resx</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="App_GlobalResources\Content.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Content.resx</DependentUpon>
+    </Compile>
     <Compile Include="App_Start\BundleConfig.cs" />
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="App_Start\WebApiConfig.cs" />
+    <Compile Include="Controllers\FeesAndFacilitiesController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\room_facilityController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="Models\account_information_parameter.cs">
+      <DependentUpon>Fees_and_facilities_model.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\account_information_parameter_translation.cs">
+      <DependentUpon>Fees_and_facilities_model.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\account_parameter_values.cs">
+      <DependentUpon>Fees_and_facilities_model.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\account_parameter_values_translation.cs">
+      <DependentUpon>Fees_and_facilities_model.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\bank_currency_table.cs">
+      <DependentUpon>Fees_and_facilities_model.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\dormitories_table.cs">
+      <DependentUpon>Fees_and_facilities_model.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\dormitories_table_translation.cs">
+      <DependentUpon>Fees_and_facilities_model.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\dormitory_bank_account_table.cs">
+      <DependentUpon>Fees_and_facilities_model.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\dormitory_information_table.cs">
+      <DependentUpon>Fees_and_facilities_model.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\dormitory_information_table_translation.cs">
+      <DependentUpon>Fees_and_facilities_model.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\dormitory_type.cs">
+      <DependentUpon>Fees_and_facilities_model.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\dormitory_type_translation.cs">
+      <DependentUpon>Fees_and_facilities_model.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\facility_option.cs">
+      <DependentUpon>Fees_and_facilities_model.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\facility_option_translation.cs">
+      <DependentUpon>Fees_and_facilities_model.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\facility_table.cs">
+      <DependentUpon>Fees_and_facilities_model.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\facility_table_translation.cs">
+      <DependentUpon>Fees_and_facilities_model.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Fees_and_facilities_model.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Fees_and_facilities_model.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Fees_and_facilities_model.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Fees_and_facilities_model.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Fees_and_facilities_model.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Fees_and_facilities_model.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="Models\language_table.cs">
+      <DependentUpon>Fees_and_facilities_model.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\room_facility.cs">
+      <DependentUpon>Fees_and_facilities_model.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\room_table.cs">
+      <DependentUpon>Fees_and_facilities_model.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\room_table_translation.cs">
+      <DependentUpon>Fees_and_facilities_model.tt</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
@@ -163,22 +273,20 @@
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
     <Content Include="Content\Site.css" />
-    <Content Include="Scripts\bootstrap.js" />
-    <Content Include="Scripts\bootstrap.min.js" />
     <Content Include="ApplicationInsights.config">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <None Include="Scripts\jquery-3.3.1.intellisense.js" />
-    <Content Include="Scripts\jquery-3.3.1.js" />
-    <Content Include="Scripts\jquery-3.3.1.min.js" />
-    <Content Include="Scripts\jquery-3.3.1.slim.js" />
-    <Content Include="Scripts\jquery-3.3.1.slim.min.js" />
-    <None Include="Scripts\jquery.validate-vsdoc.js" />
-    <Content Include="Scripts\jquery.validate.js" />
-    <Content Include="Scripts\jquery.validate.min.js" />
-    <Content Include="Scripts\jquery.validate.unobtrusive.js" />
-    <Content Include="Scripts\jquery.validate.unobtrusive.min.js" />
-    <Content Include="Scripts\modernizr-2.8.3.js" />
+    <Content Include="Models\Fees_and_facilities_model.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>Fees_and_facilities_model.Context.cs</LastGenOutput>
+      <DependentUpon>Fees_and_facilities_model.edmx</DependentUpon>
+    </Content>
+    <Content Include="Models\Fees_and_facilities_model.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>Fees_and_facilities_model.edmx</DependentUpon>
+      <LastGenOutput>Fees_and_facilities_model.cs</LastGenOutput>
+    </Content>
+    <Content Include="Scripts\ScriptMain.js" />
     <Content Include="Web.config" />
     <Content Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
@@ -193,10 +301,10 @@
     <Content Include="Views\Home\About.cshtml" />
     <Content Include="Views\Home\Contact.cshtml" />
     <Content Include="Views\Home\Index.cshtml" />
+    <Content Include="Views\FeesAndFacilities\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="Models\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff2" />
@@ -207,9 +315,35 @@
     <Content Include="Content\bootstrap.css.map" />
     <Content Include="Content\bootstrap-theme.min.css.map" />
     <Content Include="Content\bootstrap-theme.css.map" />
+    <EntityDeploy Include="Models\Fees_and_facilities_model.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>Fees_and_facilities_model.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <Content Include="Models\Fees_and_facilities_model.edmx.diagram">
+      <DependentUpon>Fees_and_facilities_model.edmx</DependentUpon>
+    </Content>
     <None Include="packages.config" />
-    <Content Include="Scripts\jquery-3.3.1.slim.min.map" />
-    <Content Include="Scripts\jquery-3.3.1.min.map" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="App_GlobalResources\Content.resx">
+      <Generator>GlobalResourceProxyGenerator</Generator>
+      <LastGenOutput>Content.Designer.cs</LastGenOutput>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="App_GlobalResources\Content.en.resx">
+      <Generator>GlobalResourceProxyGenerator</Generator>
+      <LastGenOutput>Content.en.designer.cs</LastGenOutput>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="App_GlobalResources\Content.tr.resx">
+      <Generator>GlobalResourceProxyGenerator</Generator>
+      <LastGenOutput>Content.tr.designer.cs</LastGenOutput>
+    </Content>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

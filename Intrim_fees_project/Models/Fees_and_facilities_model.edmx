@@ -1,0 +1,1498 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+      <Schema Namespace="fees_and_facilitiesModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="account_information_parameter">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+        </EntityType>
+        <EntityType Name="account_information_parameter_translation">
+          <Key>
+            <PropertyRef Name="account_info_non_trans_id" />
+            <PropertyRef Name="language_id" />
+          </Key>
+          <Property Name="account_info_non_trans_id" Type="int" Nullable="false" />
+          <Property Name="language_id" Type="int" Nullable="false" />
+          <Property Name="parameter" Type="varchar" MaxLength="400" Nullable="false" />
+        </EntityType>
+        <EntityType Name="account_parameter_values">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="currency_id" Type="int" Nullable="false" />
+          <Property Name="parameter_id" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="account_parameter_values_translation">
+          <Key>
+            <PropertyRef Name="language_id" />
+            <PropertyRef Name="account_params_values_non_trans_id" />
+          </Key>
+          <Property Name="language_id" Type="int" Nullable="false" />
+          <Property Name="account_params_values_non_trans_id" Type="int" Nullable="false" />
+          <Property Name="value" Type="varchar" MaxLength="300" Nullable="false" />
+        </EntityType>
+        <EntityType Name="bank_currency_table">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="bank_id" Type="int" Nullable="false" />
+          <Property Name="currency_name" Type="varchar" MaxLength="50" Nullable="false" />
+        </EntityType>
+        <EntityType Name="dormitories_table">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="dormitory_type_id" Type="int" Nullable="false" />
+          <Property Name="room_price_currency" Type="varchar" MaxLength="100" Nullable="false" />
+          <Property Name="room_price_currency_symbol" Type="varchar" MaxLength="10" Nullable="false" />
+        </EntityType>
+        <EntityType Name="dormitories_table_translation">
+          <Key>
+            <PropertyRef Name="language_id" />
+            <PropertyRef Name="dormitories_table_non_trans_id" />
+          </Key>
+          <Property Name="language_id" Type="int" Nullable="false" />
+          <Property Name="dormitories_table_non_trans_id" Type="int" Nullable="false" />
+          <Property Name="dormitory_name" Type="varchar" MaxLength="300" Nullable="false" />
+          <Property Name="dormitory_address" Type="varchar" MaxLength="500" Nullable="false" />
+          <Property Name="gender_allocation" Type="varchar" MaxLength="200" Nullable="false" />
+          <Property Name="rooms_payment_period" Type="varchar" MaxLength="200" Nullable="false" />
+        </EntityType>
+        <EntityType Name="dormitory_bank_account_table">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="dormitory_id" Type="int" Nullable="false" />
+          <Property Name="bank_name" Type="varchar" MaxLength="50" Nullable="false" />
+        </EntityType>
+        <EntityType Name="dormitory_information_table">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="dormitory_type_id" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="dormitory_information_table_translation">
+          <Key>
+            <PropertyRef Name="language_id" />
+            <PropertyRef Name="dormitory_info_non_trans_id" />
+          </Key>
+          <Property Name="language_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="dormitory_info_non_trans_id" Type="int" Nullable="false" />
+          <Property Name="information" Type="varchar" MaxLength="500" Nullable="false" />
+        </EntityType>
+        <EntityType Name="dormitory_type">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+        </EntityType>
+        <EntityType Name="dormitory_type_translation">
+          <Key>
+            <PropertyRef Name="language_id" />
+            <PropertyRef Name="dormitory_type_non_trans_id" />
+          </Key>
+          <Property Name="language_id" Type="int" Nullable="false" />
+          <Property Name="dormitory_type_non_trans_id" Type="int" Nullable="false" />
+          <Property Name="type_name" Type="varchar" MaxLength="300" Nullable="false" />
+        </EntityType>
+        <EntityType Name="facility_option">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="facility_id" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="facility_option_translation">
+          <Key>
+            <PropertyRef Name="facility_option_non_trans_id" />
+            <PropertyRef Name="language_id" />
+          </Key>
+          <Property Name="facility_option_non_trans_id" Type="int" Nullable="false" />
+          <Property Name="language_id" Type="int" Nullable="false" />
+          <Property Name="facility_option" Type="varchar" MaxLength="300" Nullable="false" />
+          <Property Name="facility_option_description" Type="varchar" MaxLength="500" Nullable="false" />
+        </EntityType>
+        <EntityType Name="facility_table">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="facility_icon_url" Type="varchar" MaxLength="500" Nullable="false" />
+        </EntityType>
+        <EntityType Name="facility_table_translation">
+          <Key>
+            <PropertyRef Name="language_id" />
+            <PropertyRef Name="facility_table_non_trans_id" />
+          </Key>
+          <Property Name="language_id" Type="int" Nullable="false" />
+          <Property Name="facility_table_non_trans_id" Type="int" Nullable="false" />
+          <Property Name="facility_title" Type="varchar" MaxLength="300" Nullable="false" />
+          <Property Name="facility_description" Type="varchar" MaxLength="500" Nullable="false" />
+        </EntityType>
+        <EntityType Name="language_table">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="name" Type="varchar" MaxLength="300" Nullable="false" />
+          <Property Name="language_code" Type="varchar" MaxLength="20" Nullable="false" />
+        </EntityType>
+        <EntityType Name="room_facility">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="facility_id" Type="int" Nullable="false" />
+          <Property Name="room_id" Type="int" Nullable="false" />
+          <Property Name="facility_option_id" Type="int" />
+        </EntityType>
+        <EntityType Name="room_table">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="dormitory_id" Type="int" Nullable="false" />
+          <Property Name="room_picture_url" Type="varchar" MaxLength="500" Nullable="false" />
+          <Property Name="room_price" Type="float" Nullable="false" />
+          <Property Name="room_price_installment" Type="float" Nullable="false" />
+          <Property Name="room_area" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="room_table_translation">
+          <Key>
+            <PropertyRef Name="language_id" />
+            <PropertyRef Name="room_table_non_trans_id" />
+          </Key>
+          <Property Name="language_id" Type="int" Nullable="false" />
+          <Property Name="room_table_non_trans_id" Type="int" Nullable="false" />
+          <Property Name="room_type" Type="varchar" MaxLength="300" Nullable="false" />
+          <Property Name="room_title" Type="varchar" MaxLength="300" Nullable="false" />
+        </EntityType>
+        <Association Name="account_information_parameter_translation_fk0">
+          <End Role="account_information_parameter" Type="Self.account_information_parameter" Multiplicity="1" />
+          <End Role="account_information_parameter_translation" Type="Self.account_information_parameter_translation" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="account_information_parameter">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="account_information_parameter_translation">
+              <PropertyRef Name="account_info_non_trans_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="account_information_parameter_translation_fk1">
+          <End Role="language_table" Type="Self.language_table" Multiplicity="1" />
+          <End Role="account_information_parameter_translation" Type="Self.account_information_parameter_translation" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="language_table">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="account_information_parameter_translation">
+              <PropertyRef Name="language_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="account_parameter_values_fk0">
+          <End Role="bank_currency_table" Type="Self.bank_currency_table" Multiplicity="1" />
+          <End Role="account_parameter_values" Type="Self.account_parameter_values" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="bank_currency_table">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="account_parameter_values">
+              <PropertyRef Name="currency_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="account_parameter_values_fk1">
+          <End Role="account_information_parameter" Type="Self.account_information_parameter" Multiplicity="1" />
+          <End Role="account_parameter_values" Type="Self.account_parameter_values" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="account_information_parameter">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="account_parameter_values">
+              <PropertyRef Name="parameter_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="account_parameter_values_translation_fk0">
+          <End Role="language_table" Type="Self.language_table" Multiplicity="1" />
+          <End Role="account_parameter_values_translation" Type="Self.account_parameter_values_translation" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="language_table">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="account_parameter_values_translation">
+              <PropertyRef Name="language_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="account_parameter_values_translation_fk1">
+          <End Role="account_parameter_values" Type="Self.account_parameter_values" Multiplicity="1" />
+          <End Role="account_parameter_values_translation" Type="Self.account_parameter_values_translation" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="account_parameter_values">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="account_parameter_values_translation">
+              <PropertyRef Name="account_params_values_non_trans_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="bank_currency_table_fk0">
+          <End Role="dormitory_bank_account_table" Type="Self.dormitory_bank_account_table" Multiplicity="1" />
+          <End Role="bank_currency_table" Type="Self.bank_currency_table" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="dormitory_bank_account_table">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="bank_currency_table">
+              <PropertyRef Name="bank_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="dormitories_table_fk0">
+          <End Role="dormitory_type" Type="Self.dormitory_type" Multiplicity="1" />
+          <End Role="dormitories_table" Type="Self.dormitories_table" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="dormitory_type">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="dormitories_table">
+              <PropertyRef Name="dormitory_type_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="dormitories_table_translation_fk0">
+          <End Role="language_table" Type="Self.language_table" Multiplicity="1" />
+          <End Role="dormitories_table_translation" Type="Self.dormitories_table_translation" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="language_table">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="dormitories_table_translation">
+              <PropertyRef Name="language_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="dormitories_table_translation_fk1">
+          <End Role="dormitories_table" Type="Self.dormitories_table" Multiplicity="1" />
+          <End Role="dormitories_table_translation" Type="Self.dormitories_table_translation" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="dormitories_table">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="dormitories_table_translation">
+              <PropertyRef Name="dormitories_table_non_trans_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="dormitory_bank_account_table_fk0">
+          <End Role="dormitories_table" Type="Self.dormitories_table" Multiplicity="1" />
+          <End Role="dormitory_bank_account_table" Type="Self.dormitory_bank_account_table" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="dormitories_table">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="dormitory_bank_account_table">
+              <PropertyRef Name="dormitory_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="dormitory_information_table_fk0">
+          <End Role="dormitory_type" Type="Self.dormitory_type" Multiplicity="1" />
+          <End Role="dormitory_information_table" Type="Self.dormitory_information_table" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="dormitory_type">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="dormitory_information_table">
+              <PropertyRef Name="dormitory_type_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="dormitory_information_table_translation_fk0">
+          <End Role="language_table" Type="Self.language_table" Multiplicity="1" />
+          <End Role="dormitory_information_table_translation" Type="Self.dormitory_information_table_translation" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="language_table">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="dormitory_information_table_translation">
+              <PropertyRef Name="language_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="dormitory_information_table_translation_fk1">
+          <End Role="dormitory_information_table" Type="Self.dormitory_information_table" Multiplicity="1" />
+          <End Role="dormitory_information_table_translation" Type="Self.dormitory_information_table_translation" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="dormitory_information_table">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="dormitory_information_table_translation">
+              <PropertyRef Name="dormitory_info_non_trans_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="dormitory_type_translation_fk0">
+          <End Role="language_table" Type="Self.language_table" Multiplicity="1" />
+          <End Role="dormitory_type_translation" Type="Self.dormitory_type_translation" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="language_table">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="dormitory_type_translation">
+              <PropertyRef Name="language_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="dormitory_type_translation_fk1">
+          <End Role="dormitory_type" Type="Self.dormitory_type" Multiplicity="1" />
+          <End Role="dormitory_type_translation" Type="Self.dormitory_type_translation" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="dormitory_type">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="dormitory_type_translation">
+              <PropertyRef Name="dormitory_type_non_trans_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="facility_option_fk0">
+          <End Role="facility_table" Type="Self.facility_table" Multiplicity="1" />
+          <End Role="facility_option" Type="Self.facility_option" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="facility_table">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="facility_option">
+              <PropertyRef Name="facility_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="facility_option_translation_fk0">
+          <End Role="facility_option" Type="Self.facility_option" Multiplicity="1" />
+          <End Role="facility_option_translation" Type="Self.facility_option_translation" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="facility_option">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="facility_option_translation">
+              <PropertyRef Name="facility_option_non_trans_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="facility_option_translation_fk1">
+          <End Role="language_table" Type="Self.language_table" Multiplicity="1" />
+          <End Role="facility_option_translation" Type="Self.facility_option_translation" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="language_table">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="facility_option_translation">
+              <PropertyRef Name="language_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="facility_table_translation_fk0">
+          <End Role="language_table" Type="Self.language_table" Multiplicity="1" />
+          <End Role="facility_table_translation" Type="Self.facility_table_translation" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="language_table">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="facility_table_translation">
+              <PropertyRef Name="language_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="facility_table_translation_fk1">
+          <End Role="facility_table" Type="Self.facility_table" Multiplicity="1" />
+          <End Role="facility_table_translation" Type="Self.facility_table_translation" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="facility_table">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="facility_table_translation">
+              <PropertyRef Name="facility_table_non_trans_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="room_facility_fk0">
+          <End Role="facility_table" Type="Self.facility_table" Multiplicity="1" />
+          <End Role="room_facility" Type="Self.room_facility" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="facility_table">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="room_facility">
+              <PropertyRef Name="facility_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="room_facility_fk1">
+          <End Role="room_table" Type="Self.room_table" Multiplicity="1" />
+          <End Role="room_facility" Type="Self.room_facility" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="room_table">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="room_facility">
+              <PropertyRef Name="room_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="room_table_fk0">
+          <End Role="dormitories_table" Type="Self.dormitories_table" Multiplicity="1" />
+          <End Role="room_table" Type="Self.room_table" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="dormitories_table">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="room_table">
+              <PropertyRef Name="dormitory_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="room_table_translation_fk0">
+          <End Role="language_table" Type="Self.language_table" Multiplicity="1" />
+          <End Role="room_table_translation" Type="Self.room_table_translation" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="language_table">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="room_table_translation">
+              <PropertyRef Name="language_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="room_table_translation_fk1">
+          <End Role="room_table" Type="Self.room_table" Multiplicity="1" />
+          <End Role="room_table_translation" Type="Self.room_table_translation" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="room_table">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="room_table_translation">
+              <PropertyRef Name="room_table_non_trans_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityContainer Name="fees_and_facilitiesModelStoreContainer">
+          <EntitySet Name="account_information_parameter" EntityType="Self.account_information_parameter" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="account_information_parameter_translation" EntityType="Self.account_information_parameter_translation" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="account_parameter_values" EntityType="Self.account_parameter_values" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="account_parameter_values_translation" EntityType="Self.account_parameter_values_translation" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="bank_currency_table" EntityType="Self.bank_currency_table" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="dormitories_table" EntityType="Self.dormitories_table" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="dormitories_table_translation" EntityType="Self.dormitories_table_translation" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="dormitory_bank_account_table" EntityType="Self.dormitory_bank_account_table" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="dormitory_information_table" EntityType="Self.dormitory_information_table" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="dormitory_information_table_translation" EntityType="Self.dormitory_information_table_translation" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="dormitory_type" EntityType="Self.dormitory_type" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="dormitory_type_translation" EntityType="Self.dormitory_type_translation" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="facility_option" EntityType="Self.facility_option" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="facility_option_translation" EntityType="Self.facility_option_translation" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="facility_table" EntityType="Self.facility_table" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="facility_table_translation" EntityType="Self.facility_table_translation" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="language_table" EntityType="Self.language_table" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="room_facility" EntityType="Self.room_facility" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="room_table" EntityType="Self.room_table" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="room_table_translation" EntityType="Self.room_table_translation" Schema="dbo" store:Type="Tables" />
+          <AssociationSet Name="account_information_parameter_translation_fk0" Association="Self.account_information_parameter_translation_fk0">
+            <End Role="account_information_parameter" EntitySet="account_information_parameter" />
+            <End Role="account_information_parameter_translation" EntitySet="account_information_parameter_translation" />
+          </AssociationSet>
+          <AssociationSet Name="account_information_parameter_translation_fk1" Association="Self.account_information_parameter_translation_fk1">
+            <End Role="language_table" EntitySet="language_table" />
+            <End Role="account_information_parameter_translation" EntitySet="account_information_parameter_translation" />
+          </AssociationSet>
+          <AssociationSet Name="account_parameter_values_fk0" Association="Self.account_parameter_values_fk0">
+            <End Role="bank_currency_table" EntitySet="bank_currency_table" />
+            <End Role="account_parameter_values" EntitySet="account_parameter_values" />
+          </AssociationSet>
+          <AssociationSet Name="account_parameter_values_fk1" Association="Self.account_parameter_values_fk1">
+            <End Role="account_information_parameter" EntitySet="account_information_parameter" />
+            <End Role="account_parameter_values" EntitySet="account_parameter_values" />
+          </AssociationSet>
+          <AssociationSet Name="account_parameter_values_translation_fk0" Association="Self.account_parameter_values_translation_fk0">
+            <End Role="language_table" EntitySet="language_table" />
+            <End Role="account_parameter_values_translation" EntitySet="account_parameter_values_translation" />
+          </AssociationSet>
+          <AssociationSet Name="account_parameter_values_translation_fk1" Association="Self.account_parameter_values_translation_fk1">
+            <End Role="account_parameter_values" EntitySet="account_parameter_values" />
+            <End Role="account_parameter_values_translation" EntitySet="account_parameter_values_translation" />
+          </AssociationSet>
+          <AssociationSet Name="bank_currency_table_fk0" Association="Self.bank_currency_table_fk0">
+            <End Role="dormitory_bank_account_table" EntitySet="dormitory_bank_account_table" />
+            <End Role="bank_currency_table" EntitySet="bank_currency_table" />
+          </AssociationSet>
+          <AssociationSet Name="dormitories_table_fk0" Association="Self.dormitories_table_fk0">
+            <End Role="dormitory_type" EntitySet="dormitory_type" />
+            <End Role="dormitories_table" EntitySet="dormitories_table" />
+          </AssociationSet>
+          <AssociationSet Name="dormitories_table_translation_fk0" Association="Self.dormitories_table_translation_fk0">
+            <End Role="language_table" EntitySet="language_table" />
+            <End Role="dormitories_table_translation" EntitySet="dormitories_table_translation" />
+          </AssociationSet>
+          <AssociationSet Name="dormitories_table_translation_fk1" Association="Self.dormitories_table_translation_fk1">
+            <End Role="dormitories_table" EntitySet="dormitories_table" />
+            <End Role="dormitories_table_translation" EntitySet="dormitories_table_translation" />
+          </AssociationSet>
+          <AssociationSet Name="dormitory_bank_account_table_fk0" Association="Self.dormitory_bank_account_table_fk0">
+            <End Role="dormitories_table" EntitySet="dormitories_table" />
+            <End Role="dormitory_bank_account_table" EntitySet="dormitory_bank_account_table" />
+          </AssociationSet>
+          <AssociationSet Name="dormitory_information_table_fk0" Association="Self.dormitory_information_table_fk0">
+            <End Role="dormitory_type" EntitySet="dormitory_type" />
+            <End Role="dormitory_information_table" EntitySet="dormitory_information_table" />
+          </AssociationSet>
+          <AssociationSet Name="dormitory_information_table_translation_fk0" Association="Self.dormitory_information_table_translation_fk0">
+            <End Role="language_table" EntitySet="language_table" />
+            <End Role="dormitory_information_table_translation" EntitySet="dormitory_information_table_translation" />
+          </AssociationSet>
+          <AssociationSet Name="dormitory_information_table_translation_fk1" Association="Self.dormitory_information_table_translation_fk1">
+            <End Role="dormitory_information_table" EntitySet="dormitory_information_table" />
+            <End Role="dormitory_information_table_translation" EntitySet="dormitory_information_table_translation" />
+          </AssociationSet>
+          <AssociationSet Name="dormitory_type_translation_fk0" Association="Self.dormitory_type_translation_fk0">
+            <End Role="language_table" EntitySet="language_table" />
+            <End Role="dormitory_type_translation" EntitySet="dormitory_type_translation" />
+          </AssociationSet>
+          <AssociationSet Name="dormitory_type_translation_fk1" Association="Self.dormitory_type_translation_fk1">
+            <End Role="dormitory_type" EntitySet="dormitory_type" />
+            <End Role="dormitory_type_translation" EntitySet="dormitory_type_translation" />
+          </AssociationSet>
+          <AssociationSet Name="facility_option_fk0" Association="Self.facility_option_fk0">
+            <End Role="facility_table" EntitySet="facility_table" />
+            <End Role="facility_option" EntitySet="facility_option" />
+          </AssociationSet>
+          <AssociationSet Name="facility_option_translation_fk0" Association="Self.facility_option_translation_fk0">
+            <End Role="facility_option" EntitySet="facility_option" />
+            <End Role="facility_option_translation" EntitySet="facility_option_translation" />
+          </AssociationSet>
+          <AssociationSet Name="facility_option_translation_fk1" Association="Self.facility_option_translation_fk1">
+            <End Role="language_table" EntitySet="language_table" />
+            <End Role="facility_option_translation" EntitySet="facility_option_translation" />
+          </AssociationSet>
+          <AssociationSet Name="facility_table_translation_fk0" Association="Self.facility_table_translation_fk0">
+            <End Role="language_table" EntitySet="language_table" />
+            <End Role="facility_table_translation" EntitySet="facility_table_translation" />
+          </AssociationSet>
+          <AssociationSet Name="facility_table_translation_fk1" Association="Self.facility_table_translation_fk1">
+            <End Role="facility_table" EntitySet="facility_table" />
+            <End Role="facility_table_translation" EntitySet="facility_table_translation" />
+          </AssociationSet>
+          <AssociationSet Name="room_facility_fk0" Association="Self.room_facility_fk0">
+            <End Role="facility_table" EntitySet="facility_table" />
+            <End Role="room_facility" EntitySet="room_facility" />
+          </AssociationSet>
+          <AssociationSet Name="room_facility_fk1" Association="Self.room_facility_fk1">
+            <End Role="room_table" EntitySet="room_table" />
+            <End Role="room_facility" EntitySet="room_facility" />
+          </AssociationSet>
+          <AssociationSet Name="room_table_fk0" Association="Self.room_table_fk0">
+            <End Role="dormitories_table" EntitySet="dormitories_table" />
+            <End Role="room_table" EntitySet="room_table" />
+          </AssociationSet>
+          <AssociationSet Name="room_table_translation_fk0" Association="Self.room_table_translation_fk0">
+            <End Role="language_table" EntitySet="language_table" />
+            <End Role="room_table_translation" EntitySet="room_table_translation" />
+          </AssociationSet>
+          <AssociationSet Name="room_table_translation_fk1" Association="Self.room_table_translation_fk1">
+            <End Role="room_table" EntitySet="room_table" />
+            <End Role="room_table_translation" EntitySet="room_table_translation" />
+          </AssociationSet>
+        </EntityContainer>
+      </Schema>
+    </edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="fees_and_facilitiesModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="account_information_parameter">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <NavigationProperty Name="account_information_parameter_translation" Relationship="Self.account_information_parameter_translation_fk0" FromRole="account_information_parameter" ToRole="account_information_parameter_translation" />
+          <NavigationProperty Name="account_parameter_values" Relationship="Self.account_parameter_values_fk1" FromRole="account_information_parameter" ToRole="account_parameter_values" />
+        </EntityType>
+        <EntityType Name="account_information_parameter_translation">
+          <Key>
+            <PropertyRef Name="account_info_non_trans_id" />
+            <PropertyRef Name="language_id" />
+          </Key>
+          <Property Name="account_info_non_trans_id" Type="Int32" Nullable="false" />
+          <Property Name="language_id" Type="Int32" Nullable="false" />
+          <Property Name="parameter" Type="String" MaxLength="400" FixedLength="false" Unicode="false" Nullable="false" />
+          <NavigationProperty Name="account_information_parameter" Relationship="Self.account_information_parameter_translation_fk0" FromRole="account_information_parameter_translation" ToRole="account_information_parameter" />
+          <NavigationProperty Name="language_table" Relationship="Self.account_information_parameter_translation_fk1" FromRole="account_information_parameter_translation" ToRole="language_table" />
+        </EntityType>
+        <EntityType Name="account_parameter_values">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="currency_id" Type="Int32" Nullable="false" />
+          <Property Name="parameter_id" Type="Int32" Nullable="false" />
+          <NavigationProperty Name="account_information_parameter" Relationship="Self.account_parameter_values_fk1" FromRole="account_parameter_values" ToRole="account_information_parameter" />
+          <NavigationProperty Name="bank_currency_table" Relationship="Self.account_parameter_values_fk0" FromRole="account_parameter_values" ToRole="bank_currency_table" />
+          <NavigationProperty Name="account_parameter_values_translation" Relationship="Self.account_parameter_values_translation_fk1" FromRole="account_parameter_values" ToRole="account_parameter_values_translation" />
+        </EntityType>
+        <EntityType Name="account_parameter_values_translation">
+          <Key>
+            <PropertyRef Name="language_id" />
+            <PropertyRef Name="account_params_values_non_trans_id" />
+          </Key>
+          <Property Name="language_id" Type="Int32" Nullable="false" />
+          <Property Name="account_params_values_non_trans_id" Type="Int32" Nullable="false" />
+          <Property Name="value" Type="String" MaxLength="300" FixedLength="false" Unicode="false" Nullable="false" />
+          <NavigationProperty Name="account_parameter_values" Relationship="Self.account_parameter_values_translation_fk1" FromRole="account_parameter_values_translation" ToRole="account_parameter_values" />
+          <NavigationProperty Name="language_table" Relationship="Self.account_parameter_values_translation_fk0" FromRole="account_parameter_values_translation" ToRole="language_table" />
+        </EntityType>
+        <EntityType Name="bank_currency_table">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="bank_id" Type="Int32" Nullable="false" />
+          <Property Name="currency_name" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <NavigationProperty Name="account_parameter_values" Relationship="Self.account_parameter_values_fk0" FromRole="bank_currency_table" ToRole="account_parameter_values" />
+          <NavigationProperty Name="dormitory_bank_account_table" Relationship="Self.bank_currency_table_fk0" FromRole="bank_currency_table" ToRole="dormitory_bank_account_table" />
+        </EntityType>
+        <EntityType Name="dormitories_table">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="dormitory_type_id" Type="Int32" Nullable="false" />
+          <Property Name="room_price_currency" Type="String" MaxLength="100" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="room_price_currency_symbol" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
+          <NavigationProperty Name="dormitory_type" Relationship="Self.dormitories_table_fk0" FromRole="dormitories_table" ToRole="dormitory_type" />
+          <NavigationProperty Name="dormitories_table_translation" Relationship="Self.dormitories_table_translation_fk1" FromRole="dormitories_table" ToRole="dormitories_table_translation" />
+          <NavigationProperty Name="dormitory_bank_account_table" Relationship="Self.dormitory_bank_account_table_fk0" FromRole="dormitories_table" ToRole="dormitory_bank_account_table" />
+          <NavigationProperty Name="room_table" Relationship="Self.room_table_fk0" FromRole="dormitories_table" ToRole="room_table" />
+        </EntityType>
+        <EntityType Name="dormitories_table_translation">
+          <Key>
+            <PropertyRef Name="language_id" />
+            <PropertyRef Name="dormitories_table_non_trans_id" />
+          </Key>
+          <Property Name="language_id" Type="Int32" Nullable="false" />
+          <Property Name="dormitories_table_non_trans_id" Type="Int32" Nullable="false" />
+          <Property Name="dormitory_name" Type="String" MaxLength="300" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="dormitory_address" Type="String" MaxLength="500" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="gender_allocation" Type="String" MaxLength="200" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="rooms_payment_period" Type="String" MaxLength="200" FixedLength="false" Unicode="false" Nullable="false" />
+          <NavigationProperty Name="dormitories_table" Relationship="Self.dormitories_table_translation_fk1" FromRole="dormitories_table_translation" ToRole="dormitories_table" />
+          <NavigationProperty Name="language_table" Relationship="Self.dormitories_table_translation_fk0" FromRole="dormitories_table_translation" ToRole="language_table" />
+        </EntityType>
+        <EntityType Name="dormitory_bank_account_table">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="dormitory_id" Type="Int32" Nullable="false" />
+          <Property Name="bank_name" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <NavigationProperty Name="bank_currency_table" Relationship="Self.bank_currency_table_fk0" FromRole="dormitory_bank_account_table" ToRole="bank_currency_table" />
+          <NavigationProperty Name="dormitories_table" Relationship="Self.dormitory_bank_account_table_fk0" FromRole="dormitory_bank_account_table" ToRole="dormitories_table" />
+        </EntityType>
+        <EntityType Name="dormitory_information_table">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="dormitory_type_id" Type="Int32" Nullable="false" />
+          <NavigationProperty Name="dormitory_type" Relationship="Self.dormitory_information_table_fk0" FromRole="dormitory_information_table" ToRole="dormitory_type" />
+          <NavigationProperty Name="dormitory_information_table_translation" Relationship="Self.dormitory_information_table_translation_fk1" FromRole="dormitory_information_table" ToRole="dormitory_information_table_translation" />
+        </EntityType>
+        <EntityType Name="dormitory_information_table_translation">
+          <Key>
+            <PropertyRef Name="language_id" />
+            <PropertyRef Name="dormitory_info_non_trans_id" />
+          </Key>
+          <Property Name="language_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="dormitory_info_non_trans_id" Type="Int32" Nullable="false" />
+          <Property Name="information" Type="String" MaxLength="500" FixedLength="false" Unicode="false" Nullable="false" />
+          <NavigationProperty Name="dormitory_information_table" Relationship="Self.dormitory_information_table_translation_fk1" FromRole="dormitory_information_table_translation" ToRole="dormitory_information_table" />
+          <NavigationProperty Name="language_table" Relationship="Self.dormitory_information_table_translation_fk0" FromRole="dormitory_information_table_translation" ToRole="language_table" />
+        </EntityType>
+        <EntityType Name="dormitory_type">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <NavigationProperty Name="dormitories_table" Relationship="Self.dormitories_table_fk0" FromRole="dormitory_type" ToRole="dormitories_table" />
+          <NavigationProperty Name="dormitory_information_table" Relationship="Self.dormitory_information_table_fk0" FromRole="dormitory_type" ToRole="dormitory_information_table" />
+          <NavigationProperty Name="dormitory_type_translation" Relationship="Self.dormitory_type_translation_fk1" FromRole="dormitory_type" ToRole="dormitory_type_translation" />
+        </EntityType>
+        <EntityType Name="dormitory_type_translation">
+          <Key>
+            <PropertyRef Name="language_id" />
+            <PropertyRef Name="dormitory_type_non_trans_id" />
+          </Key>
+          <Property Name="language_id" Type="Int32" Nullable="false" />
+          <Property Name="dormitory_type_non_trans_id" Type="Int32" Nullable="false" />
+          <Property Name="type_name" Type="String" MaxLength="300" FixedLength="false" Unicode="false" Nullable="false" />
+          <NavigationProperty Name="dormitory_type" Relationship="Self.dormitory_type_translation_fk1" FromRole="dormitory_type_translation" ToRole="dormitory_type" />
+          <NavigationProperty Name="language_table" Relationship="Self.dormitory_type_translation_fk0" FromRole="dormitory_type_translation" ToRole="language_table" />
+        </EntityType>
+        <EntityType Name="facility_option">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="facility_id" Type="Int32" Nullable="false" />
+          <NavigationProperty Name="facility_table" Relationship="Self.facility_option_fk0" FromRole="facility_option" ToRole="facility_table" />
+          <NavigationProperty Name="facility_option_translation" Relationship="Self.facility_option_translation_fk0" FromRole="facility_option" ToRole="facility_option_translation" />
+        </EntityType>
+        <EntityType Name="facility_option_translation">
+          <Key>
+            <PropertyRef Name="facility_option_non_trans_id" />
+            <PropertyRef Name="language_id" />
+          </Key>
+          <Property Name="facility_option_non_trans_id" Type="Int32" Nullable="false" />
+          <Property Name="language_id" Type="Int32" Nullable="false" />
+          <Property Name="facility_option" Type="String" MaxLength="300" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="facility_option_description" Type="String" MaxLength="500" FixedLength="false" Unicode="false" Nullable="false" />
+          <NavigationProperty Name="facility_option1" Relationship="Self.facility_option_translation_fk0" FromRole="facility_option_translation" ToRole="facility_option" />
+          <NavigationProperty Name="language_table" Relationship="Self.facility_option_translation_fk1" FromRole="facility_option_translation" ToRole="language_table" />
+        </EntityType>
+        <EntityType Name="facility_table">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="facility_icon_url" Type="String" MaxLength="500" FixedLength="false" Unicode="false" Nullable="false" />
+          <NavigationProperty Name="facility_option" Relationship="Self.facility_option_fk0" FromRole="facility_table" ToRole="facility_option" />
+          <NavigationProperty Name="facility_table_translation" Relationship="Self.facility_table_translation_fk1" FromRole="facility_table" ToRole="facility_table_translation" />
+          <NavigationProperty Name="room_facility" Relationship="Self.room_facility_fk0" FromRole="facility_table" ToRole="room_facility" />
+        </EntityType>
+        <EntityType Name="facility_table_translation">
+          <Key>
+            <PropertyRef Name="language_id" />
+            <PropertyRef Name="facility_table_non_trans_id" />
+          </Key>
+          <Property Name="language_id" Type="Int32" Nullable="false" />
+          <Property Name="facility_table_non_trans_id" Type="Int32" Nullable="false" />
+          <Property Name="facility_title" Type="String" MaxLength="300" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="facility_description" Type="String" MaxLength="500" FixedLength="false" Unicode="false" Nullable="false" />
+          <NavigationProperty Name="facility_table" Relationship="Self.facility_table_translation_fk1" FromRole="facility_table_translation" ToRole="facility_table" />
+          <NavigationProperty Name="language_table" Relationship="Self.facility_table_translation_fk0" FromRole="facility_table_translation" ToRole="language_table" />
+        </EntityType>
+        <EntityType Name="language_table">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="name" Type="String" MaxLength="300" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="language_code" Type="String" MaxLength="20" FixedLength="false" Unicode="false" Nullable="false" />
+          <NavigationProperty Name="account_information_parameter_translation" Relationship="Self.account_information_parameter_translation_fk1" FromRole="language_table" ToRole="account_information_parameter_translation" />
+          <NavigationProperty Name="account_parameter_values_translation" Relationship="Self.account_parameter_values_translation_fk0" FromRole="language_table" ToRole="account_parameter_values_translation" />
+          <NavigationProperty Name="dormitories_table_translation" Relationship="Self.dormitories_table_translation_fk0" FromRole="language_table" ToRole="dormitories_table_translation" />
+          <NavigationProperty Name="dormitory_information_table_translation" Relationship="Self.dormitory_information_table_translation_fk0" FromRole="language_table" ToRole="dormitory_information_table_translation" />
+          <NavigationProperty Name="dormitory_type_translation" Relationship="Self.dormitory_type_translation_fk0" FromRole="language_table" ToRole="dormitory_type_translation" />
+          <NavigationProperty Name="facility_option_translation" Relationship="Self.facility_option_translation_fk1" FromRole="language_table" ToRole="facility_option_translation" />
+          <NavigationProperty Name="facility_table_translation" Relationship="Self.facility_table_translation_fk0" FromRole="language_table" ToRole="facility_table_translation" />
+          <NavigationProperty Name="room_table_translation" Relationship="Self.room_table_translation_fk0" FromRole="language_table" ToRole="room_table_translation" />
+        </EntityType>
+        <EntityType Name="room_facility">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="facility_id" Type="Int32" Nullable="false" />
+          <Property Name="room_id" Type="Int32" Nullable="false" />
+          <Property Name="facility_option_id" Type="Int32" />
+          <NavigationProperty Name="facility_table" Relationship="Self.room_facility_fk0" FromRole="room_facility" ToRole="facility_table" />
+          <NavigationProperty Name="room_table" Relationship="Self.room_facility_fk1" FromRole="room_facility" ToRole="room_table" />
+        </EntityType>
+        <EntityType Name="room_table">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="dormitory_id" Type="Int32" Nullable="false" />
+          <Property Name="room_picture_url" Type="String" MaxLength="500" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="room_price" Type="Double" Nullable="false" />
+          <Property Name="room_price_installment" Type="Double" Nullable="false" />
+          <Property Name="room_area" Type="Int32" Nullable="false" />
+          <NavigationProperty Name="dormitories_table" Relationship="Self.room_table_fk0" FromRole="room_table" ToRole="dormitories_table" />
+          <NavigationProperty Name="room_facility" Relationship="Self.room_facility_fk1" FromRole="room_table" ToRole="room_facility" />
+          <NavigationProperty Name="room_table_translation" Relationship="Self.room_table_translation_fk1" FromRole="room_table" ToRole="room_table_translation" />
+        </EntityType>
+        <EntityType Name="room_table_translation">
+          <Key>
+            <PropertyRef Name="language_id" />
+            <PropertyRef Name="room_table_non_trans_id" />
+          </Key>
+          <Property Name="language_id" Type="Int32" Nullable="false" />
+          <Property Name="room_table_non_trans_id" Type="Int32" Nullable="false" />
+          <Property Name="room_type" Type="String" MaxLength="300" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="room_title" Type="String" MaxLength="300" FixedLength="false" Unicode="false" Nullable="false" />
+          <NavigationProperty Name="language_table" Relationship="Self.room_table_translation_fk0" FromRole="room_table_translation" ToRole="language_table" />
+          <NavigationProperty Name="room_table" Relationship="Self.room_table_translation_fk1" FromRole="room_table_translation" ToRole="room_table" />
+        </EntityType>
+        <Association Name="account_information_parameter_translation_fk0">
+          <End Role="account_information_parameter" Type="Self.account_information_parameter" Multiplicity="1" />
+          <End Role="account_information_parameter_translation" Type="Self.account_information_parameter_translation" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="account_information_parameter">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="account_information_parameter_translation">
+              <PropertyRef Name="account_info_non_trans_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="account_parameter_values_fk1">
+          <End Role="account_information_parameter" Type="Self.account_information_parameter" Multiplicity="1" />
+          <End Role="account_parameter_values" Type="Self.account_parameter_values" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="account_information_parameter">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="account_parameter_values">
+              <PropertyRef Name="parameter_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="account_information_parameter_translation_fk1">
+          <End Role="language_table" Type="Self.language_table" Multiplicity="1" />
+          <End Role="account_information_parameter_translation" Type="Self.account_information_parameter_translation" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="language_table">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="account_information_parameter_translation">
+              <PropertyRef Name="language_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="account_parameter_values_fk0">
+          <End Role="bank_currency_table" Type="Self.bank_currency_table" Multiplicity="1" />
+          <End Role="account_parameter_values" Type="Self.account_parameter_values" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="bank_currency_table">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="account_parameter_values">
+              <PropertyRef Name="currency_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="account_parameter_values_translation_fk1">
+          <End Role="account_parameter_values" Type="Self.account_parameter_values" Multiplicity="1" />
+          <End Role="account_parameter_values_translation" Type="Self.account_parameter_values_translation" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="account_parameter_values">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="account_parameter_values_translation">
+              <PropertyRef Name="account_params_values_non_trans_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="account_parameter_values_translation_fk0">
+          <End Role="language_table" Type="Self.language_table" Multiplicity="1" />
+          <End Role="account_parameter_values_translation" Type="Self.account_parameter_values_translation" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="language_table">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="account_parameter_values_translation">
+              <PropertyRef Name="language_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="bank_currency_table_fk0">
+          <End Role="dormitory_bank_account_table" Type="Self.dormitory_bank_account_table" Multiplicity="1" />
+          <End Role="bank_currency_table" Type="Self.bank_currency_table" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="dormitory_bank_account_table">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="bank_currency_table">
+              <PropertyRef Name="bank_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="dormitories_table_fk0">
+          <End Role="dormitory_type" Type="Self.dormitory_type" Multiplicity="1" />
+          <End Role="dormitories_table" Type="Self.dormitories_table" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="dormitory_type">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="dormitories_table">
+              <PropertyRef Name="dormitory_type_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="dormitories_table_translation_fk1">
+          <End Role="dormitories_table" Type="Self.dormitories_table" Multiplicity="1" />
+          <End Role="dormitories_table_translation" Type="Self.dormitories_table_translation" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="dormitories_table">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="dormitories_table_translation">
+              <PropertyRef Name="dormitories_table_non_trans_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="dormitory_bank_account_table_fk0">
+          <End Role="dormitories_table" Type="Self.dormitories_table" Multiplicity="1" />
+          <End Role="dormitory_bank_account_table" Type="Self.dormitory_bank_account_table" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="dormitories_table">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="dormitory_bank_account_table">
+              <PropertyRef Name="dormitory_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="room_table_fk0">
+          <End Role="dormitories_table" Type="Self.dormitories_table" Multiplicity="1" />
+          <End Role="room_table" Type="Self.room_table" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="dormitories_table">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="room_table">
+              <PropertyRef Name="dormitory_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="dormitories_table_translation_fk0">
+          <End Role="language_table" Type="Self.language_table" Multiplicity="1" />
+          <End Role="dormitories_table_translation" Type="Self.dormitories_table_translation" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="language_table">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="dormitories_table_translation">
+              <PropertyRef Name="language_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="dormitory_information_table_fk0">
+          <End Role="dormitory_type" Type="Self.dormitory_type" Multiplicity="1" />
+          <End Role="dormitory_information_table" Type="Self.dormitory_information_table" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="dormitory_type">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="dormitory_information_table">
+              <PropertyRef Name="dormitory_type_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="dormitory_information_table_translation_fk1">
+          <End Role="dormitory_information_table" Type="Self.dormitory_information_table" Multiplicity="1" />
+          <End Role="dormitory_information_table_translation" Type="Self.dormitory_information_table_translation" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="dormitory_information_table">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="dormitory_information_table_translation">
+              <PropertyRef Name="dormitory_info_non_trans_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="dormitory_information_table_translation_fk0">
+          <End Role="language_table" Type="Self.language_table" Multiplicity="1" />
+          <End Role="dormitory_information_table_translation" Type="Self.dormitory_information_table_translation" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="language_table">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="dormitory_information_table_translation">
+              <PropertyRef Name="language_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="dormitory_type_translation_fk1">
+          <End Role="dormitory_type" Type="Self.dormitory_type" Multiplicity="1" />
+          <End Role="dormitory_type_translation" Type="Self.dormitory_type_translation" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="dormitory_type">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="dormitory_type_translation">
+              <PropertyRef Name="dormitory_type_non_trans_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="dormitory_type_translation_fk0">
+          <End Role="language_table" Type="Self.language_table" Multiplicity="1" />
+          <End Role="dormitory_type_translation" Type="Self.dormitory_type_translation" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="language_table">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="dormitory_type_translation">
+              <PropertyRef Name="language_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="facility_option_fk0">
+          <End Role="facility_table" Type="Self.facility_table" Multiplicity="1" />
+          <End Role="facility_option" Type="Self.facility_option" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="facility_table">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="facility_option">
+              <PropertyRef Name="facility_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="facility_option_translation_fk0">
+          <End Role="facility_option" Type="Self.facility_option" Multiplicity="1" />
+          <End Role="facility_option_translation" Type="Self.facility_option_translation" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="facility_option">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="facility_option_translation">
+              <PropertyRef Name="facility_option_non_trans_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="facility_option_translation_fk1">
+          <End Role="language_table" Type="Self.language_table" Multiplicity="1" />
+          <End Role="facility_option_translation" Type="Self.facility_option_translation" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="language_table">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="facility_option_translation">
+              <PropertyRef Name="language_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="facility_table_translation_fk1">
+          <End Role="facility_table" Type="Self.facility_table" Multiplicity="1" />
+          <End Role="facility_table_translation" Type="Self.facility_table_translation" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="facility_table">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="facility_table_translation">
+              <PropertyRef Name="facility_table_non_trans_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="room_facility_fk0">
+          <End Role="facility_table" Type="Self.facility_table" Multiplicity="1" />
+          <End Role="room_facility" Type="Self.room_facility" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="facility_table">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="room_facility">
+              <PropertyRef Name="facility_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="facility_table_translation_fk0">
+          <End Role="language_table" Type="Self.language_table" Multiplicity="1" />
+          <End Role="facility_table_translation" Type="Self.facility_table_translation" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="language_table">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="facility_table_translation">
+              <PropertyRef Name="language_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="room_table_translation_fk0">
+          <End Role="language_table" Type="Self.language_table" Multiplicity="1" />
+          <End Role="room_table_translation" Type="Self.room_table_translation" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="language_table">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="room_table_translation">
+              <PropertyRef Name="language_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="room_facility_fk1">
+          <End Role="room_table" Type="Self.room_table" Multiplicity="1" />
+          <End Role="room_facility" Type="Self.room_facility" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="room_table">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="room_facility">
+              <PropertyRef Name="room_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="room_table_translation_fk1">
+          <End Role="room_table" Type="Self.room_table" Multiplicity="1" />
+          <End Role="room_table_translation" Type="Self.room_table_translation" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="room_table">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="room_table_translation">
+              <PropertyRef Name="room_table_non_trans_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityContainer Name="fees_and_facilitiesEntities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="account_information_parameter" EntityType="Self.account_information_parameter" />
+          <EntitySet Name="account_information_parameter_translation" EntityType="Self.account_information_parameter_translation" />
+          <EntitySet Name="account_parameter_values" EntityType="Self.account_parameter_values" />
+          <EntitySet Name="account_parameter_values_translation" EntityType="Self.account_parameter_values_translation" />
+          <EntitySet Name="bank_currency_table" EntityType="Self.bank_currency_table" />
+          <EntitySet Name="dormitories_table" EntityType="Self.dormitories_table" />
+          <EntitySet Name="dormitories_table_translation" EntityType="Self.dormitories_table_translation" />
+          <EntitySet Name="dormitory_bank_account_table" EntityType="Self.dormitory_bank_account_table" />
+          <EntitySet Name="dormitory_information_table" EntityType="Self.dormitory_information_table" />
+          <EntitySet Name="dormitory_information_table_translation" EntityType="Self.dormitory_information_table_translation" />
+          <EntitySet Name="dormitory_type" EntityType="Self.dormitory_type" />
+          <EntitySet Name="dormitory_type_translation" EntityType="Self.dormitory_type_translation" />
+          <EntitySet Name="facility_option" EntityType="Self.facility_option" />
+          <EntitySet Name="facility_option_translation" EntityType="Self.facility_option_translation" />
+          <EntitySet Name="facility_table" EntityType="Self.facility_table" />
+          <EntitySet Name="facility_table_translation" EntityType="Self.facility_table_translation" />
+          <EntitySet Name="language_table" EntityType="Self.language_table" />
+          <EntitySet Name="room_facility" EntityType="Self.room_facility" />
+          <EntitySet Name="room_table" EntityType="Self.room_table" />
+          <EntitySet Name="room_table_translation" EntityType="Self.room_table_translation" />
+          <AssociationSet Name="account_information_parameter_translation_fk0" Association="Self.account_information_parameter_translation_fk0">
+            <End Role="account_information_parameter" EntitySet="account_information_parameter" />
+            <End Role="account_information_parameter_translation" EntitySet="account_information_parameter_translation" />
+          </AssociationSet>
+          <AssociationSet Name="account_parameter_values_fk1" Association="Self.account_parameter_values_fk1">
+            <End Role="account_information_parameter" EntitySet="account_information_parameter" />
+            <End Role="account_parameter_values" EntitySet="account_parameter_values" />
+          </AssociationSet>
+          <AssociationSet Name="account_information_parameter_translation_fk1" Association="Self.account_information_parameter_translation_fk1">
+            <End Role="language_table" EntitySet="language_table" />
+            <End Role="account_information_parameter_translation" EntitySet="account_information_parameter_translation" />
+          </AssociationSet>
+          <AssociationSet Name="account_parameter_values_fk0" Association="Self.account_parameter_values_fk0">
+            <End Role="bank_currency_table" EntitySet="bank_currency_table" />
+            <End Role="account_parameter_values" EntitySet="account_parameter_values" />
+          </AssociationSet>
+          <AssociationSet Name="account_parameter_values_translation_fk1" Association="Self.account_parameter_values_translation_fk1">
+            <End Role="account_parameter_values" EntitySet="account_parameter_values" />
+            <End Role="account_parameter_values_translation" EntitySet="account_parameter_values_translation" />
+          </AssociationSet>
+          <AssociationSet Name="account_parameter_values_translation_fk0" Association="Self.account_parameter_values_translation_fk0">
+            <End Role="language_table" EntitySet="language_table" />
+            <End Role="account_parameter_values_translation" EntitySet="account_parameter_values_translation" />
+          </AssociationSet>
+          <AssociationSet Name="bank_currency_table_fk0" Association="Self.bank_currency_table_fk0">
+            <End Role="dormitory_bank_account_table" EntitySet="dormitory_bank_account_table" />
+            <End Role="bank_currency_table" EntitySet="bank_currency_table" />
+          </AssociationSet>
+          <AssociationSet Name="dormitories_table_fk0" Association="Self.dormitories_table_fk0">
+            <End Role="dormitory_type" EntitySet="dormitory_type" />
+            <End Role="dormitories_table" EntitySet="dormitories_table" />
+          </AssociationSet>
+          <AssociationSet Name="dormitories_table_translation_fk1" Association="Self.dormitories_table_translation_fk1">
+            <End Role="dormitories_table" EntitySet="dormitories_table" />
+            <End Role="dormitories_table_translation" EntitySet="dormitories_table_translation" />
+          </AssociationSet>
+          <AssociationSet Name="dormitory_bank_account_table_fk0" Association="Self.dormitory_bank_account_table_fk0">
+            <End Role="dormitories_table" EntitySet="dormitories_table" />
+            <End Role="dormitory_bank_account_table" EntitySet="dormitory_bank_account_table" />
+          </AssociationSet>
+          <AssociationSet Name="room_table_fk0" Association="Self.room_table_fk0">
+            <End Role="dormitories_table" EntitySet="dormitories_table" />
+            <End Role="room_table" EntitySet="room_table" />
+          </AssociationSet>
+          <AssociationSet Name="dormitories_table_translation_fk0" Association="Self.dormitories_table_translation_fk0">
+            <End Role="language_table" EntitySet="language_table" />
+            <End Role="dormitories_table_translation" EntitySet="dormitories_table_translation" />
+          </AssociationSet>
+          <AssociationSet Name="dormitory_information_table_fk0" Association="Self.dormitory_information_table_fk0">
+            <End Role="dormitory_type" EntitySet="dormitory_type" />
+            <End Role="dormitory_information_table" EntitySet="dormitory_information_table" />
+          </AssociationSet>
+          <AssociationSet Name="dormitory_information_table_translation_fk1" Association="Self.dormitory_information_table_translation_fk1">
+            <End Role="dormitory_information_table" EntitySet="dormitory_information_table" />
+            <End Role="dormitory_information_table_translation" EntitySet="dormitory_information_table_translation" />
+          </AssociationSet>
+          <AssociationSet Name="dormitory_information_table_translation_fk0" Association="Self.dormitory_information_table_translation_fk0">
+            <End Role="language_table" EntitySet="language_table" />
+            <End Role="dormitory_information_table_translation" EntitySet="dormitory_information_table_translation" />
+          </AssociationSet>
+          <AssociationSet Name="dormitory_type_translation_fk1" Association="Self.dormitory_type_translation_fk1">
+            <End Role="dormitory_type" EntitySet="dormitory_type" />
+            <End Role="dormitory_type_translation" EntitySet="dormitory_type_translation" />
+          </AssociationSet>
+          <AssociationSet Name="dormitory_type_translation_fk0" Association="Self.dormitory_type_translation_fk0">
+            <End Role="language_table" EntitySet="language_table" />
+            <End Role="dormitory_type_translation" EntitySet="dormitory_type_translation" />
+          </AssociationSet>
+          <AssociationSet Name="facility_option_fk0" Association="Self.facility_option_fk0">
+            <End Role="facility_table" EntitySet="facility_table" />
+            <End Role="facility_option" EntitySet="facility_option" />
+          </AssociationSet>
+          <AssociationSet Name="facility_option_translation_fk0" Association="Self.facility_option_translation_fk0">
+            <End Role="facility_option" EntitySet="facility_option" />
+            <End Role="facility_option_translation" EntitySet="facility_option_translation" />
+          </AssociationSet>
+          <AssociationSet Name="facility_option_translation_fk1" Association="Self.facility_option_translation_fk1">
+            <End Role="language_table" EntitySet="language_table" />
+            <End Role="facility_option_translation" EntitySet="facility_option_translation" />
+          </AssociationSet>
+          <AssociationSet Name="facility_table_translation_fk1" Association="Self.facility_table_translation_fk1">
+            <End Role="facility_table" EntitySet="facility_table" />
+            <End Role="facility_table_translation" EntitySet="facility_table_translation" />
+          </AssociationSet>
+          <AssociationSet Name="room_facility_fk0" Association="Self.room_facility_fk0">
+            <End Role="facility_table" EntitySet="facility_table" />
+            <End Role="room_facility" EntitySet="room_facility" />
+          </AssociationSet>
+          <AssociationSet Name="facility_table_translation_fk0" Association="Self.facility_table_translation_fk0">
+            <End Role="language_table" EntitySet="language_table" />
+            <End Role="facility_table_translation" EntitySet="facility_table_translation" />
+          </AssociationSet>
+          <AssociationSet Name="room_table_translation_fk0" Association="Self.room_table_translation_fk0">
+            <End Role="language_table" EntitySet="language_table" />
+            <End Role="room_table_translation" EntitySet="room_table_translation" />
+          </AssociationSet>
+          <AssociationSet Name="room_facility_fk1" Association="Self.room_facility_fk1">
+            <End Role="room_table" EntitySet="room_table" />
+            <End Role="room_facility" EntitySet="room_facility" />
+          </AssociationSet>
+          <AssociationSet Name="room_table_translation_fk1" Association="Self.room_table_translation_fk1">
+            <End Role="room_table" EntitySet="room_table" />
+            <End Role="room_table_translation" EntitySet="room_table_translation" />
+          </AssociationSet>
+        </EntityContainer>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="fees_and_facilitiesModelStoreContainer" CdmEntityContainer="fees_and_facilitiesEntities">
+          <EntitySetMapping Name="account_information_parameter">
+            <EntityTypeMapping TypeName="fees_and_facilitiesModel.account_information_parameter">
+              <MappingFragment StoreEntitySet="account_information_parameter">
+                <ScalarProperty Name="id" ColumnName="id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="account_information_parameter_translation">
+            <EntityTypeMapping TypeName="fees_and_facilitiesModel.account_information_parameter_translation">
+              <MappingFragment StoreEntitySet="account_information_parameter_translation">
+                <ScalarProperty Name="account_info_non_trans_id" ColumnName="account_info_non_trans_id" />
+                <ScalarProperty Name="language_id" ColumnName="language_id" />
+                <ScalarProperty Name="parameter" ColumnName="parameter" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="account_parameter_values">
+            <EntityTypeMapping TypeName="fees_and_facilitiesModel.account_parameter_values">
+              <MappingFragment StoreEntitySet="account_parameter_values">
+                <ScalarProperty Name="id" ColumnName="id" />
+                <ScalarProperty Name="currency_id" ColumnName="currency_id" />
+                <ScalarProperty Name="parameter_id" ColumnName="parameter_id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="account_parameter_values_translation">
+            <EntityTypeMapping TypeName="fees_and_facilitiesModel.account_parameter_values_translation">
+              <MappingFragment StoreEntitySet="account_parameter_values_translation">
+                <ScalarProperty Name="language_id" ColumnName="language_id" />
+                <ScalarProperty Name="account_params_values_non_trans_id" ColumnName="account_params_values_non_trans_id" />
+                <ScalarProperty Name="value" ColumnName="value" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="bank_currency_table">
+            <EntityTypeMapping TypeName="fees_and_facilitiesModel.bank_currency_table">
+              <MappingFragment StoreEntitySet="bank_currency_table">
+                <ScalarProperty Name="id" ColumnName="id" />
+                <ScalarProperty Name="bank_id" ColumnName="bank_id" />
+                <ScalarProperty Name="currency_name" ColumnName="currency_name" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="dormitories_table">
+            <EntityTypeMapping TypeName="fees_and_facilitiesModel.dormitories_table">
+              <MappingFragment StoreEntitySet="dormitories_table">
+                <ScalarProperty Name="id" ColumnName="id" />
+                <ScalarProperty Name="dormitory_type_id" ColumnName="dormitory_type_id" />
+                <ScalarProperty Name="room_price_currency" ColumnName="room_price_currency" />
+                <ScalarProperty Name="room_price_currency_symbol" ColumnName="room_price_currency_symbol" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="dormitories_table_translation">
+            <EntityTypeMapping TypeName="fees_and_facilitiesModel.dormitories_table_translation">
+              <MappingFragment StoreEntitySet="dormitories_table_translation">
+                <ScalarProperty Name="language_id" ColumnName="language_id" />
+                <ScalarProperty Name="dormitories_table_non_trans_id" ColumnName="dormitories_table_non_trans_id" />
+                <ScalarProperty Name="dormitory_name" ColumnName="dormitory_name" />
+                <ScalarProperty Name="dormitory_address" ColumnName="dormitory_address" />
+                <ScalarProperty Name="gender_allocation" ColumnName="gender_allocation" />
+                <ScalarProperty Name="rooms_payment_period" ColumnName="rooms_payment_period" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="dormitory_bank_account_table">
+            <EntityTypeMapping TypeName="fees_and_facilitiesModel.dormitory_bank_account_table">
+              <MappingFragment StoreEntitySet="dormitory_bank_account_table">
+                <ScalarProperty Name="id" ColumnName="id" />
+                <ScalarProperty Name="dormitory_id" ColumnName="dormitory_id" />
+                <ScalarProperty Name="bank_name" ColumnName="bank_name" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="dormitory_information_table">
+            <EntityTypeMapping TypeName="fees_and_facilitiesModel.dormitory_information_table">
+              <MappingFragment StoreEntitySet="dormitory_information_table">
+                <ScalarProperty Name="id" ColumnName="id" />
+                <ScalarProperty Name="dormitory_type_id" ColumnName="dormitory_type_id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="dormitory_information_table_translation">
+            <EntityTypeMapping TypeName="fees_and_facilitiesModel.dormitory_information_table_translation">
+              <MappingFragment StoreEntitySet="dormitory_information_table_translation">
+                <ScalarProperty Name="language_id" ColumnName="language_id" />
+                <ScalarProperty Name="dormitory_info_non_trans_id" ColumnName="dormitory_info_non_trans_id" />
+                <ScalarProperty Name="information" ColumnName="information" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="dormitory_type">
+            <EntityTypeMapping TypeName="fees_and_facilitiesModel.dormitory_type">
+              <MappingFragment StoreEntitySet="dormitory_type">
+                <ScalarProperty Name="id" ColumnName="id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="dormitory_type_translation">
+            <EntityTypeMapping TypeName="fees_and_facilitiesModel.dormitory_type_translation">
+              <MappingFragment StoreEntitySet="dormitory_type_translation">
+                <ScalarProperty Name="language_id" ColumnName="language_id" />
+                <ScalarProperty Name="dormitory_type_non_trans_id" ColumnName="dormitory_type_non_trans_id" />
+                <ScalarProperty Name="type_name" ColumnName="type_name" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="facility_option">
+            <EntityTypeMapping TypeName="fees_and_facilitiesModel.facility_option">
+              <MappingFragment StoreEntitySet="facility_option">
+                <ScalarProperty Name="id" ColumnName="id" />
+                <ScalarProperty Name="facility_id" ColumnName="facility_id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="facility_option_translation">
+            <EntityTypeMapping TypeName="fees_and_facilitiesModel.facility_option_translation">
+              <MappingFragment StoreEntitySet="facility_option_translation">
+                <ScalarProperty Name="facility_option_non_trans_id" ColumnName="facility_option_non_trans_id" />
+                <ScalarProperty Name="language_id" ColumnName="language_id" />
+                <ScalarProperty Name="facility_option" ColumnName="facility_option" />
+                <ScalarProperty Name="facility_option_description" ColumnName="facility_option_description" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="facility_table">
+            <EntityTypeMapping TypeName="fees_and_facilitiesModel.facility_table">
+              <MappingFragment StoreEntitySet="facility_table">
+                <ScalarProperty Name="id" ColumnName="id" />
+                <ScalarProperty Name="facility_icon_url" ColumnName="facility_icon_url" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="facility_table_translation">
+            <EntityTypeMapping TypeName="fees_and_facilitiesModel.facility_table_translation">
+              <MappingFragment StoreEntitySet="facility_table_translation">
+                <ScalarProperty Name="language_id" ColumnName="language_id" />
+                <ScalarProperty Name="facility_table_non_trans_id" ColumnName="facility_table_non_trans_id" />
+                <ScalarProperty Name="facility_title" ColumnName="facility_title" />
+                <ScalarProperty Name="facility_description" ColumnName="facility_description" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="language_table">
+            <EntityTypeMapping TypeName="fees_and_facilitiesModel.language_table">
+              <MappingFragment StoreEntitySet="language_table">
+                <ScalarProperty Name="id" ColumnName="id" />
+                <ScalarProperty Name="name" ColumnName="name" />
+                <ScalarProperty Name="language_code" ColumnName="language_code" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="room_facility">
+            <EntityTypeMapping TypeName="fees_and_facilitiesModel.room_facility">
+              <MappingFragment StoreEntitySet="room_facility">
+                <ScalarProperty Name="id" ColumnName="id" />
+                <ScalarProperty Name="facility_id" ColumnName="facility_id" />
+                <ScalarProperty Name="room_id" ColumnName="room_id" />
+                <ScalarProperty Name="facility_option_id" ColumnName="facility_option_id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="room_table">
+            <EntityTypeMapping TypeName="fees_and_facilitiesModel.room_table">
+              <MappingFragment StoreEntitySet="room_table">
+                <ScalarProperty Name="id" ColumnName="id" />
+                <ScalarProperty Name="dormitory_id" ColumnName="dormitory_id" />
+                <ScalarProperty Name="room_picture_url" ColumnName="room_picture_url" />
+                <ScalarProperty Name="room_price" ColumnName="room_price" />
+                <ScalarProperty Name="room_price_installment" ColumnName="room_price_installment" />
+                <ScalarProperty Name="room_area" ColumnName="room_area" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="room_table_translation">
+            <EntityTypeMapping TypeName="fees_and_facilitiesModel.room_table_translation">
+              <MappingFragment StoreEntitySet="room_table_translation">
+                <ScalarProperty Name="language_id" ColumnName="language_id" />
+                <ScalarProperty Name="room_table_non_trans_id" ColumnName="room_table_non_trans_id" />
+                <ScalarProperty Name="room_type" ColumnName="room_type" />
+                <ScalarProperty Name="room_title" ColumnName="room_title" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="true" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>

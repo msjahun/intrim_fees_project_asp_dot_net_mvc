@@ -1,0 +1,295 @@
+﻿/* Custom Colors for Unit Orange ---------------------*/
+/*MENU*/
+ul#topMenu > li.hasvisiblechild>a{
+  background-image: url(../../../../Style%20Library/branding/images/arrow-down-white.png);
+  background-repeat: no-repeat;
+  background-position: right center;
+}
+
+/*Site Title fontsize */
+.emu-faculty-title a{
+	font-size:32px;
+	color:#003876;
+}
+/* Bootstrap Colors Override ----------------------------*/
+.btn-primary {
+	background-color: #003876;
+	border-color: #003168;
+}
+.btn-primary:hover, .btn-primary:focus, .btn-primary:active {
+	background-color: #002957;
+	border-color: #00254e;
+}
+.btn-default:hover, .btn-default:focus, .btn-default:active {
+	background-color:#d9ebff
+}
+.page-header{
+	margin-top: 0px;
+	border-bottom: 2px solid #003876;
+}
+
+.panel-primary > .panel-heading {
+	background-color: #002957;
+	border-color: #00254e;
+}
+.panel-primary{
+	border-color: #00254e;
+}
+
+.table > thead > tr > th {
+	border-bottom-color:#003876;
+}
+
+/* Text block over Image-----------------------------*/
+a:hover div.emu-description{
+	opacity: 1;
+	filter: alpha(opacity=100);
+	background-color: #003876;
+	color:white;
+}
+
+
+/* Paging Buttons ----------------------------------*/
+.pagination > .active > a, .pagination > .active > span, .pagination > .active > a:hover, .pagination > .active > span:hover, .pagination > .active > a:focus, .pagination > .active > span:focus {
+background-color: #003876;
+border-color: #003168;
+}
+
+.pagination > li > a:hover, .pagination > li > span:hover, .pagination > li > a:focus, .pagination > li > span:focus {
+color: #2a6496;
+background-color: #d9ebff;
+border-color: #ddd;
+}
+
+/* Slider ----------------------------------*/
+
+.emu-sliderTextContainer:hover .emu-sliderText{
+	background: #003876;
+}
+
+.tparrows:hover {
+	background: #003876 !important;
+}
+.tp-bullets.simplebullets .bullet.selected { 
+	background: #003876 !important;
+}
+.rsMinW .rsArrowIcn:hover {
+	background-color: #c31f26;
+	border-color: #da9da0;
+	opacity:0.8;
+	filter: alpha(opacity=80);
+}
+/* Menu & Top Menu --------------------------- */
+.emu-site-logo a:visited,
+.emu-site-logo a:link,
+.emu-site-logo a:hover{
+  text-decoration:none;
+  color:#003876;
+  font-weight:bold;
+}
+ul#topMenu > li.topMenuHome{
+  border-left: #355A82 1px solid;
+}
+ul#topMenu a:hover, ul#topMenu > li.selected > a {
+color: white;background-color: #105EB4;}
+ul#topMenu > li > a {
+    border-right: #355A82 1px solid;
+}
+.emu-top-container a:hover{
+  background-color: #C9E2FE;
+}
+ul#topMenu > li:hover > a, ul#topMenu > li.selectedparent > a{
+     background-color: #105EB4;
+     color:white;
+}
+.emu-header-container{
+  background-color: #fcb131;
+  background-image:url('../images/header-bkg.png');
+}
+.emu-main-menu{
+   background-color: #003876;
+}
+ul#topMenu a{
+	color: #EBEBEB;
+}
+ul#topMenu ul a{
+  color: #1d1d1d;
+}
+/*Mobile Menu --------------------------------*/
+#mobileMenuCont .submenu0 {
+    background-color: #DE9B27;
+}
+#toggleMobileMenu:hover, #mobileSearch:hover, .mobileLang:hover > a{
+	background-color: #FFF0D6;
+}
+.submenu0 > li {
+	border-top: 1px solid #EEA62D;
+	border-bottom: 1px solid #985F00;
+}
+ul#mobileMenu li > a:hover {
+	background-color: #FAA413;
+}
+
+ul#mobileMenu li > .toggle:hover {
+	background-color: #FAA413;
+}
+.submenu1 > li {
+	border-top: 1px solid #DD9925;
+	border-bottom: 1px solid #905F0C;
+}
+
+.submenu2 > li {
+	border-top: 1px solid #C8891D;
+	border-bottom: 1px solid #8E6115;
+}
+
+#mobileMenuCont .submenu1 {
+    background-color: #C2841A;
+}
+
+#mobileMenuCont .submenu2 {
+    background-color: #A56F12;
+}
+#mobileMenuCont .submenu3 {
+    background-color: #ccc;
+}
+
+.submenu0 > li > .toggle {
+	color: #dddddd;
+	background-color: #DE9B27;
+}
+
+.submenu1 > li > .toggle {
+	color: #dddddd;
+	background-color: #996000;
+}
+/* Footer -------------------------------*/
+#emu-footer{
+	border-top: 10px solid #FCB131;
+}
+
+/* ---------------- Custom Buttons Hover --------------*/
+.btn-faculty01:active, .btn-faculty01:focus, .btn-faculty01:hover {
+  color: #f0f0f0;
+  background-color: #001e40;
+  border-color: #003168;
+}
+
+.btn-faculty02:active, .btn-faculty02:focus, .btn-faculty02:hover {
+  color: #f0f0f0;
+  background-color: #003876;
+  border-color: #003168;
+}
+
+.btn-faculty01 {
+  background-color: #003876;
+  border-color: #003168;
+  color: #fff;
+}
+
+.btn-faculty02 {
+  background-color: #FFFFFF;
+  border-color: #606060;
+  color: #292929;
+}
+/* mobile search */
+#mobileSearchContainer{
+	background-color: #DE9B27;
+	border-bottom: 1px solid #985F00;
+}
+
+/*  Sidemenu -----------------------------*/
+.SideMenuJS a{
+   color: #1d1d1d;  
+}
+.SideMenuJS a:hover{
+     background-color: #FCB131;
+     color: #fff;
+}
+
+.SideMenuJS li.selected > a {
+     background-color: #f5f5f5;
+     border-left: 4px solid #FCB131;
+     font-weight: bold;
+}
+.SideMenuJS li.selected > a:hover {
+     color: #1d1d1d;
+}
+/* MOBILE media Queries -----------------------------*/
+
+@media (max-width: 767px) {
+    .emu-footer-top-menu, .emu-footer-main-menu, .emu-footer-address, .emu-sign-in, .emu-top-menu, .emu-rightLogo-continer-aligner, .emu-LSwitchSearchContainer { display:none;} 
+    .emu-top-container{
+      text-align:center;
+    }
+    .emu-main-menu{
+      background-color:transparent;
+    }
+        .emu-top-logo{
+          display:block;
+          text-align:center;
+        }
+    .emu-site-logo {
+      text-align: center;
+      height: 20px;
+      font-size: 26px;
+    }
+    .emu-faculty-logo{
+      float:none;
+    }
+    .emu-faculty-logo img {
+      height:50px;
+    }
+    
+    .emu-faculty-logo-container{
+      display:inline;
+    }
+    .emu-site-logo a {
+      display: inline-block;
+    }
+    .emu-faculty-title{
+      display:block;
+      padding-left:0px;
+    }         
+    .emu-top-container img{
+      display: inline-block;
+      margin-left: auto;
+      margin-right: auto; 
+    }
+        .SideMenuJS{ display:none;
+        }
+        .emu-slider{
+      margin-top:-15px;
+      margin-left:-15px;
+      margin-right:-15px;
+        } 
+        .emu-body-wraper .breadcrumb li{
+          line-height:14px;
+          font-size:12px;
+        }
+        .emu-body-wraper h1{
+          font-size:26px;
+        }
+        .emu-body-wraper h2{
+          font-size:22px;
+        }
+        .emu-body-wraper h3{
+          font-size:20px;
+        }
+        .emu-body-wraper h4{
+          font-size:18px;
+        }
+
+        .emu-body-wraper {
+        padding-top: 15px;
+        }
+        .breadcrumb{
+          margin-bottom:10px;
+        }
+        .emu-teaser{
+          position:relative; 
+        }
+        #scrollup{ 
+        right:20px;
+    }
+}        

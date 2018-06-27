@@ -1,0 +1,241 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="btn_bot_dormitofies_fees" xml:space="preserve">
+    <value>Y.İ.D Yurtları Ücretleri (PDF)</value>
+  </data>
+  <data name="btn_bot_dormitories_fees_2018" xml:space="preserve">
+    <value>Y.İ.D Yurtları Ücretleri 
+(2018 İlkbahar) (PDF)</value>
+  </data>
+  <data name="btn_clear_filter" xml:space="preserve">
+    <value>Temiz filtre</value>
+  </data>
+  <data name="btn_emu_dormitories_fees" xml:space="preserve">
+    <value>DAÜ Yurtları Ücretleri (PDF)</value>
+  </data>
+  <data name="btn_search" xml:space="preserve">
+    <value>Arama</value>
+  </data>
+  <data name="emu_intro_text" xml:space="preserve">
+    <value>Doğu Akdeniz Üniversitesi, bölgedeki en iyi yatakhanelere sahiptir. Aramaya başlamadan önce slayt gösterisinin tadını çıkarın.</value>
+  </data>
+  <data name="filter_glide_price_range" xml:space="preserve">
+    <value>Fiyat aralığı</value>
+  </data>
+  <data name="filter_header_bed" xml:space="preserve">
+    <value>Yatak Türü</value>
+  </data>
+  <data name="filter_header_kitchenette" xml:space="preserve">
+    <value>Mutfak</value>
+  </data>
+  <data name="filter_header_more_options" xml:space="preserve">
+    <value>Daha fazla seçenek</value>
+  </data>
+  <data name="filter_header_nececities" xml:space="preserve">
+    <value>ihtiyaçlar</value>
+  </data>
+  <data name="filter_header_other_options" xml:space="preserve">
+    <value>Diğer seçenekler</value>
+  </data>
+  <data name="filter_header_wc_shower" xml:space="preserve">
+    <value>WC - Duş</value>
+  </data>
+  <data name="filter_head_internet" xml:space="preserve">
+    <value>Internet</value>
+  </data>
+  <data name="filter_head_tv" xml:space="preserve">
+    <value>TV</value>
+  </data>
+  <data name="filter_option_air_condition" xml:space="preserve">
+    <value>Klima</value>
+  </data>
+  <data name="filter_option_bed_bunk" xml:space="preserve">
+    <value>Ranza</value>
+  </data>
+  <data name="filter_option_bed_normal" xml:space="preserve">
+    <value>Normal</value>
+  </data>
+  <data name="filter_option_cafeteria" xml:space="preserve">
+    <value>Kafeterya</value>
+  </data>
+  <data name="filter_option_center_heating_cooling" xml:space="preserve">
+    <value>Merkezi Isıtma</value>
+  </data>
+  <data name="filter_option_generator" xml:space="preserve">
+    <value>Jeneratör</value>
+  </data>
+  <data name="filter_option_internet_wireless" xml:space="preserve">
+    <value>Kablosuz</value>
+  </data>
+  <data name="filter_option_internt_cable" xml:space="preserve">
+    <value>Kablolu</value>
+  </data>
+  <data name="filter_option_kitchenette_flats" xml:space="preserve">
+    <value>Katta</value>
+  </data>
+  <data name="filter_option_kitchenette_room" xml:space="preserve">
+    <value>Odada</value>
+  </data>
+  <data name="filter_option_laundry" xml:space="preserve">
+    <value>Çamaşırhane</value>
+  </data>
+  <data name="filter_option_refrigerator" xml:space="preserve">
+    <value>Buzdolabı</value>
+  </data>
+  <data name="filter_option_room_tel" xml:space="preserve">
+    <value>Oda Telefonmu</value>
+  </data>
+  <data name="filter_option_tv_hall" xml:space="preserve">
+    <value>Salonda</value>
+  </data>
+  <data name="filter_option_tv_room" xml:space="preserve">
+    <value>Odada</value>
+  </data>
+  <data name="filter_option_wc_shower_common" xml:space="preserve">
+    <value>Ortak</value>
+  </data>
+  <data name="filter_option_wc_shower_flats" xml:space="preserve">
+    <value>Katta</value>
+  </data>
+  <data name="filter_option_wc_shower_room" xml:space="preserve">
+    <value>Odada</value>
+  </data>
+  <data name="filter_select_dormitory_name" xml:space="preserve">
+    <value>Yurt adı</value>
+  </data>
+  <data name="filter_select_dormitory_type" xml:space="preserve">
+    <value>Yurt tipi</value>
+  </data>
+  <data name="filter_select_room_area" xml:space="preserve">
+    <value>Oda Alanı</value>
+  </data>
+  <data name="instruction_text" xml:space="preserve">
+    <value>Başlamak için herhangi bir onay kutusunu seçin</value>
+  </data>
+  <data name="lang_code" xml:space="preserve">
+    <value>en</value>
+  </data>
+  <data name="lang_trans_link" xml:space="preserve">
+    <value>/FeesAndFacilities/Index/en</value>
+  </data>
+  <data name="Message" xml:space="preserve">
+    <value>Hello World</value>
+  </data>
+</root>

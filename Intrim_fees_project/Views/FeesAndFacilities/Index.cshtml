@@ -1,0 +1,798 @@
+﻿
+@{
+    /**/
+
+    ViewBag.Title = "Index";
+}
+
+
+
+@Html.AntiForgeryToken()
+
+
+<div class="col-md-9">
+    <div class="skin skin-minimal">
+
+
+        <div class="row">
+            <div class="col">
+                <dd class="selected"></dd>
+                <div class="skin-section">
+                    <h4 id="label_header_tv">
+                        @ViewBag.ContentFormat_filter_head_tv </h4>
+
+                    <ul class="list">
+                        <li>
+                            <input tabindex="7" type="radio" id="minimal-radio-tv-room" name="minimal-radio-tv">
+                            <label for="minimal-radio-tv-room">
+                                @ViewBag.ContentFormat_filter_option_tv_room
+                                                    </label>
+                        </li>
+                        <li>
+                            <input tabindex="8" type="radio" id="minimal-radio-tv-hall" name="minimal-radio-tv">
+                            <label for="minimal-radio-tv-hall">
+                                @ViewBag.ContentFormat_filter_option_tv_hall
+                                                    </label>
+                        </li>
+
+                    </ul>
+                </div>
+            </div>
+
+            <div class="col">
+                <dd class="selected"></dd>
+                <div class="skin-section">
+                    <h4 id="label_header_internet">
+                        @ViewBag.ContentFormat_filter_head_internet
+                                    </h4>
+
+                    <ul class="list">
+                        <li>
+                            <input tabindex="7" type="radio" id="minimal-radio-internet-wireless" name="minimal-radio-internet">
+                            <label for="minimal-radio-internet-wireless">
+                                @ViewBag.ContentFormat_filter_option_internet_wireless
+                                                    </label>
+                        </li>
+                        <li>
+                            <input tabindex="8" type="radio" id="minimal-radio-internet-cable" name="minimal-radio-internet">
+                            <label for="minimal-radio-internet-cable">
+                                @ViewBag.ContentFormat_filter_option_internt_cable
+                                                    </label>
+                        </li>
+
+                    </ul>
+
+
+                </div>
+            </div>
+
+            <div class="col">
+                <dd class="selected"></dd>
+                <div class="skin-section">
+                    <h4 id="label_header_wc_shower">
+                        @ViewBag.ContentFormat_filter_header_wc_shower
+                                    </h4>
+                    <ul class="list">
+                        <li>
+                            <input tabindex="7" type="radio" id="minimal-radio-wc-room" name="minimal-radio-wc">
+                            <label for="minimal-radio-wc-room">
+                                @ViewBag.ContentFormat_filter_option_wc_shower_room
+                                                    </label>
+                        </li>
+                        <li>
+                            <input tabindex="8" type="radio" id="minimal-radio-wc-common" name="minimal-radio-wc">
+                            <label for="minimal-radio-wc-common">
+                                @ViewBag.ContentFormat_filter_option_wc_shower_common
+                                                    </label>
+                        </li>
+                        <li>
+                            <input tabindex="8" type="radio" id="minimal-radio-wc-flats" name="minimal-radio-wc">
+                            <label for="minimal-radio-wc-flats">
+                                @ViewBag.ContentFormat_filter_option_wc_shower_flats
+                                                    </label>
+                        </li>
+
+                    </ul>
+
+
+                </div>
+            </div>
+
+            <div class="col">
+                <dd class="selected"></dd>
+                <div class="skin-section">
+                    <h4 id="label_header_kitchenette">
+                        @ViewBag.ContentFormat_filter_header_kitchenette
+                                    </h4>
+
+                    <ul class="list">
+                        <li>
+                            <input tabindex="7" type="radio" id="minimal-radio-kitchenette-room" name="minimal-radio-kitchenette">
+                            <label for="minimal-radio-kitchenette-room">
+                                @ViewBag.ContentFormat_filter_option_kitchenette_room
+                                                    </label>
+                        </li>
+                        <li>
+                            <input tabindex="8" type="radio" id="minimal-radio-kitchenette-flats" name="minimal-radio-kitchenette">
+                            <label for="minimal-radio-kitchenette-flats">
+                                @ViewBag.ContentFormat_filter_option_kitchenette_flats
+                                                    </label>
+                        </li>
+
+                    </ul>
+
+                </div>
+            </div>
+            <div style=" padding-left: 20px; padding-right: 20px">
+                <a class="pull-right" data-toggle="collapse" href="#collapseMoreoptions" aria-expanded="false" id="label_more_options" aria-controls="collapseMoreoptions">
+                    @ViewBag.ContentFormat_filter_header_more_options
+                    <i class="fa fa-angle-down"></i>
+                </a>
+            </div>
+
+        </div>
+
+
+        <div class="row collapse" id="collapseMoreoptions">
+            <div class="col">
+                <dd class="selected"></dd>
+                <div class="skin-section">
+                    <h4 id="label_header_bed">
+                        @ViewBag.ContentFormat_filter_header_bed
+                                    </h4>
+
+                    <ul class="list">
+                        <li>
+                            <input tabindex="7" type="radio" id="minimal-radio-bed-bunk" name="minimal-radio-bed">
+                            <label for="minimal-radio-bed-bunk">
+                                @ViewBag.ContentFormat_filter_option_bed_bunk
+                                                    </label>
+                        </li>
+                        <li>
+                            <input tabindex="8" type="radio" id="minimal-radio-bed-normal" name="minimal-radio-bed">
+                            <label for="minimal-radio-bed-normal">
+                                @ViewBag.ContentFormat_filter_option_bed_normal
+                                                    </label>
+                        </li>
+
+                    </ul>
+                </div>
+            </div>
+
+            <div class="col">
+                <dd class="selected"></dd>
+                <div class="skin-section">
+                    <h4 id="label_header_nececities">
+                        @ViewBag.ContentFormat_filter_header_nececities
+                    </h4>
+                    <ul class="list">
+                        <li>
+                            <input tabindex="5" type="checkbox" id="minimal-checkbox-air_condition">
+                            <label for="minimal-checkbox-air_condition" id="Label-minimal-checkbox-air_condition">
+                                @ViewBag.ContentFormat_filter_option_air_condition
+                                                    </label>
+                        </li>
+                        <li>
+                            <input tabindex="6" type="checkbox" id="minimal-checkbox-central">
+                            <label for="minimal-checkbox-central" id="Label-minimal-checkbox-central">
+                                @ViewBag.ContentFormat_filter_option_center_heating_cooling
+                                                    </label>
+                        </li>
+                        <li>
+                            <input tabindex="6" type="checkbox" id="minimal-checkbox-refriferator">
+                            <label for="minimal-checkbox-refriferator" id="Label-minimal-checkbox-refriferator">
+                                @ViewBag.ContentFormat_filter_option_refrigerator
+                                                    </label>
+                        </li>
+                        <li>
+                            <input tabindex="6" type="checkbox" id="minimal-checkbox-Laundry">
+                            <label for="minimal-checkbox-Laundry" id="Label-minimal-checkbox-Laundry">
+                                @ViewBag.ContentFormat_filter_option_laundry
+                                                    </label>
+                        </li>
+                        <li>
+                            <input tabindex="6" type="checkbox" id="minimal-checkbox-cafeteria">
+                            <label for="minimal-checkbox-cafeteria" id="Label-minimal-checkbox-cafeteria">
+                                @ViewBag.ContentFormat_filter_option_cafeteria
+                                                    </label>
+                        </li>
+                        <li>
+                            <input tabindex="6" type="checkbox" id="minimal-checkbox-room">
+                            <label for="minimal-checkbox-room" id="Label-minimal-checkbox-room">
+                                @ViewBag.ContentFormat_filter_option_room_tel
+                                                    </label>
+                        </li>
+                        <li>
+                            <input tabindex="6" type="checkbox" id="minimal-checkbox-generator">
+                            <label for="minimal-checkbox-generator" id="Label-minimal-checkbox-generator">
+                                @ViewBag.ContentFormat_filter_option_generator
+                                                    </label>
+                        </li>
+                    </ul>
+
+                </div>
+            </div>
+
+            <div class="col">
+                <dd class="selected"></dd>
+                <div class="skin-section">
+                    <h4 id="label_header_other_options">
+                        @ViewBag.ContentFormat_filter_header_other_options
+                                    </h4>
+                    <div class="form-group">
+
+                        <ul class="list">
+                            <label for="exampleFormControlSelect1" id="LabelFormControlSelectDormitoryType">
+                                @ViewBag.ContentFormat_filter_select_dormitory_type
+                                                    </label>
+                            <select class="form-control" id="selectedDormitoryType">
+                                <option value="0"></option>
+                                <option value="1">EMU Dormitories</option>
+                                <option value="2">BOT (build-operate-transfer) Dormitories</option>
+                            </select>
+                            <br />
+
+                            <label for="exampleFormControlSelect1" id="LabelFormControlSelectDormitoryName">
+                                @ViewBag.ContentFormat_filter_select_dormitory_name
+                                                    </label>
+                            <select class="form-control" id="selectedDormitoryName">
+                                <option></option>
+                                <option>EMU</option>
+
+                                <option>Alfam</option>
+                                <option>Ugursal</option>
+                                <option>Marmara</option>
+                                <option>Akdeniz</option>
+                                <option>Longson</option>
+                                <option>Homedorm</option>
+                                <option>Ramen</option>
+                                <option>Prime Living</option>
+                                <option>Golden Plus</option>
+                                <option>Kamacioglu</option>
+                            </select>
+                            <br />
+
+                            <label for="exampleFormControlSelect1" id="LabelFormControlSelectRoomArea">
+                                @ViewBag.ContentFormat_filter_select_room_area
+                                                    </label>
+                            <select class="form-control" id="selectedRoomArea">
+                                <option value="0"></option>
+                                <option value="25"> 25 m<sup style="vertical-align: super; font-size: smaller;">2</sup> </option>
+                                <option value="10"> 10 m<sup style="vertical-align: super; font-size: smaller; ">2</sup> </option>
+                                <option value="12"> 12 m<sup style="vertical-align: super; font-size: smaller; ">2</sup> </option>
+                                <option value="13"> 13 m<sup style="vertical-align: super; font-size: smaller; ">2</sup> </option>
+                                <option value="15"> 15 m<sup style="vertical-align: super; font-size: smaller; ">2</sup> </option>
+                                <option value="20"> 20 m<sup style="vertical-align: super; font-size: smaller; ">2</sup> </option>
+                                <option value="21"> 21 m<sup style="vertical-align: super; font-size: smaller; ">2</sup> </option>
+                                <option value="22"> 22 m<sup style="vertical-align: super; font-size: smaller; ">2</sup> </option>
+                                <option value="24"> 24 m<sup style="vertical-align: super; font-size: smaller; ">2</sup> </option>
+                                <option value="25"> 25 m<sup style="vertical-align: super; font-size: smaller; ">2</sup> </option>
+                                <option value="27"> 27 m<sup style="vertical-align: super; font-size: smaller; ">2</sup> </option>
+                                <option value="28"> 28 m<sup style="vertical-align: super; font-size: smaller; ">2</sup> </option>
+                                <option value="29"> 29 m<sup style="vertical-align: super; font-size: smaller; ">2</sup> </option>
+                                <option value="30"> 30 m<sup style="vertical-align: super; font-size: smaller; ">2</sup> </option>
+                                <option value="55"> 55 m<sup style="vertical-align: super; font-size: smaller; ">2</sup> </option>
+                            </select>
+
+                        </ul>
+
+
+
+
+
+                    </div>
+
+
+                </div>
+            </div>
+
+
+        </div>
+
+
+
+
+
+
+
+
+        <div class="col" style=" padding-left: 20px; padding-right: 20px">
+
+            <div >
+                <input type="button" id="btnPost" value="@ViewBag.ContentFormat_btn_search" class="btn btn-md btn-color02 pull-right">
+            </div>
+            <div>
+                <input type="button" value="@ViewBag.ContentFormat_btn_clear_filter" id="btnClearFilter" class="btn btn-md btn-color02 pull-right">
+            </div>
+            <br />
+        </div>
+
+        <div class="col" style=" padding-left: 20px; padding-right: 20px">
+            <div>
+                <label for="minimal-checkbox-2">
+                    @ViewBag.ContentFormat_filter_glide_price_range ($|₺)
+                </label> <input type="text" id="range" value="" name="range" />
+            </div>
+
+        </div>
+
+        <hr>
+
+        <div style="text-align&#58;left;  padding-left: 20px; padding-right: 20px;">
+
+            <a class="btn btn-color02" id="btnPost" href="https://dormitories.emu.edu.tr/Documents/fees/dau-yurt-paket-ucretleri-emu-dorm-fees-2017-18.pdf" target="_blank">
+                <span class="glyphicon glyphicon-cloud-download"></span>@ViewBag.ContentFormat_btn_emu_dormitories_fees
+
+            </a>
+
+            <a class="btn btn-color05" href="https://dormitories.emu.edu.tr/Documents/fees/yid-yurt-ucretleri-bot-dorm-fees-2017-18.pdf" target="_blank">
+                <span class="glyphicon glyphicon-cloud-download"></span>@ViewBag.ContentFormat_btn_bot_dormitofies_fees
+
+
+            </a>
+
+            <a class="btn btn-color05" href="https://dormitories.emu.edu.tr/Documents/fees/2018-spring-dorm-fees.pdf" target="_blank">
+                <span class="glyphicon glyphicon-cloud-download"></span>@ViewBag.ContentFormat_btn_bot_dormitories_fees_2018
+
+            </a>
+            <br>
+        </div>
+
+
+
+        <section class="default-section padd-top-40 no-padd-bottom">
+            <div class="auto-container">
+                <div class="row clearfix">
+                    <div class="contact-us no-padd-bottom no-padd-top">
+                        <div class="auto-container">
+
+                            <div id="searchNoResult">
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+
+
+
+
+
+
+        <script>
+
+            $('.skin-minimal input').iCheck({
+                checkboxClass: 'icheckbox_minimal',
+                radioClass: 'iradio_minimal',
+                increaseArea: '20%'
+            });
+
+
+
+            $("#range").ionRangeSlider({
+                hide_min_max: true,
+                keyboard: true,
+                min: 0,
+                max: 5000,
+                from: 100,
+                to: 4000,
+                type: 'double',
+                step: 1,
+                prefix: "",
+                grid: true
+            });
+
+
+
+
+
+
+        </script>
+        <script src="../../Content/js/jquery-1.12.3.min.js"></script>
+        <script src="../../Content/js/ion.rangeSlider.js"></script>
+
+
+
+    </div>
+
+
+</div>
+
+
+
+<div id="content_to_replace">
+    <div class="col-md-12" align="center">
+        <div class="skin skin-minimal">
+
+            <div>
+                <h3 style="text-align: center;
+					vertical-align: middle;
+					line-height: 90px;  color:  #777;">
+                    @ViewBag.ContentFormat_instruction_text
+
+                </h3>
+                <div>
+                    <!-- #region Jssor Slider Begin -->
+                    <!-- Generator: Jssor Slider Maker -->
+                    <!-- Source: https://www.jssor.com -->
+                    <script src="../../Content/js/jssor.slider-27.1.0.min.js" type="text/javascript"></script>
+                    <script type="text/javascript">
+                        jssor_1_slider_init = function () {
+
+                            var jssor_1_SlideshowTransitions = [
+                                { $Duration: 1200, $Zoom: 1, $Easing: { $Zoom: $Jease$.$InCubic, $Opacity: $Jease$.$OutQuad }, $Opacity: 2 },
+                                { $Duration: 1000, $Zoom: 11, $SlideOut: true, $Easing: { $Zoom: $Jease$.$InExpo, $Opacity: $Jease$.$Linear }, $Opacity: 2 },
+                                { $Duration: 1200, $Zoom: 1, $Rotate: 1, $During: { $Zoom: [0.2, 0.8], $Rotate: [0.2, 0.8] }, $Easing: { $Zoom: $Jease$.$Swing, $Opacity: $Jease$.$Linear, $Rotate: $Jease$.$Swing }, $Opacity: 2, $Round: { $Rotate: 0.5 } },
+                                { $Duration: 1000, $Zoom: 11, $Rotate: 1, $SlideOut: true, $Easing: { $Zoom: $Jease$.$InQuint, $Opacity: $Jease$.$Linear, $Rotate: $Jease$.$InQuint }, $Opacity: 2, $Round: { $Rotate: 0.8 } },
+                                { $Duration: 1200, x: 0.5, $Cols: 2, $Zoom: 1, $Assembly: 2049, $ChessMode: { $Column: 15 }, $Easing: { $Left: $Jease$.$InCubic, $Zoom: $Jease$.$InCubic, $Opacity: $Jease$.$Linear }, $Opacity: 2 },
+                                { $Duration: 1200, x: 4, $Cols: 2, $Zoom: 11, $SlideOut: true, $Assembly: 2049, $ChessMode: { $Column: 15 }, $Easing: { $Left: $Jease$.$InExpo, $Zoom: $Jease$.$InExpo, $Opacity: $Jease$.$Linear }, $Opacity: 2 },
+                                { $Duration: 1200, x: 0.6, $Zoom: 1, $Rotate: 1, $During: { $Left: [0.2, 0.8], $Zoom: [0.2, 0.8], $Rotate: [0.2, 0.8] }, $Opacity: 2, $Round: { $Rotate: 0.5 } },
+                                { $Duration: 1000, x: -4, $Zoom: 11, $Rotate: 1, $SlideOut: true, $Easing: { $Left: $Jease$.$InQuint, $Zoom: $Jease$.$InQuart, $Opacity: $Jease$.$Linear, $Rotate: $Jease$.$InQuint }, $Opacity: 2, $Round: { $Rotate: 0.8 } },
+                                { $Duration: 1200, x: -0.6, $Zoom: 1, $Rotate: 1, $During: { $Left: [0.2, 0.8], $Zoom: [0.2, 0.8], $Rotate: [0.2, 0.8] }, $Opacity: 2, $Round: { $Rotate: 0.5 } },
+                                { $Duration: 1000, x: 4, $Zoom: 11, $Rotate: 1, $SlideOut: true, $Easing: { $Left: $Jease$.$InQuint, $Zoom: $Jease$.$InQuart, $Opacity: $Jease$.$Linear, $Rotate: $Jease$.$InQuint }, $Opacity: 2, $Round: { $Rotate: 0.8 } },
+                                { $Duration: 1200, x: 0.5, y: 0.3, $Cols: 2, $Zoom: 1, $Rotate: 1, $Assembly: 2049, $ChessMode: { $Column: 15 }, $Easing: { $Left: $Jease$.$InCubic, $Top: $Jease$.$InCubic, $Zoom: $Jease$.$InCubic, $Opacity: $Jease$.$OutQuad, $Rotate: $Jease$.$InCubic }, $Opacity: 2, $Round: { $Rotate: 0.7 } },
+                                { $Duration: 1000, x: 0.5, y: 0.3, $Cols: 2, $Zoom: 1, $Rotate: 1, $SlideOut: true, $Assembly: 2049, $ChessMode: { $Column: 15 }, $Easing: { $Left: $Jease$.$InExpo, $Top: $Jease$.$InExpo, $Zoom: $Jease$.$InExpo, $Opacity: $Jease$.$Linear, $Rotate: $Jease$.$InExpo }, $Opacity: 2, $Round: { $Rotate: 0.7 } },
+                                { $Duration: 1200, x: -4, y: 2, $Rows: 2, $Zoom: 11, $Rotate: 1, $Assembly: 2049, $ChessMode: { $Row: 28 }, $Easing: { $Left: $Jease$.$InCubic, $Top: $Jease$.$InCubic, $Zoom: $Jease$.$InCubic, $Opacity: $Jease$.$OutQuad, $Rotate: $Jease$.$InCubic }, $Opacity: 2, $Round: { $Rotate: 0.7 } },
+                                { $Duration: 1200, x: 1, y: 2, $Cols: 2, $Zoom: 11, $Rotate: 1, $Assembly: 2049, $ChessMode: { $Column: 19 }, $Easing: { $Left: $Jease$.$InCubic, $Top: $Jease$.$InCubic, $Zoom: $Jease$.$InCubic, $Opacity: $Jease$.$OutQuad, $Rotate: $Jease$.$InCubic }, $Opacity: 2, $Round: { $Rotate: 0.8 } }
+                            ];
+
+                            var jssor_1_options = {
+                                $AutoPlay: 1,
+                                $SlideshowOptions: {
+                                    $Class: $JssorSlideshowRunner$,
+                                    $Transitions: jssor_1_SlideshowTransitions,
+                                    $TransitionsOrder: 1
+                                },
+                                $ArrowNavigatorOptions: {
+                                    $Class: $JssorArrowNavigator$
+                                },
+                                $ThumbnailNavigatorOptions: {
+                                    $Class: $JssorThumbnailNavigator$,
+                                    $Rows: 2,
+                                    $SpacingX: 14,
+                                    $SpacingY: 12,
+                                    $Orientation: 2,
+                                    $Align: 156
+                                }
+                            };
+
+                            var jssor_1_slider = new $JssorSlider$("jssor_1", jssor_1_options);
+
+                            /*#region responsive code begin*/
+
+                            var MAX_WIDTH = 960;
+
+                            function ScaleSlider() {
+                                var containerElement = jssor_1_slider.$Elmt.parentNode;
+                                var containerWidth = containerElement.clientWidth;
+
+                                if (containerWidth) {
+
+                                    var expectedWidth = Math.min(MAX_WIDTH || containerWidth, containerWidth);
+
+                                    jssor_1_slider.$ScaleWidth(expectedWidth);
+                                }
+                                else {
+                                    window.setTimeout(ScaleSlider, 30);
+                                }
+                            }
+
+                            ScaleSlider();
+
+                            $Jssor$.$AddEvent(window, "load", ScaleSlider);
+                            $Jssor$.$AddEvent(window, "resize", ScaleSlider);
+                            $Jssor$.$AddEvent(window, "orientationchange", ScaleSlider);
+                            /*#endregion responsive code end*/
+                        };
+                    </script>
+                    <style>
+                        /*jssor slider loading skin spin css*/
+                        .jssorl-009-spin img {
+                            animation-name: jssorl-009-spin;
+                            animation-duration: 1.6s;
+                            animation-iteration-count: infinite;
+                            animation-timing-function: linear;
+                        }
+
+
+                        /*jssor slider arrow skin 093 css*/
+                        .jssora093 {
+                            display: block;
+                            position: absolute;
+                            cursor: pointer;
+                        }
+
+                            .jssora093 .c {
+                                fill: none;
+                                stroke: #fff;
+                                stroke-width: 400;
+                                stroke-miterlimit: 10;
+                            }
+
+                            .jssora093 .a {
+                                fill: none;
+                                stroke: #fff;
+                                stroke-width: 400;
+                                stroke-miterlimit: 10;
+                            }
+
+                            .jssora093:hover {
+                                opacity: .8;
+                            }
+
+                            .jssora093.jssora093dn {
+                                opacity: .6;
+                            }
+
+                            .jssora093.jssora093ds {
+                                opacity: .3;
+                                pointer-events: none;
+                            }
+
+                        /*jssor slider thumbnail skin 101 css*/
+                        .jssort101 .p {
+                            position: absolute;
+                            top: 0;
+                            left: 0;
+                            box-sizing: border-box;
+                            background: #000;
+                        }
+
+                            .jssort101 .p .cv {
+                                position: relative;
+                                top: 0;
+                                left: 0;
+                                width: 100%;
+                                height: 100%;
+                                border: 2px solid #000;
+                                box-sizing: border-box;
+                                z-index: 1;
+                            }
+
+                        .jssort101 .a {
+                            fill: none;
+                            stroke: #fff;
+                            stroke-width: 400;
+                            stroke-miterlimit: 10;
+                            visibility: hidden;
+                        }
+
+                        .jssort101 .p:hover .cv, .jssort101 .p.pdn .cv {
+                            border: none;
+                            border-color: transparent;
+                        }
+
+                        .jssort101 .p:hover {
+                            padding: 2px;
+                        }
+
+                            .jssort101 .p:hover .cv {
+                                background-color: rgba(0,0,0,6);
+                                opacity: .35;
+                            }
+
+                            .jssort101 .p:hover.pdn {
+                                padding: 0;
+                            }
+
+                                .jssort101 .p:hover.pdn .cv {
+                                    border: 2px solid #fff;
+                                    background: none;
+                                    opacity: .35;
+                                }
+
+                        .jssort101 .pav .cv {
+                            border-color: #fff;
+                            opacity: .35;
+                        }
+
+                        .jssort101 .pav .a, .jssort101 .p:hover .a {
+                            visibility: visible;
+                        }
+
+                        .jssort101 .t {
+                            position: absolute;
+                            top: 0;
+                            left: 0;
+                            width: 100%;
+                            height: 100%;
+                            border: none;
+                            opacity: .6;
+                        }
+
+                        .jssort101 .pav .t, .jssort101 .p:hover .t {
+                            opacity: 1;
+                        }
+                    </style>
+                    <div id="jssor_1" style="position:relative;margin:0 auto;top:0px;left:0px;width:960px;height:480px;overflow:hidden;visibility:hidden;background-color:#24262e;">
+                        <!-- Loading Screen -->
+                        <div data-u="loading" class="jssorl-009-spin" style="position:absolute;top:0px;left:0px;width:100%;height:100%;text-align:center;background-color:rgba(0,0,0,0.7);">
+                            <img style="margin-top:-19px;position:relative;top:50%;width:38px;height:38px;" src="img/spin.svg" />
+                        </div>
+                        <div data-u="slides" style="cursor:default;position:relative;top:0px;left:240px;width:720px;height:480px;overflow:hidden;">
+                            <div data-p="150.00">
+                                <img data-u="image" src="https://dormitories.emu.edu.tr/PhotoGalleries/dormitories/popart/CORIDORS.jpg?RenditionID=7" />
+                                <img data-u="thumb" src="https://dormitories.emu.edu.tr/PhotoGalleries/dormitories/popart/CORIDORS.jpg?RenditionID=7" />
+                            </div>
+                            <div data-p="150.00">
+                                <img data-u="image" src="https://dormitories.emu.edu.tr/PhotoGalleries/dormitories/popart/DOUBLE%20SUIT%20ROOM%201.jpg?RenditionID=7" />
+                                <img data-u="thumb" src="https://dormitories.emu.edu.tr/PhotoGalleries/dormitories/popart/DOUBLE%20SUIT%20ROOM%201.jpg?RenditionID=7" />
+                            </div>
+                            <div data-p="150.00">
+                                <img data-u="image" src="https://dormitories.emu.edu.tr/PhotoGalleries/dormitories/popart/VIP%20EXCLUSIVE.jpg?RenditionID=7" />
+                                <img data-u="thumb" src="https://dormitories.emu.edu.tr/PhotoGalleries/dormitories/popart/VIP%20EXCLUSIVE.jpg?RenditionID=7" />
+                            </div>
+                            <div data-p="150.00">
+                                <img data-u="image" src="https://dormitories.emu.edu.tr/PhotoGalleries/dormitories/popart/TV%20ROOM%20KING%20EXCLUSIVE.jpg?RenditionID=7" />
+                                <img data-u="thumb" src="https://dormitories.emu.edu.tr/PhotoGalleries/dormitories/popart/TV%20ROOM%20KING%20EXCLUSIVE.jpg?RenditionID=7" />
+                            </div>
+                            <div data-p="150.00">
+                                <img data-u="image" src="https://dormitories.emu.edu.tr/PhotoGalleries/dormitories/popart/TEK%20K%C4%B0%C5%9E%C4%B0L%C4%B0K%20EXCLUS%C4%B0VE.jpg?RenditionID=7" />
+                                <img data-u="thumb" src="https://dormitories.emu.edu.tr/PhotoGalleries/dormitories/popart/TEK%20K%C4%B0%C5%9E%C4%B0L%C4%B0K%20EXCLUS%C4%B0VE.jpg?RenditionID=7" />
+                            </div>
+                            <div data-p="150.00">
+                                <img data-u="image" src="https://dormitories.emu.edu.tr/PhotoGalleries/dormitories/popart/CORIDORS.jpg?RenditionID=7" />
+                                <img data-u="thumb" src="https://dormitories.emu.edu.tr/PhotoGalleries/dormitories/popart/CORIDORS.jpg?RenditionID=7" />
+                            </div>
+                            <div data-p="150.00">
+                                <img data-u="image" src="https://dormitories.emu.edu.tr/PhotoGalleries/dormitories/popart/KING%20EXCLUSIVE.jpg?RenditionID=7" />
+                                <img data-u="thumb" src="https://dormitories.emu.edu.tr/PhotoGalleries/dormitories/popart/KING%20EXCLUSIVE.jpg?RenditionID=7" />
+                            </div>
+                            <div data-p="150.00">
+                                <img data-u="image" src="https://dormitories.emu.edu.tr/PhotoGalleries/dormitories/popart/DOUBLE%20SUIT%20ROOM.jpg?RenditionID=7" />
+                                <img data-u="thumb" src="https://dormitories.emu.edu.tr/PhotoGalleries/dormitories/popart/DOUBLE%20SUIT%20ROOM.jpg?RenditionID=7" />
+                            </div>
+                            <div data-p="150.00">
+                                <img data-u="image" src="https://dormitories.emu.edu.tr/PhotoGalleries/dormitories/popart/DOUBLE%20SUIT%20ROOM%201.jpg?RenditionID=7" />
+                                <img data-u="thumb" src="https://dormitories.emu.edu.tr/PhotoGalleries/dormitories/popart/DOUBLE%20SUIT%20ROOM%201.jpg?RenditionID=7" />
+                            </div>
+                            <div data-p="150.00">
+                                <img data-u="image" src="https://dormitories.emu.edu.tr/PhotoGalleries/dormitories/popart/TEK%20K%C4%B0%C5%9E%C4%B0L%C4%B0K%20EXCLUS%C4%B0VE.jpg?RenditionID=7" />
+                                <img data-u="thumb" src="https://dormitories.emu.edu.tr/PhotoGalleries/dormitories/popart/TEK%20K%C4%B0%C5%9E%C4%B0L%C4%B0K%20EXCLUS%C4%B0VE.jpg?RenditionID=7" />
+                            </div>
+                            <div data-p="150.00">
+                                <img data-u="image" src="https://dormitories.emu.edu.tr/PhotoGalleries/dormitories/popart/DOUBLE%20SUIT%20ROOM.jpg?RenditionID=7" />
+                                <img data-u="thumb" src="https://dormitories.emu.edu.tr/PhotoGalleries/dormitories/popart/DOUBLE%20SUIT%20ROOM.jpg?RenditionID=7" />
+                            </div>
+                            <div data-p="150.00">
+                                <img data-u="image" src="https://dormitories.emu.edu.tr/PhotoGalleries/dormitories/popart/FRONT%20DESK.jpg?RenditionID=7" />
+                                <img data-u="thumb" src="https://dormitories.emu.edu.tr/PhotoGalleries/dormitories/popart/FRONT%20DESK.jpg?RenditionID=7" />
+                            </div>
+                            <div data-p="150.00">
+                                <img data-u="image" src="https://dormitories.emu.edu.tr/PhotoGalleries/dormitories/popart/KING%20EXCLUSIVE.jpg?RenditionID=7" />
+                                <img data-u="thumb" src="https://dormitories.emu.edu.tr/PhotoGalleries/dormitories/popart/KING%20EXCLUSIVE.jpg?RenditionID=7" />
+                            </div>
+                        </div>
+                        <!-- Thumbnail Navigator -->
+                        <div data-u="thumbnavigator" class="jssort101" style="position:absolute;left:0px;top:0px;width:240px;height:480px;background-color:#000;" data-autocenter="2" data-scale-left="0.75">
+                            <div data-u="slides">
+                                <div data-u="prototype" class="p" style="width:99px;height:66px;">
+                                    <div data-u="thumbnailtemplate" class="t"></div>
+                                    <svg viewbox="0 0 16000 16000" class="cv">
+                                        <circle class="a" cx="8000" cy="8000" r="3238.1"></circle>
+                                        <line class="a" x1="6190.5" y1="8000" x2="9809.5" y2="8000"></line>
+                                        <line class="a" x1="8000" y1="9809.5" x2="8000" y2="6190.5"></line>
+                                    </svg>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Arrow Navigator -->
+                        <div data-u="arrowleft" class="jssora093" style="width:50px;height:50px;top:0px;left:270px;" data-autocenter="2">
+                            <svg viewbox="0 0 16000 16000" style="position:absolute;top:0;left:0;width:100%;height:100%;">
+                                <circle class="c" cx="8000" cy="8000" r="5920"></circle>
+                                <polyline class="a" points="7777.8,6080 5857.8,8000 7777.8,9920 "></polyline>
+                                <line class="a" x1="10142.2" y1="8000" x2="5857.8" y2="8000"></line>
+                            </svg>
+                        </div>
+                        <div data-u="arrowright" class="jssora093" style="width:50px;height:50px;top:0px;right:30px;" data-autocenter="2">
+                            <svg viewbox="0 0 16000 16000" style="position:absolute;top:0;left:0;width:100%;height:100%;">
+                                <circle class="c" cx="8000" cy="8000" r="5920"></circle>
+                                <polyline class="a" points="8222.2,6080 10142.2,8000 8222.2,9920 "></polyline>
+                                <line class="a" x1="5857.8" y1="8000" x2="10142.2" y2="8000"></line>
+                            </svg>
+                        </div>
+                    </div>
+                    <script type="text/javascript">jssor_1_slider_init();</script>
+                    <!-- #endregion Jssor Slider End -->
+
+                    <p style="text-align: center;
+								vertical-align: middle;
+								line-height: 90px;  color:  #777;">
+                        @ViewBag.ContentFormat_emu_intro_text
+                            </p>
+
+
+
+
+                </div>
+                <br><br><br><br>
+
+            </div>
+        </div>
+    </div>
+</div>
+
+<div style=" padding-left: 20px; padding-right: 20px">
+    <a data-toggle="collapse" href="#extra_info" aria-expanded="false" aria-controls="extra_info">
+        More Dormitory Information <i class="fa fa-angle-down"></i>
+    </a>
+    <br /><br /><br /><br /><br />
+</div>
+
+
+<div id="extra_info" class="collapse" style=" padding-left: 20px; padding-right: 20px">
+    <h3>EMU Dormitories</h3>
+    <div>
+        <ul>
+            <li>
+                <span style="line-height&#58;1.42857;">The fees are in Turkish Lira (TL ) and for one semester.</span>
+            </li>
+            <li>
+                <span style="line-height&#58;1.42857;">Fees can be paid either cash or in 4 installments.</span>
+            </li>
+            <li>
+                <span style="line-height&#58;1.42857;">Elektric (*), water, internet and cleaning services are included in the fee.</span><span style="line-height&#58;1.42857;"></span><br>
+            </li>
+        </ul><div>
+            <span style="line-height&#58;20px;">(*) Electric has quota. If the quota exceeded, students can buy electric for their rooms.<br></span>
+        </div>
+    </div>
+    <div>
+        <br>
+    </div><div>
+        <table class="ms-rteTable-Bootstrap-style-1" width="100%" cellspacing="0">
+            <tbody>
+                <tr class="ms-rteTableHeaderRow-Bootstrap-style-1">
+                    <th class="ms-rteTableHeaderEvenCol-Bootstrap-style-1" rowspan="1" colspan="1" style="width&#58;50%;">Fall Semester</th>
+                    <th class="ms-rteTableHeaderOddCol-Bootstrap-style-1" rowspan="1" colspan="1" style="width&#58;50%;">Spring Semester</th>
+                </tr>
+                <tr class="ms-rteTableOddRow-Bootstrap-style-1">
+                    <td class="ms-rteTableEvenCol-Bootstrap-style-1">1. Installment&#58; During Registration </td>
+                    <td class="ms-rteTableOddCol-Bootstrap-style-1">1. Installment&#58; During Registration </td>
+                </tr>
+                <tr class="ms-rteTableEvenRow-Bootstrap-style-1">
+                    <td class="ms-rteTableEvenCol-Bootstrap-style-1">2. &#160;Installment&#58; 5&#160;November&#160; 2017</td>
+                    <td class="ms-rteTableOddCol-Bootstrap-style-1">2.&#160;Installment&#58; 5 April&#160; 2018</td>
+                </tr>
+                <tr class="ms-rteTableOddRow-Bootstrap-style-1">
+                    <td class="ms-rteTableEvenCol-Bootstrap-style-1">3.&#160;Installment&#58; 5&#160;December&#160; 2017</td>
+                    <td class="ms-rteTableOddCol-Bootstrap-style-1">3.&#160;Installment&#58; 7&#160;May&#160; 2018</td>
+                </tr>
+                <tr class="ms-rteTableEvenRow-Bootstrap-style-1">
+                    <td class="ms-rteTableEvenCol-Bootstrap-style-1">4. Installment&#58; 5 January 2018</td>
+                    <td class="ms-rteTableOddCol-Bootstrap-style-1">4.&#160;Installment&#58; 5&#160;June&#160; 2018</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <br>
+
+        <div>
+
+            <h3>EMU&#160;B.O.T Dormitories</h3>
+            <ul>
+                <li>
+                    All fees are per person, in U.S. Dollars, and to be paid
+                    <span style="text-decoration&#58;underline;">on an annual basis.</span>
+                </li>
+
+                <li>The cash payment or the payment of the I. Installment has to be made on the registration date.</li>
+                <li>All fees can be paid cash or in installments.</li>
+                <li>Some of the dormitories request deposit.</li>
+                <li>Dormitory fees include electricity (*), water, cleaning, and other similar expenses </li>
+                <p>(*) Some of the dormitories has electric quota. </p>
+                <li>All dormitories have rooms for male and female students. </li>
+            </ul>
+
+
+            <br>
+        </div>
+
+
+    </div>
+</div>
+
+<script type="text/javascript" src="../../Scripts/ScriptMain.js" language="JavaScript"> </script>
