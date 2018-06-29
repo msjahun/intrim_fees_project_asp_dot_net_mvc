@@ -6,6 +6,28 @@
         $(document).ready(function () {
             //id="nextLangId" href="/FeesAndFacilities/Index/tr" title="Türkçe">tr
 
+            var langIDPosted = 1;
+            //On page load do this.
+            langIDPosted = $('#hiddenLanguageId').val()
+           
+            if (langIDPosted == 1) {
+                //we're currently on english site
+                var nextLangId = $("#nextLangId");
+              //  nextLangId.setAttribute("href", "/FeesAndFacilities/Index/tr").setAttribute("title", "Türkçe").append("tr");
+                document.getElementById("nextLangId").innerHTML = "tr";
+                document.getElementById("nextLangId").setAttribute("href", "/FeesAndFacilities/Index/tr");
+                document.getElementById("nextLangId").setAttribute("title", "Türkçe");
+            }
+            else if (langIDPosted == 2) {
+                //we're currently on Turkish site
+                var nextLangId = $("#nextLangId");
+               // nextLangId.setAttribute("href", "/FeesAndFacilities/Index/en").setAttribute("title", "English").append("en");
+                document.getElementById("nextLangId").innerHTML = "en";
+                document.getElementById("nextLangId").setAttribute("href", "/FeesAndFacilities/Index/en");
+                document.getElementById("nextLangId").setAttribute("title", "English");
+            }
+          //  alert(langIDPosted);
+            console.log(langIDPosted);
         
 
             $('#btnClearFilter').on('click', function () {
@@ -16,7 +38,7 @@
 
             $('#btnPost').on('click', function () {
 
-
+             //   alert("I have entered the function");
 
                 var name_of_dormitoryPosted = "";
                 var dormitory_typePosted = 0;
@@ -38,12 +60,10 @@
                 var facility_room_telPosted = "";
                 var facility_generatorPosted = "";
                 var langIDPosted = 1;
+                langIDPosted = $('#hiddenLanguageId').val();
+               //<a class="" id="nextLangId"  href="/FeesAndFacilities/Index/tr" title="Türkçe">tr</a>
 
-                if ($('#selectedLangId').find(":selected").text().length != 0) {
-                    //    console.log("Selected room area :" + $('#selectedRoomArea').find(":selected").text());
-                    langIDPosted = parseInt($('#selectedLangId').find(":selected").val());
-                    console.log(langIDPosted);
-                }
+                
 
                 if ($('#minimal-radio-tv-1').is(':checked')) {
                     // console.log("#minimal-radio-tv-1 checked");
@@ -254,7 +274,7 @@
                 console.log("price range: " + minPrice + " " + maxPrice);
 
 
-
+              
 
 
                 document.getElementById('content_to_replace').scrollIntoView(true);
@@ -262,11 +282,13 @@
 
                 $.ajax({
                     type: "POST",
-                    url: "http://localhost:51598/Demo?handler=Send",
+                    url: "http://localhost:52343/api/room_facility",
 
                     beforeSend: function (xhr) {
                         xhr.setRequestHeader("XSRF-TOKEN",
                             $('input:hidden[name="__RequestVerificationToken"]').val());
+
+                     //   alert("I am inside post");
                     },
 
                     data: JSON.stringify({
@@ -297,6 +319,7 @@
                     contentType: "application/json; charset=utf-8",
                     dataType: "json",
                     success: function (response) {
+                    //    alert("I have return " + response);
                         var dvItems = $("#content_to_replace");
                         dvItems.empty();
                         //empty #dvPostItems
@@ -391,10 +414,10 @@
                             //     <img src="./Dormitories_files/thumbnail(3).png" alt="Aspirator"> Aspirator
 
                             // <img src="./Dormitories_files/thumbnail(3).png" alt="Aspirator"> Aspirator
-                            var div_col_md_6_col4 = $('<div>').addClass("col-lg-6 col-md-12 col-xs-12").appendTo(ul_styled_list_two);
-                            var li_image2 = $('<li>').appendTo(div_col_md_6_col4);
-                            var a_more_info_facility = $('<a>').append("More information ").appendTo(li_image2);
-                            var i_fa_angle_down = $('<i>').addClass("fa fa-angle-down").appendTo(a_more_info_facility);
+                            //var div_col_md_6_col4 = $('<div>').addClass("col-lg-6 col-md-12 col-xs-12").appendTo(ul_styled_list_two);
+                            //var li_image2 = $('<li>').appendTo(div_col_md_6_col4);
+                            //var a_more_info_facility = $('<a>').append("More information ").appendTo(li_image2);
+                            //var i_fa_angle_down = $('<i>').addClass("fa fa-angle-down").appendTo(a_more_info_facility);
 
                             //<div class="col-lg-6 col-md-12 col-xs-12">
                             //   <li>
@@ -502,6 +525,7 @@
 
                         });
                         var search_result_no = $("#searchNoResult");
+
                         search_result_no.empty();
 
 
