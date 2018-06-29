@@ -237,4 +237,7 @@
   <data name="Message" xml:space="preserve">
     <value>Hello World</value>
   </data>
+  <data name="language_id" xml:space="preserve">
+    <value>1</value>
+  </data>
 </root>
