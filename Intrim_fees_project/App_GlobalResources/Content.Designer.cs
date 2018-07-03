@@ -394,6 +394,15 @@ namespace Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to 1.
+        /// </summary>
+        internal static string language_id {
+            get {
+                return ResourceManager.GetString("language_id", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to tr.
         /// </summary>
         internal static string lang_code {
