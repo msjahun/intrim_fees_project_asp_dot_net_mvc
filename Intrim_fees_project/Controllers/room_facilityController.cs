@@ -130,7 +130,7 @@ namespace Intrim_fees_project.Controllers
                 List<string> listRoom = new List<string>();
 
 
-                using (var context = new fees_facilitiesEntities())
+                using (var context = new fees_and_facilitiesEntities())
                 {
                     var dormitories = context.dormitories_table
                                         .Include(dormitory_trans => dormitory_trans.dormitories_table_translation)

@@ -282,7 +282,7 @@
 
                 $.ajax({
                     type: "POST",
-                    url: "~/api/room_facility",
+                    url: "http://localhost:52343/api/room_facility",
 
                     beforeSend: function (xhr) {
                         xhr.setRequestHeader("XSRF-TOKEN",
