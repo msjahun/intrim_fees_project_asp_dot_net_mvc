@@ -62,6 +62,7 @@ namespace Intrim_fees_project.Controllers
             ViewBag.ContentFormat_lang_code = Resources.Content.lang_code;
             ViewBag.ContentFormat_lang_trans_link = Resources.Content.lang_trans_link;
             ViewBag.ContentFormat_Message = Resources.Content.Message;
+            ViewBag.ContentFormat_language_id = Resources.Content.language_id;
             return View("Index");
 
         }

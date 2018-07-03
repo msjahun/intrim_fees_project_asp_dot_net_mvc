@@ -188,79 +188,79 @@
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Models\account_information_parameter.cs">
-      <DependentUpon>Fees_and_facilities_model.tt</DependentUpon>
+      <DependentUpon>fess_and_facilities_model.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\account_information_parameter_translation.cs">
-      <DependentUpon>Fees_and_facilities_model.tt</DependentUpon>
+      <DependentUpon>fess_and_facilities_model.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\account_parameter_values.cs">
-      <DependentUpon>Fees_and_facilities_model.tt</DependentUpon>
+      <DependentUpon>fess_and_facilities_model.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\account_parameter_values_translation.cs">
-      <DependentUpon>Fees_and_facilities_model.tt</DependentUpon>
+      <DependentUpon>fess_and_facilities_model.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\bank_currency_table.cs">
-      <DependentUpon>Fees_and_facilities_model.tt</DependentUpon>
+      <DependentUpon>fess_and_facilities_model.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\dormitories_table.cs">
-      <DependentUpon>Fees_and_facilities_model.tt</DependentUpon>
+      <DependentUpon>fess_and_facilities_model.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\dormitories_table_translation.cs">
-      <DependentUpon>Fees_and_facilities_model.tt</DependentUpon>
+      <DependentUpon>fess_and_facilities_model.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\dormitory_bank_account_table.cs">
-      <DependentUpon>Fees_and_facilities_model.tt</DependentUpon>
+      <DependentUpon>fess_and_facilities_model.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\dormitory_information_table.cs">
-      <DependentUpon>Fees_and_facilities_model.tt</DependentUpon>
+      <DependentUpon>fess_and_facilities_model.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\dormitory_information_table_translation.cs">
-      <DependentUpon>Fees_and_facilities_model.tt</DependentUpon>
+      <DependentUpon>fess_and_facilities_model.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\dormitory_type.cs">
-      <DependentUpon>Fees_and_facilities_model.tt</DependentUpon>
+      <DependentUpon>fess_and_facilities_model.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\dormitory_type_translation.cs">
-      <DependentUpon>Fees_and_facilities_model.tt</DependentUpon>
+      <DependentUpon>fess_and_facilities_model.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\facility_option.cs">
-      <DependentUpon>Fees_and_facilities_model.tt</DependentUpon>
+      <DependentUpon>fess_and_facilities_model.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\facility_option_translation.cs">
-      <DependentUpon>Fees_and_facilities_model.tt</DependentUpon>
+      <DependentUpon>fess_and_facilities_model.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\facility_table.cs">
-      <DependentUpon>Fees_and_facilities_model.tt</DependentUpon>
+      <DependentUpon>fess_and_facilities_model.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\facility_table_translation.cs">
-      <DependentUpon>Fees_and_facilities_model.tt</DependentUpon>
+      <DependentUpon>fess_and_facilities_model.tt</DependentUpon>
     </Compile>
-    <Compile Include="Models\Fees_and_facilities_model.Context.cs">
+    <Compile Include="Models\fess_and_facilities_model.Context.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>Fees_and_facilities_model.Context.tt</DependentUpon>
+      <DependentUpon>fess_and_facilities_model.Context.tt</DependentUpon>
     </Compile>
-    <Compile Include="Models\Fees_and_facilities_model.cs">
+    <Compile Include="Models\fess_and_facilities_model.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>Fees_and_facilities_model.tt</DependentUpon>
+      <DependentUpon>fess_and_facilities_model.tt</DependentUpon>
     </Compile>
-    <Compile Include="Models\Fees_and_facilities_model.Designer.cs">
+    <Compile Include="Models\fess_and_facilities_model.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>Fees_and_facilities_model.edmx</DependentUpon>
+      <DependentUpon>fess_and_facilities_model.edmx</DependentUpon>
     </Compile>
     <Compile Include="Models\language_table.cs">
-      <DependentUpon>Fees_and_facilities_model.tt</DependentUpon>
+      <DependentUpon>fess_and_facilities_model.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\room_facility.cs">
-      <DependentUpon>Fees_and_facilities_model.tt</DependentUpon>
+      <DependentUpon>fess_and_facilities_model.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\room_table.cs">
-      <DependentUpon>Fees_and_facilities_model.tt</DependentUpon>
+      <DependentUpon>fess_and_facilities_model.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\room_table_translation.cs">
-      <DependentUpon>Fees_and_facilities_model.tt</DependentUpon>
+      <DependentUpon>fess_and_facilities_model.tt</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
@@ -276,15 +276,15 @@
     <Content Include="ApplicationInsights.config">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="Models\Fees_and_facilities_model.Context.tt">
+    <Content Include="Models\fess_and_facilities_model.Context.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
-      <LastGenOutput>Fees_and_facilities_model.Context.cs</LastGenOutput>
-      <DependentUpon>Fees_and_facilities_model.edmx</DependentUpon>
+      <DependentUpon>fess_and_facilities_model.edmx</DependentUpon>
+      <LastGenOutput>fess_and_facilities_model.Context.cs</LastGenOutput>
     </Content>
-    <Content Include="Models\Fees_and_facilities_model.tt">
+    <Content Include="Models\fess_and_facilities_model.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
-      <DependentUpon>Fees_and_facilities_model.edmx</DependentUpon>
-      <LastGenOutput>Fees_and_facilities_model.cs</LastGenOutput>
+      <DependentUpon>fess_and_facilities_model.edmx</DependentUpon>
+      <LastGenOutput>fess_and_facilities_model.cs</LastGenOutput>
     </Content>
     <Content Include="Scripts\ScriptMain.js" />
     <Content Include="Web.config" />
@@ -315,12 +315,12 @@
     <Content Include="Content\bootstrap.css.map" />
     <Content Include="Content\bootstrap-theme.min.css.map" />
     <Content Include="Content\bootstrap-theme.css.map" />
-    <EntityDeploy Include="Models\Fees_and_facilities_model.edmx">
+    <EntityDeploy Include="Models\fess_and_facilities_model.edmx">
       <Generator>EntityModelCodeGenerator</Generator>
-      <LastGenOutput>Fees_and_facilities_model.Designer.cs</LastGenOutput>
+      <LastGenOutput>fess_and_facilities_model.Designer.cs</LastGenOutput>
     </EntityDeploy>
-    <Content Include="Models\Fees_and_facilities_model.edmx.diagram">
-      <DependentUpon>Fees_and_facilities_model.edmx</DependentUpon>
+    <Content Include="Models\fess_and_facilities_model.edmx.diagram">
+      <DependentUpon>fess_and_facilities_model.edmx</DependentUpon>
     </Content>
     <None Include="packages.config" />
   </ItemGroup>
