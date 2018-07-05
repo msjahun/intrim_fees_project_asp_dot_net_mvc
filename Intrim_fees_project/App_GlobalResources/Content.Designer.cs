@@ -61,6 +61,15 @@ namespace Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to BANK NAME.
+        /// </summary>
+        internal static string bank_name {
+            get {
+                return ResourceManager.GetString("bank_name", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to B.O.T Dormitories&apos; Fees (PDF).
         /// </summary>
         internal static string btn_bot_dormitofies_fees {
@@ -106,11 +115,128 @@ namespace Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to EMU B.O.T Dormitories.
+        /// </summary>
+        internal static string emu_bot_dormitories {
+            get {
+                return ResourceManager.GetString("emu_bot_dormitories", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to All fees are per person, in U.S. Dollars, and to be paid.
+        /// </summary>
+        internal static string emu_bot_dormitories1 {
+            get {
+                return ResourceManager.GetString("emu_bot_dormitories1", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to on an annual basis..
+        /// </summary>
+        internal static string emu_bot_dormitories2 {
+            get {
+                return ResourceManager.GetString("emu_bot_dormitories2", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to The cash payment or the payment of the I. Installment has to be made on the registration date..
+        /// </summary>
+        internal static string emu_bot_dormitories3 {
+            get {
+                return ResourceManager.GetString("emu_bot_dormitories3", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to All fees can be paid cash or in installments..
+        /// </summary>
+        internal static string emu_bot_dormitories4 {
+            get {
+                return ResourceManager.GetString("emu_bot_dormitories4", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Some of the dormitories request deposit..
+        /// </summary>
+        internal static string emu_bot_dormitories5 {
+            get {
+                return ResourceManager.GetString("emu_bot_dormitories5", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Dormitory fees include electricity (*), water, cleaning, and other similar expenses.
+        /// </summary>
+        internal static string emu_bot_dormitories6 {
+            get {
+                return ResourceManager.GetString("emu_bot_dormitories6", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to (*) Some of the dormitories has electric quota..
+        /// </summary>
+        internal static string emu_bot_dormitories7 {
+            get {
+                return ResourceManager.GetString("emu_bot_dormitories7", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to All dormitories have rooms for male and female students..
+        /// </summary>
+        internal static string emu_bot_dormitories8 {
+            get {
+                return ResourceManager.GetString("emu_bot_dormitories8", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to EMU Dormitories Bank Accounts.
+        /// </summary>
+        internal static string emu_dormitories_bank_accounts {
+            get {
+                return ResourceManager.GetString("emu_dormitories_bank_accounts", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to EMU Dormitories&apos; Fees (PDF).
+        /// </summary>
+        internal static string emu_dormitories_fees_pdf {
+            get {
+                return ResourceManager.GetString("emu_dormitories_fees_pdf", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Eastern Mediterranean University has the best dormitories in the region, Enjoy the slideshow before you begin your search..
         /// </summary>
         internal static string emu_intro_text {
             get {
                 return ResourceManager.GetString("emu_intro_text", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Privately-Owned Campus Dormitories.
+        /// </summary>
+        internal static string filter_dormitory_type_bot_dormitories {
+            get {
+                return ResourceManager.GetString("filter_dormitory_type_bot_dormitories", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to EMU Dormitories.
+        /// </summary>
+        internal static string filter_dormitory_type_emu_dormitories {
+            get {
+                return ResourceManager.GetString("filter_dormitory_type_emu_dormitories", resourceCulture);
             }
         }
         
@@ -142,7 +268,7 @@ namespace Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to More options.
+        ///   Looks up a localized string similar to Hide options.
         /// </summary>
         internal static string filter_header_more_options {
             get {
@@ -358,6 +484,42 @@ namespace Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to 10 m2  to  20 m2.
+        /// </summary>
+        internal static string filter_range_10_to_20 {
+            get {
+                return ResourceManager.GetString("filter_range_10_to_20", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to 21 m2  to  25 m2.
+        /// </summary>
+        internal static string filter_range_21_to_25 {
+            get {
+                return ResourceManager.GetString("filter_range_21_to_25", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to 26 m2  to  30 m2.
+        /// </summary>
+        internal static string filter_range_26_to_30 {
+            get {
+                return ResourceManager.GetString("filter_range_26_to_30", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Greater than 30 m2.
+        /// </summary>
+        internal static string filter_range_greater_than_30 {
+            get {
+                return ResourceManager.GetString("filter_range_greater_than_30", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Dormitory Name.
         /// </summary>
         internal static string filter_select_dormitory_name {
@@ -381,6 +543,69 @@ namespace Resources {
         internal static string filter_select_room_area {
             get {
                 return ResourceManager.GetString("filter_select_room_area", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to IBAN TL.
+        /// </summary>
+        internal static string iban_tl {
+            get {
+                return ResourceManager.GetString("iban_tl", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to IBAN USD.
+        /// </summary>
+        internal static string iban_usd {
+            get {
+                return ResourceManager.GetString("iban_usd", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Installment: 25 March 2019.
+        /// </summary>
+        internal static string installment_date_2019 {
+            get {
+                return ResourceManager.GetString("installment_date_2019", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Installment: 25 April 2019.
+        /// </summary>
+        internal static string installment_date_april_2019 {
+            get {
+                return ResourceManager.GetString("installment_date_april_2019", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Installment: 25 December 2018.
+        /// </summary>
+        internal static string installment_date_december_2018 {
+            get {
+                return ResourceManager.GetString("installment_date_december_2018", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Installment: 27 May 2019.
+        /// </summary>
+        internal static string Installment_date_may_2019 {
+            get {
+                return ResourceManager.GetString("Installment_date_may_2019", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Installment: 26  November 2018.
+        /// </summary>
+        internal static string installment_date_november_2019 {
+            get {
+                return ResourceManager.GetString("installment_date_november_2019", resourceCulture);
             }
         }
         
@@ -426,6 +651,114 @@ namespace Resources {
         internal static string Message {
             get {
                 return ResourceManager.GetString("Message", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Elektric (*), water, internet and cleaning services are included in the fee..
+        /// </summary>
+        internal static string ories_2 {
+            get {
+                return ResourceManager.GetString("ories_2", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to (*) Electric has quota. If the quota exceeded, students can buy electric for their rooms..
+        /// </summary>
+        internal static string ories_3 {
+            get {
+                return ResourceManager.GetString("ories_3", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Fall Semester.
+        /// </summary>
+        internal static string ories_fall_semester {
+            get {
+                return ResourceManager.GetString("ories_fall_semester", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Installment: During Registration.
+        /// </summary>
+        internal static string ories_installment_during_registration {
+            get {
+                return ResourceManager.GetString("ories_installment_during_registration", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Installment: 25 October 2018.
+        /// </summary>
+        internal static string ories_installment_october {
+            get {
+                return ResourceManager.GetString("ories_installment_october", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Spring Semester.
+        /// </summary>
+        internal static string ories_spring_semester {
+            get {
+                return ResourceManager.GetString("ories_spring_semester", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Private Dormitories in the Campus.
+        /// </summary>
+        internal static string private_dormitories_in_the_campus {
+            get {
+                return ResourceManager.GetString("private_dormitories_in_the_campus", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Kamacıoğlu Dormitory.
+        /// </summary>
+        internal static string private_dormitory_in_campus_link {
+            get {
+                return ResourceManager.GetString("private_dormitory_in_campus_link", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to EMU Dormitories.
+        /// </summary>
+        internal static string static_text_emu_dormitories {
+            get {
+                return ResourceManager.GetString("static_text_emu_dormitories", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to The fees are in Turkish Lira (TL ) and for one semester.
+        /// </summary>
+        internal static string static_text_emu_dormitories0 {
+            get {
+                return ResourceManager.GetString("static_text_emu_dormitories0", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Fees can be paid either cash or in 4 installments..
+        /// </summary>
+        internal static string static_text_emu_dormitories_1 {
+            get {
+                return ResourceManager.GetString("static_text_emu_dormitories_1", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Fees and Facilities.
+        /// </summary>
+        internal static string static_text_fees_and_facilities {
+            get {
+                return ResourceManager.GetString("static_text_fees_and_facilities", resourceCulture);
             }
         }
     }

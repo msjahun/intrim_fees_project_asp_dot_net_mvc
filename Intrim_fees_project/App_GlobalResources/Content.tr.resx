@@ -146,7 +146,7 @@
     <value>Mutfak</value>
   </data>
   <data name="filter_header_more_options" xml:space="preserve">
-    <value>Daha fazla seçenek</value>
+    <value>Seçenekleri gizle</value>
   </data>
   <data name="filter_header_nececities" xml:space="preserve">
     <value>ihtiyaçlar</value>
@@ -240,5 +240,116 @@
   </data>
   <data name="language_id" xml:space="preserve">
     <value>2</value>
+  </data>
+  <data name="filter_range_10_to_20" xml:space="preserve">
+    <value>10 m2 ila  20 m2</value>
+  </data>
+  <data name="filter_range_21_to_25" xml:space="preserve">
+    <value>21 m2  ila  25 m2</value>
+  </data>
+  <data name="filter_range_26_to_30" xml:space="preserve">
+    <value>26 m2la  30 m2</value>
+  </data>
+  <data name="filter_range_greater_than_30" xml:space="preserve">
+    <value>30 m2'den büyük</value>
+  </data>
+  <data name="filter_dormitory_type_bot_dormitories" xml:space="preserve">
+    <value>Yap İşlet Devret ve Diğer Yurtlar</value>
+  </data>
+  <data name="filter_dormitory_type_emu_dormitories" xml:space="preserve">
+    <value>DAÜ Yurtları</value>
+  </data>
+  <data name="bank_name" xml:space="preserve">
+    <value>BANKA ADI</value>
+  </data>
+  <data name="emu_bot_dormitories" xml:space="preserve">
+    <value>DAÜ Yap-İşlet-Devret Yurtları</value>
+  </data>
+  <data name="emu_bot_dormitories1" xml:space="preserve">
+    <value>Ödeme Planı ve Ücretler</value>
+  </data>
+  <data name="emu_bot_dormitories2" xml:space="preserve">
+    <value>Ücretler USD üzerindendir.</value>
+  </data>
+  <data name="emu_bot_dormitories3" xml:space="preserve">
+    <value>Ücretler PEŞİN veya TAKSİTLİ olmak üzere iki seçeneklidir</value>
+  </data>
+  <data name="emu_bot_dormitories4" xml:space="preserve">
+    <value>Bazı yurtlarda depozito alınmaz ancak normal kullanım dışı zarar-ziyan öğrencilerden tahsil edilir,</value>
+  </data>
+  <data name="emu_bot_dormitories5" xml:space="preserve">
+    <value>Elektrik (*), su, temizlik gibi giderler ücrete dahildir.</value>
+  </data>
+  <data name="emu_bot_dormitories6" xml:space="preserve">
+    <value />
+  </data>
+  <data name="emu_bot_dormitories7" xml:space="preserve">
+    <value>(*) Bazı Yurtlarda elektrik kotalıdır.</value>
+  </data>
+  <data name="emu_bot_dormitories8" xml:space="preserve">
+    <value>Kampüs İçi Özel Yurtlar</value>
+  </data>
+  <data name="emu_dormitories_bank_accounts" xml:space="preserve">
+    <value>DAÜ Yurtları Banka Hesap Numaraları</value>
+  </data>
+  <data name="emu_dormitories_fees_pdf" xml:space="preserve">
+    <value>DAÜ Yurtları Ücretleri (PDF)</value>
+  </data>
+  <data name="iban_tl" xml:space="preserve">
+    <value>IBAN TL</value>
+  </data>
+  <data name="iban_usd" xml:space="preserve">
+    <value>IBAN USD</value>
+  </data>
+  <data name="installment_date_2019" xml:space="preserve">
+    <value>Taksit: Kayıt esnasında</value>
+  </data>
+  <data name="installment_date_april_2019" xml:space="preserve">
+    <value>Taksit: 25 Nisan 2019</value>
+  </data>
+  <data name="installment_date_december_2018" xml:space="preserve">
+    <value>Taksit: 25 Aralık 2018</value>
+  </data>
+  <data name="Installment_date_may_2019" xml:space="preserve">
+    <value>Taksit: 27 Mayıs 2019</value>
+  </data>
+  <data name="installment_date_november_2019" xml:space="preserve">
+    <value>Taksit: 26 Kasım 2018</value>
+  </data>
+  <data name="ories_2" xml:space="preserve">
+    <value>Elektrik(*), su, temizlik gibi giderler ücrete dahildir.</value>
+  </data>
+  <data name="ories_3" xml:space="preserve">
+    <value>(*)Elektrik kotalıdır. Sözleşmede belirtilen kota aşımı durumunda öğrenciler Kw elektrik satın alabilirler.</value>
+  </data>
+  <data name="ories_fall_semester" xml:space="preserve">
+    <value>Güz Dönemi</value>
+  </data>
+  <data name="ories_installment_during_registration" xml:space="preserve">
+    <value>Taksit tarihleri sırası ile</value>
+  </data>
+  <data name="ories_installment_october" xml:space="preserve">
+    <value>Taksit: 25 Ekim 2018</value>
+  </data>
+  <data name="ories_spring_semester" xml:space="preserve">
+    <value>Bahar Dönemi</value>
+  </data>
+  <data name="private_dormitories_in_the_campus" xml:space="preserve">
+    <value>Kampüs İçi Özel Yurtlar</value>
+  </data>
+  <data name="private_dormitory_in_campus_link" xml:space="preserve">
+    <value>Kamacıoğlu Öğrenci Yurdu</value>
+  </data>
+  <data name="static_text_emu_dormitories" xml:space="preserve">
+    <value>DAÜ Yurtları</value>
+  </data>
+  <data name="static_text_emu_dormitories0" xml:space="preserve">
+    <value>Ücretler DÖNEMLİK (TL) üzerindendir.</value>
+  </data>
+  <data name="static_text_emu_dormitories_1" xml:space="preserve">
+    <value>Ücretler PEŞİN veya TAKSİTLİ olmak üzere iki seçeneklidir</value>
+  </data>
+  <data name="static_text_fees_and_facilities" xml:space="preserve">
+    <value>Özellikler ve Ücretler</value>
   </data>
 </root>

@@ -145,7 +145,7 @@
     <value>Kitchenette</value>
   </data>
   <data name="filter_header_more_options" xml:space="preserve">
-    <value>More options</value>
+    <value>Hide options</value>
   </data>
   <data name="filter_header_nececities" xml:space="preserve">
     <value>Nececities</value>
@@ -239,5 +239,116 @@
   </data>
   <data name="language_id" xml:space="preserve">
     <value>1</value>
+  </data>
+  <data name="filter_range_10_to_20" xml:space="preserve">
+    <value>10 m2  to  20 m2</value>
+  </data>
+  <data name="filter_range_21_to_25" xml:space="preserve">
+    <value>21 m2  to  25 m2</value>
+  </data>
+  <data name="filter_range_26_to_30" xml:space="preserve">
+    <value>26 m2  to  30 m2</value>
+  </data>
+  <data name="filter_range_greater_than_30" xml:space="preserve">
+    <value>Greater than 30 m2</value>
+  </data>
+  <data name="bank_name" xml:space="preserve">
+    <value>BANK NAME</value>
+  </data>
+  <data name="emu_bot_dormitories" xml:space="preserve">
+    <value>EMU B.O.T Dormitories</value>
+  </data>
+  <data name="emu_bot_dormitories1" xml:space="preserve">
+    <value>All fees are per person, in U.S. Dollars, and to be paid</value>
+  </data>
+  <data name="emu_bot_dormitories2" xml:space="preserve">
+    <value>on an annual basis.</value>
+  </data>
+  <data name="emu_bot_dormitories3" xml:space="preserve">
+    <value>The cash payment or the payment of the I. Installment has to be made on the registration date.</value>
+  </data>
+  <data name="emu_bot_dormitories4" xml:space="preserve">
+    <value>All fees can be paid cash or in installments.</value>
+  </data>
+  <data name="emu_bot_dormitories5" xml:space="preserve">
+    <value>Some of the dormitories request deposit.</value>
+  </data>
+  <data name="emu_bot_dormitories6" xml:space="preserve">
+    <value>Dormitory fees include electricity (*), water, cleaning, and other similar expenses</value>
+  </data>
+  <data name="emu_bot_dormitories7" xml:space="preserve">
+    <value>(*) Some of the dormitories has electric quota.</value>
+  </data>
+  <data name="emu_bot_dormitories8" xml:space="preserve">
+    <value>All dormitories have rooms for male and female students.</value>
+  </data>
+  <data name="emu_dormitories_bank_accounts" xml:space="preserve">
+    <value>EMU Dormitories Bank Accounts</value>
+  </data>
+  <data name="emu_dormitories_fees_pdf" xml:space="preserve">
+    <value>EMU Dormitories' Fees (PDF)</value>
+  </data>
+  <data name="filter_dormitory_type_bot_dormitories" xml:space="preserve">
+    <value>Privately-Owned Campus Dormitories</value>
+  </data>
+  <data name="filter_dormitory_type_emu_dormitories" xml:space="preserve">
+    <value>EMU Dormitories</value>
+  </data>
+  <data name="iban_tl" xml:space="preserve">
+    <value>IBAN TL</value>
+  </data>
+  <data name="iban_usd" xml:space="preserve">
+    <value>IBAN USD</value>
+  </data>
+  <data name="installment_date_2019" xml:space="preserve">
+    <value>Installment: 25 March 2019</value>
+  </data>
+  <data name="installment_date_april_2019" xml:space="preserve">
+    <value>Installment: 25 April 2019</value>
+  </data>
+  <data name="installment_date_december_2018" xml:space="preserve">
+    <value>Installment: 25 December 2018</value>
+  </data>
+  <data name="Installment_date_may_2019" xml:space="preserve">
+    <value>Installment: 27 May 2019</value>
+  </data>
+  <data name="installment_date_november_2019" xml:space="preserve">
+    <value>Installment: 26  November 2018</value>
+  </data>
+  <data name="ories_2" xml:space="preserve">
+    <value>Elektric (*), water, internet and cleaning services are included in the fee.</value>
+  </data>
+  <data name="ories_3" xml:space="preserve">
+    <value>(*) Electric has quota. If the quota exceeded, students can buy electric for their rooms.</value>
+  </data>
+  <data name="ories_fall_semester" xml:space="preserve">
+    <value>Fall Semester</value>
+  </data>
+  <data name="ories_installment_during_registration" xml:space="preserve">
+    <value>Installment: During Registration</value>
+  </data>
+  <data name="ories_installment_october" xml:space="preserve">
+    <value>Installment: 25 October 2018</value>
+  </data>
+  <data name="ories_spring_semester" xml:space="preserve">
+    <value>Spring Semester</value>
+  </data>
+  <data name="private_dormitories_in_the_campus" xml:space="preserve">
+    <value>Private Dormitories in the Campus</value>
+  </data>
+  <data name="private_dormitory_in_campus_link" xml:space="preserve">
+    <value>Kamacıoğlu Dormitory</value>
+  </data>
+  <data name="static_text_emu_dormitories" xml:space="preserve">
+    <value>EMU Dormitories</value>
+  </data>
+  <data name="static_text_emu_dormitories0" xml:space="preserve">
+    <value>The fees are in Turkish Lira (TL ) and for one semester</value>
+  </data>
+  <data name="static_text_emu_dormitories_1" xml:space="preserve">
+    <value>Fees can be paid either cash or in 4 installments.</value>
+  </data>
+  <data name="static_text_fees_and_facilities" xml:space="preserve">
+    <value>Fees and Facilities</value>
   </data>
 </root>
