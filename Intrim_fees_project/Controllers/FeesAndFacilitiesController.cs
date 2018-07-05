@@ -63,6 +63,56 @@ namespace Intrim_fees_project.Controllers
             ViewBag.ContentFormat_lang_trans_link = Resources.Content.lang_trans_link;
             ViewBag.ContentFormat_Message = Resources.Content.Message;
             ViewBag.ContentFormat_language_id = Resources.Content.language_id;
+
+
+            ViewBag.ContentFormat_filter_range_10_to_20 = Resources.Content.filter_range_10_to_20;
+            ViewBag.ContentFormat_filter_range_21_to_25 = Resources.Content.filter_range_21_to_25;
+            ViewBag.ContentFormat_filter_range_26_to_30 = Resources.Content.filter_range_26_to_30;
+            ViewBag.ContentFormat_filter_range_greater_than_30 = Resources.Content.filter_range_greater_than_30;
+
+       
+            ViewBag.ContentFormat_filter_dormitory_type_emu_dormitories = Resources.Content.filter_dormitory_type_emu_dormitories;
+            ViewBag.ContentFormat_filter_dormitory_type_bot_dormitories = Resources.Content.filter_dormitory_type_bot_dormitories;
+
+
+
+                ViewBag.ContentFormat_static_text_fees_and_facilities = Resources.Content.static_text_fees_and_facilities;
+                ViewBag.ContentFormat_static_text_emu_dormitories = Resources.Content.static_text_emu_dormitories;
+                ViewBag.ContentFormat_static_text_emu_dormitories0 = Resources.Content.static_text_emu_dormitories0;
+                ViewBag.ContentFormat_static_text_emu_dormitories_1 = Resources.Content.static_text_emu_dormitories_1;
+                ViewBag.ContentFormat_ories_2 = Resources.Content.ories_2;
+                ViewBag.ContentFormat_ories_3 = Resources.Content.ories_3;
+                ViewBag.ContentFormat_ories_fall_semester = Resources.Content.ories_fall_semester;
+                ViewBag.ContentFormat_ories_spring_semester = Resources.Content.ories_spring_semester;
+                ViewBag.ContentFormat_ories_installment_during_registration = Resources.Content.ories_installment_during_registration;
+                ViewBag.ContentFormat_installment_date_2019 = Resources.Content.installment_date_2019;
+                ViewBag.ContentFormat_installment_date_november_2019 = Resources.Content.installment_date_november_2019;
+                ViewBag.ContentFormat_installment_date_april_2019 = Resources.Content.installment_date_april_2019;
+                ViewBag.ContentFormat_installment_date_december_2018 = Resources.Content.installment_date_december_2018;
+                ViewBag.ContentFormat_Installment_date_may_2019 = Resources.Content.Installment_date_may_2019;
+                ViewBag.ContentFormat_emu_dormitories_fees_pdf = Resources.Content.emu_dormitories_fees_pdf;
+                ViewBag.ContentFormat_emu_dormitories_bank_accounts = Resources.Content.emu_dormitories_bank_accounts;
+                ViewBag.ContentFormat_bank_name = Resources.Content.bank_name;
+                ViewBag.ContentFormat_iban_tl = Resources.Content.iban_tl;
+                ViewBag.ContentFormat_iban_usd = Resources.Content.iban_usd;
+                ViewBag.ContentFormat_emu_bot_dormitories = Resources.Content.emu_bot_dormitories;
+                ViewBag.ContentFormat_emu_bot_dormitories1 = Resources.Content.emu_bot_dormitories1;
+                ViewBag.ContentFormat_emu_bot_dormitories2 = Resources.Content.emu_bot_dormitories2;
+                ViewBag.ContentFormat_emu_bot_dormitories3 = Resources.Content.emu_bot_dormitories3;
+                ViewBag.ContentFormat_emu_bot_dormitories4 = Resources.Content.emu_bot_dormitories4;
+                ViewBag.ContentFormat_emu_bot_dormitories5 = Resources.Content.emu_bot_dormitories5;
+                ViewBag.ContentFormat_emu_bot_dormitories6 = Resources.Content.emu_bot_dormitories6;
+                ViewBag.ContentFormat_emu_bot_dormitories7 = Resources.Content.emu_bot_dormitories7;
+                ViewBag.ContentFormat_emu_bot_dormitories8 = Resources.Content.emu_bot_dormitories8;
+                ViewBag.ContentFormat_private_dormitories_in_the_campus = Resources.Content.private_dormitories_in_the_campus;
+                ViewBag.ContentFormat_private_dormitory_in_campus_link = Resources.Content.private_dormitory_in_campus_link;
+                ViewBag.ContentFormat_ories_installment_october = Resources.Content.ories_installment_october;
+
+
+
+
+
+
             return View("Index");
 
         }
