@@ -9,7 +9,7 @@
 
 @Html.AntiForgeryToken()
 
-<input type="hidden" id="hiddenLanguageId"  value="@ViewBag.ContentFormat_language_id">
+<input type="hidden" id="hiddenLanguageId" value="@ViewBag.ContentFormat_language_id">
 <div class="col-md-9">
     <div class="skin skin-minimal">
 
@@ -222,14 +222,15 @@
                     </h4>
                     <div class="form-group">
 
-                        <ul class="list">
+
+                      
                             <label for="exampleFormControlSelect1" id="LabelFormControlSelectDormitoryType">
                                 @ViewBag.ContentFormat_filter_select_dormitory_type
                             </label>
-                            <select class="form-control" id="selectedDormitoryType">
+                            <select class="form-control" id="selectedDormitoryType" onchange="getAndSetSelected_dormitory_name(this)">
                                 <option value="0"></option>
-                                <option value="1">EMU Dormitories</option>
-                                <option value="2">BOT (build-operate-transfer) Dormitories</option>
+                                <option value="1">@ViewBag.ContentFormat_filter_dormitory_type_emu_dormitories</option>
+                                <option value="2">@ViewBag.ContentFormat_filter_dormitory_type_bot_dormitories</option>
                             </select>
                             <br />
 
@@ -238,18 +239,7 @@
                             </label>
                             <select class="form-control" id="selectedDormitoryName">
                                 <option></option>
-                                <option>EMU</option>
-
-                                <option>Alfam</option>
-                                <option>Ugursal</option>
-                                <option>Marmara</option>
-                                <option>Akdeniz</option>
-                                <option>Longson</option>
-                                <option>Homedorm</option>
-                                <option>Ramen</option>
-                                <option>Prime Living</option>
-                                <option>Golden Plus</option>
-                                <option>Kamacioglu</option>
+                                
                             </select>
                             <br />
 
@@ -258,25 +248,15 @@
                             </label>
                             <select class="form-control" id="selectedRoomArea">
                                 <option value="0"></option>
-                                <option value="25"> 25 m<sup style="vertical-align: super; font-size: smaller;">2</sup> </option>
-                                <option value="10"> 10 m<sup style="vertical-align: super; font-size: smaller; ">2</sup> </option>
-                                <option value="12"> 12 m<sup style="vertical-align: super; font-size: smaller; ">2</sup> </option>
-                                <option value="13"> 13 m<sup style="vertical-align: super; font-size: smaller; ">2</sup> </option>
-                                <option value="15"> 15 m<sup style="vertical-align: super; font-size: smaller; ">2</sup> </option>
-                                <option value="20"> 20 m<sup style="vertical-align: super; font-size: smaller; ">2</sup> </option>
-                                <option value="21"> 21 m<sup style="vertical-align: super; font-size: smaller; ">2</sup> </option>
-                                <option value="22"> 22 m<sup style="vertical-align: super; font-size: smaller; ">2</sup> </option>
-                                <option value="24"> 24 m<sup style="vertical-align: super; font-size: smaller; ">2</sup> </option>
-                                <option value="25"> 25 m<sup style="vertical-align: super; font-size: smaller; ">2</sup> </option>
-                                <option value="27"> 27 m<sup style="vertical-align: super; font-size: smaller; ">2</sup> </option>
-                                <option value="28"> 28 m<sup style="vertical-align: super; font-size: smaller; ">2</sup> </option>
-                                <option value="29"> 29 m<sup style="vertical-align: super; font-size: smaller; ">2</sup> </option>
-                                <option value="30"> 30 m<sup style="vertical-align: super; font-size: smaller; ">2</sup> </option>
-                                <option value="55"> 55 m<sup style="vertical-align: super; font-size: smaller; ">2</sup> </option>
+                                <option value="1">  @ViewBag.ContentFormat_filter_range_10_to_20</option>
+                                <option value="2"> @ViewBag.ContentFormat_filter_range_21_to_25 </option>
+                                <option value="3">  @ViewBag.ContentFormat_filter_range_26_to_30 </option>
+                                <option value="4">   @ViewBag.ContentFormat_filter_range_greater_than_30</option>
+
+
                             </select>
 
-                        </ul>
-
+                      
 
 
 
@@ -395,13 +375,7 @@
         <script src="@Url.Content("~/")Content/js/jquery-1.12.3.min.js"></script>
         <script src="@Url.Content("~/")Content/js/ion.rangeSlider.js"></script>
 
-        <div id="content_to_replace">
-            <div class="col-md-12" align="center">
-                <div class="skin skin-minimal">
-                    
-                </div>
-            </div>
-        </div>
+
 
     </div>
 
@@ -410,8 +384,89 @@
 
 
 
+<div id="content_to_replace">
+    <div class="col-md-offset-4"
+    <div class="skin skin-minimal">
+    <div class="row">
+    <div class="col-md-9">
+    <h1>@ViewBag.ContentFormat_static_text_fees_and_facilities</h1>
+    <div id="ctl00_PlaceHolderMain_ctl00_label" style="display:none">Page Content</div><div id="ctl00_PlaceHolderMain_ctl00__ControlWrapper_RichHtmlField" class="ms-rtestate-field" style="display:inline" aria-labelledby="ctl00_PlaceHolderMain_ctl00_label">
+    <h3>@ViewBag.ContentFormat_static_text_emu_dormitories</h3><div>
+    <ul>
+    <li>
+    <span style="line-height:1.42857;">@ViewBag.ContentFormat_static_text_emu_dormitories0</span>
+    </li>
+    <li>
+    <span style="line-height:1.42857;">@ViewBag.ContentFormat_static_text_emu_dormitories_1</span>
+    </li>
+    <li>
+    <span style="line-height:1.42857;">@ViewBag.ContentFormat_ories_2</span><span style="line-height:1.42857;"></span><br>
+    </li>
+    </ul><div>
+    <span style="line-height:20px;">@ViewBag.ContentFormat_ories_3<br></span>
+    </div>
+    </div><div>
+    <br>
+    </div><div>
+    <div class="table-responsive"><table class="ms-rteTable-Bootstrap-style-1 table" width="100%" cellspacing="0"><tbody><tr class="ms-rteTableHeaderRow-Bootstrap-style-1"><th class="ms-rteTableHeaderEvenCol-Bootstrap-style-1" rowspan="1" colspan="1" style="width:50%;">@ViewBag.ContentFormat_ories_fall_semester</th><th class="ms-rteTableHeaderOddCol-Bootstrap-style-1" rowspan="1" colspan="1" style="width:50%;">@ViewBag.ContentFormat_ories_spring_semester</th></tr><tr class="ms-rteTableOddRow-Bootstrap-style-1"><td class="ms-rteTableEvenCol-Bootstrap-style-1">1. @ViewBag.ContentFormat_ories_installment_during_registration </td><td class="ms-rteTableOddCol-Bootstrap-style-1">1. @ViewBag.ContentFormat_ories_installment_during_registration </td></tr><tr class="ms-rteTableEvenRow-Bootstrap-style-1"><td class="ms-rteTableEvenCol-Bootstrap-style-1">2. &nbsp;@ViewBag.ContentFormat_ories_installment_october<br></td><td class="ms-rteTableOddCol-Bootstrap-style-1">2.&nbsp;@ViewBag.ContentFormat_installment_date_2019<br></td></tr><tr class="ms-rteTableOddRow-Bootstrap-style-1"><td class="ms-rteTableEvenCol-Bootstrap-style-1">3.&nbsp;@ViewBag.ContentFormat_installment_date_november_2019 <br></td><td class="ms-rteTableOddCol-Bootstrap-style-1">3.&nbsp;@ViewBag.ContentFormat_installment_date_april_2019<br></td></tr><tr class="ms-rteTableEvenRow-Bootstrap-style-1"><td class="ms-rteTableEvenCol-Bootstrap-style-1">4. @ViewBag.ContentFormat_installment_date_december_2018</td><td class="ms-rteTableOddCol-Bootstrap-style-1">4.&nbsp;@ViewBag.ContentFormat_installment_date_december_2018<br></td></tr></tbody></table></div>
+    <br>
+    </div><div style="text-align:left;">
+    <a class="btn btn-color02 external-link" href="/Documents/fees/dau-yurt-paket-ucretleri-emu-dorm-fees-2018-19.pdf" target="_blank"><span class="glyphicon glyphicon-cloud-download"></span>&nbsp; @ViewBag.ContentFormat_emu_dormitories_fees_pdf</a><br>
+    </div><div>
+    <br>
+    </div><div>
+    <div class="table-responsive">
+    <table class="ms-rteTable-Faculty-style-1 table" width="100%" cellspacing="0">
+    <tbody>
+    <tr class="ms-rteTableEvenRow-Faculty-style-1">
+    <td class="ms-rteTableEvenCol-Faculty-style-1" colspan="3" style="width:33.3333%;">
+    <strong>@ViewBag.ContentFormat_emu_dormitories_bank_account</strong>
+    </td>
+    </tr>
+    <tr class="ms-rteTableOddRow-Faculty-style-1">
+    <td class="ms-rteTableEvenCol-Faculty-style-1">
+    <strong>@ViewBag.ContentFormat_bank_name</strong>
+    </td>
+    <td class="ms-rteTableOddCol-Faculty-style-1">
+    <strong>@ViewBag.ContentFormat_iban_tl</strong>
+    </td>
+    <td class="ms-rteTableEvenCol-Faculty-style-1">
+        <strong>@ViewBag.ContentFormat_iban_usd </strong>
+    </td>
+    </tr>
+    <tr class="ms-rteTableEvenRow-Faculty-style-1"><td class="ms-rteTableEvenCol-Faculty-style-1">İs Bankasi<br> (Magusa Branch)</td><td class="ms-rteTableOddCol-Faculty-style-1">TR42-0006 4000 001 6820 0275509 (TL)</td><td class="ms-rteTableEvenCol-Faculty-style-1">TR 16 0006 4000 002&nbsp; 6820 0760487 (USD)</td></tr>
+    </tbody>
+    </table>
+    </div>
+    <br>
+    </div><div>
+              <h3>@ViewBag.ContentFormat_emu_bot_dormitories </h3><ul>
+    <li>
+    @ViewBag.ContentFormat_emu_bot_dormitories1
+    <span style="text-decoration:underline;">@ViewBag.ContentFormat_emu_bot_dormitories2</span>
+    </li>
+    <li>@ViewBag.ContentFormat_emu_bot_dormitories3</li>
+    <li>@ViewBag.ContentFormat_emu_bot_dormitories4</li>
+    <li>@ViewBag.ContentFormat_emu_bot_dormitories5</li>
+    <li>@ViewBag.ContentFormat_emu_bot_dormitories6 </li>
+    <p>@ViewBag.ContentFormat_emu_bot_dormitories7 </p>
+    <li>@ViewBag.ContentFormat_emu_bot_dormitories8 </li>
+    </ul>
+    <br>
+
+    <div></div><h3>@ViewBag.ContentFormat_private_dormitories_in_the_campus <br></h3><p style="text-align:left;">
+                                                                                         <b>@ViewBag.ContentFormat_private_dormitory_in_campus_link  -&nbsp;<a href="http://www.kamaciogluyurt.com/" target="_blank" class="external-link">http://www.kamaciogluyurt.com/</a></b>
+    </p>
+    </div>
+    </div>
+
+
+    </div>
+    </div>
+    </div>
+    </div>
 
 
 
 
-<script type="text/javascript" src="@Url.Content("~/")Scripts/ScriptMain.js" language="JavaScript"> </script>
+    <script type="text/javascript" src="@Url.Content("~/")Scripts/ScriptMain.js" language="JavaScript"></script>

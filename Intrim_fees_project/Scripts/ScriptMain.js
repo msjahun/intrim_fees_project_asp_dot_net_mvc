@@ -1,11 +1,20 @@
 ﻿
-   
+
         //On page load do this.
 
 
         $(document).ready(function () {
             //id="nextLangId" href="/FeesAndFacilities/Index/tr" title="Türkçe">tr
 
+         
+            //function getAndSetSelected_dormitory_name(sel) {
+            //  alert(sel.value);
+
+            //    document.getElementById("selectedDormitoryName").innerHTML = "<option>hello</option>";
+                
+       
+            //    alert("already set");
+            //}
             var langIDPosted = 1;
             //On page load do this.
             langIDPosted = $('#hiddenLanguageId').val()
@@ -28,7 +37,83 @@
             }
           //  alert(langIDPosted);
             console.log(langIDPosted);
-        
+
+           
+
+
+            $('#selectedDormitoryType').on('change', function () {
+            //    alert(this.value + "I am the one who knocks");
+                
+               // document.getElementById("selectedDormitoryName").innerHTML = "<option>hello</option>";
+                
+               var dormitory_typePosted = this.value;
+                var langIDPosted = 1;
+                langIDPosted = $('#hiddenLanguageId').val();
+
+
+                $.ajax({
+                    type: "POST",
+                    url: "http://localhost:52343/api/dormitories_table_translation",
+
+                    beforeSend: function (xhr) {
+                        xhr.setRequestHeader("XSRF-TOKEN",
+                            $('input:hidden[name="__RequestVerificationToken"]').val());
+
+                        //   alert("I am inside post");
+                    },
+
+                    data: JSON.stringify({
+
+
+                      
+                        dormitory_type: dormitory_typePosted,
+                        langId: langIDPosted 
+
+                    }),
+                    //data is sent when json is strintify;
+                    contentType: "application/json; charset=utf-8",
+                    dataType: "json",
+                    success: function (response) {
+                          //  alert("I have return " + response);
+                        var slItems = $("#selectedDormitoryName");
+                        slItems.empty();
+
+                        $.each(response, function (i, item) {
+                            $('<option>').append(item).appendTo(slItems);
+                        });
+                         
+
+                    },
+                    failure: function (response) {
+                        alert(response);
+                    }
+                });
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+             
+              //  <option>Marmara</option>
+                 //   <option>Akdeniz</option>
+
+              //alert("already set");
+            })
+
+
+
+
+
 
             $('#btnClearFilter').on('click', function () {
                 location.reload();
@@ -44,7 +129,8 @@
                 var dormitory_typePosted = 0;
                 var min_price_of_roomPosted = 0;
                 var max_price_of_roomPosted = 100000000000;
-                var room_areaPosted = 0;
+                var room_areaPostedMin = 0;
+                var room_areaPostedMax = 100000;
 
                 var facility_TVPosted = "";
                 var facility_InternetPosted = "";
@@ -260,7 +346,32 @@
                 if ($('#selectedRoomArea').find(":selected").text().length != 0) {
                     //    console.log("Selected room area :" + $('#selectedRoomArea').find(":selected").text());
                     room_areaPosted = parseInt($('#selectedRoomArea').find(":selected").val());
-                    console.log(room_areaPosted);
+                    if (room_areaPosted == 1) {
+                        //between 10 to 20
+                        room_areaPostedMin = 10;
+                        room_areaPostedMax = 20;
+
+                    } else if (room_areaPosted == 2) {
+                        //between 21 to 25
+                        room_areaPostedMin = 21;
+                        room_areaPostedMax = 25;
+
+                    } else if (room_areaPosted == 3) {
+                        //between 26 to 30
+                        room_areaPostedMin = 26;
+                        room_areaPostedMax = 30;
+
+                    } else if (room_areaPosted == 4) {
+                        //grater than 30
+                        room_areaPostedMin = 31;
+                        room_areaPostedMax = 10000;
+                    }
+                    else {
+                        //0
+                        room_areaPostedMin = 0;
+                        room_areaPostedMax = 10000;
+                    }
+                    console.log("room area min="+room_areaPostedMin+ " room area max" +room_areaPostedMax);
                 }
 
 
@@ -282,7 +393,7 @@
 
                 $.ajax({
                     type: "POST",
-                    url: "~/api/room_facility",
+                    url: "http://localhost:52343/api/room_facility",
 
                     beforeSend: function (xhr) {
                         xhr.setRequestHeader("XSRF-TOKEN",
@@ -298,7 +409,8 @@
                         dormitory_type: dormitory_typePosted,
                         min_price_of_room: min_price_of_roomPosted,
                         max_price_of_room: max_price_of_roomPosted,
-                        room_area: room_areaPosted,
+                        room_areaMin: room_areaPostedMin,
+                        room_areaMax: room_areaPostedMax,
                         langId: langIDPosted,
                         facility_TV: facility_TVPosted,
                         facility_Internet: facility_InternetPosted,
@@ -364,8 +476,8 @@
                             var div_row_clearfix2 = $('<div>').addClass("row clearfix").appendTo(div_inner_box);
                             var div_col_md_6_col = $('<div>').addClass("col-md-6 col-sm-6 col-xs-12").appendTo(div_row_clearfix2);
                             var figure_image = $('<figure>').addClass("image").appendTo(div_col_md_6_col);
-                            var a_href_class_light_box = $('<a>').attr('href', '').attr('title', item.name_of_dormitory + " | " + item.name_of_room).appendTo(figure_image);
-                            var image_src_dormitory = $('<img>').attr('src', item.url_of_room_image).attr('alt', item.name_of_dormitory + " | " + item.name_of_room).appendTo(a_href_class_light_box);
+                            var a_href_class_light_box = $('<a>').attr('title', item.name_of_dormitory + " | " + item.name_of_room).appendTo(figure_image);
+                            var image_src_dormitory = $('<img>').attr('onclick', "window.open('" + item.dormitory_address + "', '_blank');").attr('src', item.url_of_room_image).attr('alt', item.name_of_dormitory + " | " + item.name_of_room).appendTo(a_href_class_light_box);
                             // <div id="odalar">
                             // <div class="item-box portfolio-item mix mix-all room_cift_kisilik">
                             //  <div class="inner-box">
@@ -384,7 +496,9 @@
                             var div_cont_column = $('<div>').addClass("cont-column").appendTo(div_col_md_6_col2);
                             var div_inner_box2 = $('<div>').addClass("inner-box").appendTo(div_cont_column);
                             var h3_heref = $('<h3>').appendTo(div_inner_box2);
-                            var a_href_javas = $('<a>').attr('href', 'javascript:;').append(item.name_of_dormitory + " | " + item.name_of_room).appendTo(h3_heref);
+                            var bold_it = $('<b>').appendTo(h3_heref);
+                            var a_href_javas = $('<a>').attr('onclick', "window.open('"+item.dormitory_address+"', '_blank');").addClass("header_partial_view").append(item.name_of_dormitory + " | " + item.name_of_room).appendTo(bold_it);
+                          
                             var h3_heref = $('<hr>').appendTo(div_inner_box2);
                             var div_row_clearfix3 = $('<div>').addClass("row clearfix").appendTo(div_inner_box2);
                             var div_description = $('<div>').addClass("description").appendTo(div_row_clearfix3);
@@ -504,19 +618,19 @@
                             //  <p>IBAN&#58; TR04 0006 4000 0026 8200 057259</p>
                             //  </td>
 
-                            var div_style_text_align = $('<div>').attr("style", "text-align&#58;left;  padding-left: 20px; padding-right: 20px;").appendTo(div_class_row3x);
-                            var aa_button_official_website = $('<a>').attr("href", item.dormitory_website).attr("target", "_blank").addClass("btn btn-color02").append("&#160;Official " + item.name_of_dormitory + " website&#160;").appendTo(div_style_text_align);
+                          //  var div_style_text_align = $('<div>').attr("style", "text-align&#58;left;  padding-left: 20px; padding-right: 20px;").appendTo(div_class_row3x);
+                           // var aa_button_official_website = $('<a>').attr("href", item.dormitory_website).attr("target", "_blank").addClass("btn btn-color02").append("&#160;Official " + item.name_of_dormitory + " website&#160;").appendTo(div_style_text_align);
 
                             //  <div style="text-align&#58;left;  padding-left: 20px; padding-right: 20px;">
                             //     <a class="btn btn-color02" href="https://dormitories.emu.edu.tr/Documents/fees/dau-yurt-paket-ucretleri-emu-dorm-fees-2017-18.pdf" target="_blank">
                             //         &#160;Official Dormitory website&#160;
 
                             var brxx1 = $('<br>').appendTo(div_odaler);
-                            var brxx2 = $('<br>').appendTo(div_odaler);
+                           // var brxx2 = $('<br>').appendTo(div_odaler);
 
-                            var div_inner_box = $('<div>').addClass("line-centered").appendTo(div_odaler);
+                          //  var div_inner_box = $('<div>').addClass("line-centered").appendTo(div_odaler);
 
-                            var hrxx2 = $('<hr>').appendTo(div_odaler);
+                         //   var hrxx2 = $('<hr>').appendTo(div_odaler);
                             //   <br><br>
                             //     <div class="line-centered"></div>
                             //    <hr>

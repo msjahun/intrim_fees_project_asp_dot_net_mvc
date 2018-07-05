@@ -165,6 +165,7 @@
           <Property Name="room_picture_url" Type="varchar" MaxLength="500" Nullable="false" />
           <Property Name="room_price" Type="float" Nullable="false" />
           <Property Name="room_price_installment" Type="float" Nullable="false" />
+          <Property Name="num_rooms_left" Type="int" Nullable="false" />
           <Property Name="room_area" Type="int" Nullable="false" />
         </EntityType>
         <EntityType Name="room_table_translation">
@@ -827,6 +828,7 @@
           <Property Name="room_picture_url" Type="String" MaxLength="500" FixedLength="false" Unicode="false" Nullable="false" />
           <Property Name="room_price" Type="Double" Nullable="false" />
           <Property Name="room_price_installment" Type="Double" Nullable="false" />
+          <Property Name="num_rooms_left" Type="Int32" Nullable="false" />
           <Property Name="room_area" Type="Int32" Nullable="false" />
           <NavigationProperty Name="dormitories_table" Relationship="Self.room_table_fk0" FromRole="room_table" ToRole="dormitories_table" />
           <NavigationProperty Name="room_facility" Relationship="Self.room_facility_fk1" FromRole="room_table" ToRole="room_facility" />
@@ -1156,7 +1158,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <EntityContainer Name="Entities" annotation:LazyLoadingEnabled="true">
+        <EntityContainer Name="Entities1" annotation:LazyLoadingEnabled="true">
           <EntitySet Name="account_information_parameter" EntityType="Self.account_information_parameter" />
           <EntitySet Name="account_information_parameter_translation" EntityType="Self.account_information_parameter_translation" />
           <EntitySet Name="account_parameter_values" EntityType="Self.account_parameter_values" />
@@ -1287,7 +1289,7 @@
     <!-- C-S mapping content -->
     <edmx:Mappings>
       <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
-        <EntityContainerMapping StorageEntityContainer="fees_and_facilitiesModelStoreContainer" CdmEntityContainer="Entities">
+        <EntityContainerMapping StorageEntityContainer="fees_and_facilitiesModelStoreContainer" CdmEntityContainer="Entities1">
           <EntitySetMapping Name="account_information_parameter">
             <EntityTypeMapping TypeName="fees_and_facilitiesModel.account_information_parameter">
               <MappingFragment StoreEntitySet="account_information_parameter">
@@ -1458,6 +1460,7 @@
                 <ScalarProperty Name="room_picture_url" ColumnName="room_picture_url" />
                 <ScalarProperty Name="room_price" ColumnName="room_price" />
                 <ScalarProperty Name="room_price_installment" ColumnName="room_price_installment" />
+                <ScalarProperty Name="num_rooms_left" ColumnName="num_rooms_left" />
                 <ScalarProperty Name="room_area" ColumnName="room_area" />
               </MappingFragment>
             </EntityTypeMapping>
