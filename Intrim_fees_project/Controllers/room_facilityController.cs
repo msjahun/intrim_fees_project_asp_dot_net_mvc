@@ -42,7 +42,8 @@ namespace Intrim_fees_project.Controllers
             int dormitory_typePosted = 1;
             double min_price_of_roomPosted = 0;
             double max_price_of_roomPosted = 10000;
-            int room_areaPosted = 0;
+            int room_areaPostedMin = 0;
+            int room_areaPostedMax = 10000;
             int langIDPosted = 0;
 
             string facility_TVPosted = " ";
@@ -64,7 +65,8 @@ namespace Intrim_fees_project.Controllers
             dormitory_typePosted = obj.dormitory_type;
             min_price_of_roomPosted = obj.min_price_of_room;
             max_price_of_roomPosted = obj.max_price_of_room;
-            room_areaPosted = obj.room_area;
+            room_areaPostedMin = obj.room_areaMin;
+            room_areaPostedMax = obj.room_areaMax;
             langIDPosted = obj.langId;
 
             facility_TVPosted = obj.facility_TV;
@@ -130,7 +132,7 @@ namespace Intrim_fees_project.Controllers
                 List<string> listRoom = new List<string>();
 
 
-                using (var context = new Entities())
+                using (var context = new Entities1())
                 {
                     var dormitories = context.dormitories_table
                                         .Include(dormitory_trans => dormitory_trans.dormitories_table_translation)
@@ -264,18 +266,49 @@ namespace Intrim_fees_project.Controllers
 
 
                                     faci.Add(new Facility { facility_name = "Room Area: " + room_t.room_area + " m" + "<sup style=\"font-size: smaller; \">2</sup>", facility_icon_url = "../../Content/Dormitories_files/room_area.jpg" });
-                                    faci.Add(new Facility { facility_name = "Price: " + dorm.room_price_currency + " " + room_t.room_price, facility_icon_url = "../../Content/Dormitories_files/price.png" });
+                                    faci.Add(new Facility { facility_name = "<b style=\"color:#0ab21b\">Price: " + dorm.room_price_currency + " " + room_t.room_price +"</b>" , facility_icon_url = "../../Content/Dormitories_files/price.png" });
+
+
+
+
+                                    if (langIDPosted == 1)
+
+
+                                        if (room_t.num_rooms_left > 1)
+                                        {
+                                            faci.Add(new Facility { facility_name = "<b  onMouseOver=\"this.style.color = '#0F0' onMouseOut = \"this.style.color='#00F'\">Only " + room_t.num_rooms_left + "  rooms left</b>", facility_icon_url = "../../Content/Dormitories_files/image_key.png" });
+                                        }
+                                        else
+                                        {
+                                            faci.Add(new Facility { facility_name = "<b  onMouseOver=\"this.style.color = '#0F0' onMouseOut = \"this.style.color='#00F'\">Only " + room_t.num_rooms_left + "  room left</b>", facility_icon_url = "../../Content/Dormitories_files/image_key.png" });
+
+                                        }
+
+                                    else
+
+                                           if (room_t.num_rooms_left > 1)
+                                    {
+
+
+                                        faci.Add(new Facility { facility_name = "<b  onMouseOver=\"this.style.color = '#0F0' onMouseOut = \"this.style.color='#00F'\">Sadece " + room_t.num_rooms_left + "  Odalar  kaldı </b>", facility_icon_url = "../../Content/Dormitories_files/image_key.png" });
+                                    }
+                                    else
+                                    {
+                                        faci.Add(new Facility { facility_name = "<b  onMouseOver=\"this.style.color = '#0F0' onMouseOut = \"this.style.color='#00F'\">Sadece " + room_t.num_rooms_left + " oda kaldı </b>", facility_icon_url = "../../Content/Dormitories_files/image_key.png" });
+                                    }
 
 
                                     arr.Add(new PostData
                                     {
                                         name_of_dormitory = dorm_trans.dormitory_name,
+                                        dormitory_address = dorm_trans.dormitory_address,
                                         name_of_room = room_trans.room_title + " (" + dorm_trans.gender_allocation + ")",
                                         url_of_room_image = room_t.room_picture_url,
                                         facility = faci,
                                         dormitory_type = dorm.dormitory_type_id,
                                         price_of_room = room_t.room_price,
                                         room_area = room_t.room_area,
+                                        num_rooms_left = room_t.num_rooms_left,
                                         dormitory_account = dorm_trans.dormitory_name,
                                         bank_name = "bank name",
                                         turkish_lira_account_number = tr_acct_num,
@@ -370,7 +403,7 @@ namespace Intrim_fees_project.Controllers
 
                 var query = arr;
 
-                if (room_areaPosted == 0)
+                if (room_areaPostedMin == 0)
                 {
 
                     if (dormitory_typePosted == 0)
@@ -408,7 +441,7 @@ namespace Intrim_fees_project.Controllers
                            .Where(item =>
                               item.name_of_dormitory.Contains(name_of_dormitoryPosted) &&
 
-                              item.room_area == room_areaPosted &&
+                              item.room_area >= room_areaPostedMin && item.room_area <= room_areaPostedMax &&
                               item.price_of_room >= min_price_of_roomPosted && item.price_of_room <= max_price_of_roomPosted &&
                               item.facility.Any(fac => fac.facility_name.Contains(q.ToString())))
                            .ToList();
@@ -420,7 +453,7 @@ namespace Intrim_fees_project.Controllers
                            .Where(item =>
                               item.name_of_dormitory.Contains(name_of_dormitoryPosted) &&
                               item.dormitory_type == dormitory_typePosted &&
-                              item.room_area == room_areaPosted &&
+                              item.room_area >= room_areaPostedMin && item.room_area <= room_areaPostedMax &&
                               item.price_of_room >= min_price_of_roomPosted && item.price_of_room <= max_price_of_roomPosted &&
                               item.facility.Any(fac => fac.facility_name.Contains(q.ToString())))
                            .ToList();
@@ -458,7 +491,8 @@ namespace Intrim_fees_project.Controllers
 
             public double min_price_of_room { get; set; }
             public double max_price_of_room { get; set; }
-            public int room_area { get; set; }
+            public int room_areaMin { get; set; }
+            public int room_areaMax { get; set; }
             public int langId { get; set; }
 
             public string facility_TV { get; set; }
@@ -483,7 +517,9 @@ namespace Intrim_fees_project.Controllers
             public string name_of_room { get; set; }
             public double price_of_room { get; set; }
             public int dormitory_type { get; set; }
+            public string dormitory_address { get; set; }
             public int room_area { get; set; }
+            public int num_rooms_left { get; set; }
             public string url_of_room_image { get; set; }
             public List<Facility> facility { get; set; }
             public string dormitory_account { get; set; }
