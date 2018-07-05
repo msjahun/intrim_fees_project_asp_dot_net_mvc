@@ -4,7 +4,7 @@
   <edmx:Runtime>
     <!-- SSDL content -->
     <edmx:StorageModels>
-      <Schema Namespace="fees_facilitiesModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+      <Schema Namespace="fees_and_facilitiesModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
         <EntityType Name="account_information_parameter">
           <Key>
             <PropertyRef Name="id" />
@@ -489,7 +489,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <EntityContainer Name="fees_facilitiesModelStoreContainer">
+        <EntityContainer Name="fees_and_facilitiesModelStoreContainer">
           <EntitySet Name="account_information_parameter" EntityType="Self.account_information_parameter" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="account_information_parameter_translation" EntityType="Self.account_information_parameter_translation" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="account_parameter_values" EntityType="Self.account_parameter_values" Schema="dbo" store:Type="Tables" />
@@ -619,7 +619,7 @@
     </edmx:StorageModels>
     <!-- CSDL content -->
     <edmx:ConceptualModels>
-      <Schema Namespace="fees_facilitiesModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+      <Schema Namespace="fees_and_facilitiesModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
         <EntityType Name="account_information_parameter">
           <Key>
             <PropertyRef Name="id" />
@@ -1156,7 +1156,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <EntityContainer Name="fees_facilitiesEntities" annotation:LazyLoadingEnabled="true">
+        <EntityContainer Name="Entities" annotation:LazyLoadingEnabled="true">
           <EntitySet Name="account_information_parameter" EntityType="Self.account_information_parameter" />
           <EntitySet Name="account_information_parameter_translation" EntityType="Self.account_information_parameter_translation" />
           <EntitySet Name="account_parameter_values" EntityType="Self.account_parameter_values" />
@@ -1287,16 +1287,16 @@
     <!-- C-S mapping content -->
     <edmx:Mappings>
       <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
-        <EntityContainerMapping StorageEntityContainer="fees_facilitiesModelStoreContainer" CdmEntityContainer="fees_facilitiesEntities">
+        <EntityContainerMapping StorageEntityContainer="fees_and_facilitiesModelStoreContainer" CdmEntityContainer="Entities">
           <EntitySetMapping Name="account_information_parameter">
-            <EntityTypeMapping TypeName="fees_facilitiesModel.account_information_parameter">
+            <EntityTypeMapping TypeName="fees_and_facilitiesModel.account_information_parameter">
               <MappingFragment StoreEntitySet="account_information_parameter">
                 <ScalarProperty Name="id" ColumnName="id" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
           <EntitySetMapping Name="account_information_parameter_translation">
-            <EntityTypeMapping TypeName="fees_facilitiesModel.account_information_parameter_translation">
+            <EntityTypeMapping TypeName="fees_and_facilitiesModel.account_information_parameter_translation">
               <MappingFragment StoreEntitySet="account_information_parameter_translation">
                 <ScalarProperty Name="account_info_non_trans_id" ColumnName="account_info_non_trans_id" />
                 <ScalarProperty Name="language_id" ColumnName="language_id" />
@@ -1305,7 +1305,7 @@
             </EntityTypeMapping>
           </EntitySetMapping>
           <EntitySetMapping Name="account_parameter_values">
-            <EntityTypeMapping TypeName="fees_facilitiesModel.account_parameter_values">
+            <EntityTypeMapping TypeName="fees_and_facilitiesModel.account_parameter_values">
               <MappingFragment StoreEntitySet="account_parameter_values">
                 <ScalarProperty Name="id" ColumnName="id" />
                 <ScalarProperty Name="currency_id" ColumnName="currency_id" />
@@ -1314,7 +1314,7 @@
             </EntityTypeMapping>
           </EntitySetMapping>
           <EntitySetMapping Name="account_parameter_values_translation">
-            <EntityTypeMapping TypeName="fees_facilitiesModel.account_parameter_values_translation">
+            <EntityTypeMapping TypeName="fees_and_facilitiesModel.account_parameter_values_translation">
               <MappingFragment StoreEntitySet="account_parameter_values_translation">
                 <ScalarProperty Name="language_id" ColumnName="language_id" />
                 <ScalarProperty Name="account_params_values_non_trans_id" ColumnName="account_params_values_non_trans_id" />
@@ -1323,7 +1323,7 @@
             </EntityTypeMapping>
           </EntitySetMapping>
           <EntitySetMapping Name="bank_currency_table">
-            <EntityTypeMapping TypeName="fees_facilitiesModel.bank_currency_table">
+            <EntityTypeMapping TypeName="fees_and_facilitiesModel.bank_currency_table">
               <MappingFragment StoreEntitySet="bank_currency_table">
                 <ScalarProperty Name="id" ColumnName="id" />
                 <ScalarProperty Name="bank_id" ColumnName="bank_id" />
@@ -1332,7 +1332,7 @@
             </EntityTypeMapping>
           </EntitySetMapping>
           <EntitySetMapping Name="dormitories_table">
-            <EntityTypeMapping TypeName="fees_facilitiesModel.dormitories_table">
+            <EntityTypeMapping TypeName="fees_and_facilitiesModel.dormitories_table">
               <MappingFragment StoreEntitySet="dormitories_table">
                 <ScalarProperty Name="id" ColumnName="id" />
                 <ScalarProperty Name="dormitory_type_id" ColumnName="dormitory_type_id" />
@@ -1342,7 +1342,7 @@
             </EntityTypeMapping>
           </EntitySetMapping>
           <EntitySetMapping Name="dormitories_table_translation">
-            <EntityTypeMapping TypeName="fees_facilitiesModel.dormitories_table_translation">
+            <EntityTypeMapping TypeName="fees_and_facilitiesModel.dormitories_table_translation">
               <MappingFragment StoreEntitySet="dormitories_table_translation">
                 <ScalarProperty Name="language_id" ColumnName="language_id" />
                 <ScalarProperty Name="dormitories_table_non_trans_id" ColumnName="dormitories_table_non_trans_id" />
@@ -1354,7 +1354,7 @@
             </EntityTypeMapping>
           </EntitySetMapping>
           <EntitySetMapping Name="dormitory_bank_account_table">
-            <EntityTypeMapping TypeName="fees_facilitiesModel.dormitory_bank_account_table">
+            <EntityTypeMapping TypeName="fees_and_facilitiesModel.dormitory_bank_account_table">
               <MappingFragment StoreEntitySet="dormitory_bank_account_table">
                 <ScalarProperty Name="id" ColumnName="id" />
                 <ScalarProperty Name="dormitory_id" ColumnName="dormitory_id" />
@@ -1363,7 +1363,7 @@
             </EntityTypeMapping>
           </EntitySetMapping>
           <EntitySetMapping Name="dormitory_information_table">
-            <EntityTypeMapping TypeName="fees_facilitiesModel.dormitory_information_table">
+            <EntityTypeMapping TypeName="fees_and_facilitiesModel.dormitory_information_table">
               <MappingFragment StoreEntitySet="dormitory_information_table">
                 <ScalarProperty Name="id" ColumnName="id" />
                 <ScalarProperty Name="dormitory_type_id" ColumnName="dormitory_type_id" />
@@ -1371,7 +1371,7 @@
             </EntityTypeMapping>
           </EntitySetMapping>
           <EntitySetMapping Name="dormitory_information_table_translation">
-            <EntityTypeMapping TypeName="fees_facilitiesModel.dormitory_information_table_translation">
+            <EntityTypeMapping TypeName="fees_and_facilitiesModel.dormitory_information_table_translation">
               <MappingFragment StoreEntitySet="dormitory_information_table_translation">
                 <ScalarProperty Name="language_id" ColumnName="language_id" />
                 <ScalarProperty Name="dormitory_info_non_trans_id" ColumnName="dormitory_info_non_trans_id" />
@@ -1380,14 +1380,14 @@
             </EntityTypeMapping>
           </EntitySetMapping>
           <EntitySetMapping Name="dormitory_type">
-            <EntityTypeMapping TypeName="fees_facilitiesModel.dormitory_type">
+            <EntityTypeMapping TypeName="fees_and_facilitiesModel.dormitory_type">
               <MappingFragment StoreEntitySet="dormitory_type">
                 <ScalarProperty Name="id" ColumnName="id" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
           <EntitySetMapping Name="dormitory_type_translation">
-            <EntityTypeMapping TypeName="fees_facilitiesModel.dormitory_type_translation">
+            <EntityTypeMapping TypeName="fees_and_facilitiesModel.dormitory_type_translation">
               <MappingFragment StoreEntitySet="dormitory_type_translation">
                 <ScalarProperty Name="language_id" ColumnName="language_id" />
                 <ScalarProperty Name="dormitory_type_non_trans_id" ColumnName="dormitory_type_non_trans_id" />
@@ -1396,7 +1396,7 @@
             </EntityTypeMapping>
           </EntitySetMapping>
           <EntitySetMapping Name="facility_option">
-            <EntityTypeMapping TypeName="fees_facilitiesModel.facility_option">
+            <EntityTypeMapping TypeName="fees_and_facilitiesModel.facility_option">
               <MappingFragment StoreEntitySet="facility_option">
                 <ScalarProperty Name="id" ColumnName="id" />
                 <ScalarProperty Name="facility_id" ColumnName="facility_id" />
@@ -1404,7 +1404,7 @@
             </EntityTypeMapping>
           </EntitySetMapping>
           <EntitySetMapping Name="facility_option_translation">
-            <EntityTypeMapping TypeName="fees_facilitiesModel.facility_option_translation">
+            <EntityTypeMapping TypeName="fees_and_facilitiesModel.facility_option_translation">
               <MappingFragment StoreEntitySet="facility_option_translation">
                 <ScalarProperty Name="facility_option_non_trans_id" ColumnName="facility_option_non_trans_id" />
                 <ScalarProperty Name="language_id" ColumnName="language_id" />
@@ -1414,7 +1414,7 @@
             </EntityTypeMapping>
           </EntitySetMapping>
           <EntitySetMapping Name="facility_table">
-            <EntityTypeMapping TypeName="fees_facilitiesModel.facility_table">
+            <EntityTypeMapping TypeName="fees_and_facilitiesModel.facility_table">
               <MappingFragment StoreEntitySet="facility_table">
                 <ScalarProperty Name="id" ColumnName="id" />
                 <ScalarProperty Name="facility_icon_url" ColumnName="facility_icon_url" />
@@ -1422,7 +1422,7 @@
             </EntityTypeMapping>
           </EntitySetMapping>
           <EntitySetMapping Name="facility_table_translation">
-            <EntityTypeMapping TypeName="fees_facilitiesModel.facility_table_translation">
+            <EntityTypeMapping TypeName="fees_and_facilitiesModel.facility_table_translation">
               <MappingFragment StoreEntitySet="facility_table_translation">
                 <ScalarProperty Name="language_id" ColumnName="language_id" />
                 <ScalarProperty Name="facility_table_non_trans_id" ColumnName="facility_table_non_trans_id" />
@@ -1432,7 +1432,7 @@
             </EntityTypeMapping>
           </EntitySetMapping>
           <EntitySetMapping Name="language_table">
-            <EntityTypeMapping TypeName="fees_facilitiesModel.language_table">
+            <EntityTypeMapping TypeName="fees_and_facilitiesModel.language_table">
               <MappingFragment StoreEntitySet="language_table">
                 <ScalarProperty Name="id" ColumnName="id" />
                 <ScalarProperty Name="name" ColumnName="name" />
@@ -1441,7 +1441,7 @@
             </EntityTypeMapping>
           </EntitySetMapping>
           <EntitySetMapping Name="room_facility">
-            <EntityTypeMapping TypeName="fees_facilitiesModel.room_facility">
+            <EntityTypeMapping TypeName="fees_and_facilitiesModel.room_facility">
               <MappingFragment StoreEntitySet="room_facility">
                 <ScalarProperty Name="id" ColumnName="id" />
                 <ScalarProperty Name="facility_id" ColumnName="facility_id" />
@@ -1451,7 +1451,7 @@
             </EntityTypeMapping>
           </EntitySetMapping>
           <EntitySetMapping Name="room_table">
-            <EntityTypeMapping TypeName="fees_facilitiesModel.room_table">
+            <EntityTypeMapping TypeName="fees_and_facilitiesModel.room_table">
               <MappingFragment StoreEntitySet="room_table">
                 <ScalarProperty Name="id" ColumnName="id" />
                 <ScalarProperty Name="dormitory_id" ColumnName="dormitory_id" />
@@ -1463,7 +1463,7 @@
             </EntityTypeMapping>
           </EntitySetMapping>
           <EntitySetMapping Name="room_table_translation">
-            <EntityTypeMapping TypeName="fees_facilitiesModel.room_table_translation">
+            <EntityTypeMapping TypeName="fees_and_facilitiesModel.room_table_translation">
               <MappingFragment StoreEntitySet="room_table_translation">
                 <ScalarProperty Name="language_id" ColumnName="language_id" />
                 <ScalarProperty Name="room_table_non_trans_id" ColumnName="room_table_non_trans_id" />

@@ -13,10 +13,10 @@ namespace Intrim_fees_project.Models
     using System.Data.Entity;
     using System.Data.Entity.Infrastructure;
     
-    public partial class fees_facilitiesEntities : DbContext
+    public partial class Entities : DbContext
     {
-        public fees_facilitiesEntities()
-            : base("name=fees_facilitiesEntities")
+        public Entities()
+            : base("name=Entities")
         {
         }
     
