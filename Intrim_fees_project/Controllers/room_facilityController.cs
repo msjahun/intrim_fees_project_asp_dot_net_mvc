@@ -290,7 +290,7 @@ namespace Intrim_fees_project.Controllers
                                     {
 
 
-                                        faci.Add(new Facility { facility_name = "<b  onMouseOver=\"this.style.color = '#0F0' onMouseOut = \"this.style.color='#00F'\">Sadece " + room_t.num_rooms_left + "  Odalar  kaldı </b>", facility_icon_url = "../../Content/Dormitories_files/image_key.png" });
+                                        faci.Add(new Facility { facility_name = "<b  onMouseOver=\"this.style.color = '#0F0' onMouseOut = \"this.style.color='#00F'\">Sadece " + room_t.num_rooms_left + "  Oda  kaldı </b>", facility_icon_url = "../../Content/Dormitories_files/image_key.png" });
                                     }
                                     else
                                     {
