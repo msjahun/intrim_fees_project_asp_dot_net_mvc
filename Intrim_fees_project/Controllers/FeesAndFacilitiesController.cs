@@ -109,7 +109,10 @@ namespace Intrim_fees_project.Controllers
                 ViewBag.ContentFormat_ories_installment_october = Resources.Content.ories_installment_october;
 
 
-
+           ViewBag.ContentFormat_sort_by = Resources.Content.sort_by;
+           ViewBag.ContentFormat_sort_by_price = Resources.Content.sort_by_price;
+           ViewBag.ContentFormat_sort_by_az = Resources.Content.sort_by_az;
+           ViewBag.ContentFormat_sort_by_area = Resources.Content.sort_by_area;
 
 
 
