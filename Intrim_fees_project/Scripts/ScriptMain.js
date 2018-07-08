@@ -146,10 +146,43 @@
                 var facility_room_telPosted = "";
                 var facility_generatorPosted = "";
                 var langIDPosted = 1;
+                var sort_byPosted = "Null";
                 langIDPosted = $('#hiddenLanguageId').val();
                //<a class="" id="nextLangId"  href="/FeesAndFacilities/Index/tr" title="Türkçe">tr</a>
 
-                
+
+               // console.log("I am here" + sort_byPosted);
+                if ($('#minimal-sort-az').is(':checked')) {
+                    // console.log("#minimal-radio-tv-1 checked");
+                    if (langIDPosted == 2)
+
+                        sort_byPosted = "a-z";
+                    else
+                        sort_byPosted = "a-z";
+                   // console.log(sort_byPosted);
+                    console.log("sort by " + sort_byPosted);
+                }
+                if ($('#minimal-sort-price').is(':checked')) {
+                    // console.log("#minimal-radio-tv-1 checked");
+                    if (langIDPosted == 2)
+
+                        sort_byPosted = "Price";
+                    else
+                        sort_byPosted = "Price";
+                    console.log("sort by " + sort_byPosted);
+
+                }
+                if ($('#minimal-sort-area').is(':checked')) {
+                    // console.log("#minimal-radio-tv-1 checked");
+                    if (langIDPosted == 2)
+
+                        sort_byPosted = "area";
+                    else
+                        sort_byPosted = "area";
+                    console.log("sort by " + sort_byPosted);
+
+                }
+               // console.log("I am here" + sort_byPosted);
 
                 if ($('#minimal-radio-tv-1').is(':checked')) {
                     // console.log("#minimal-radio-tv-1 checked");
@@ -424,7 +457,8 @@
                         facility_laundry: facility_laundryPosted,
                         facility_cafeteria: facility_cafeteriaPosted,
                         facility_room_tel: facility_room_telPosted,
-                        facility_generator: facility_generatorPosted
+                        facility_generator: facility_generatorPosted,
+                        sort_by: sort_byPosted
 
                     }),
                     //data is sent when json is strintify;
