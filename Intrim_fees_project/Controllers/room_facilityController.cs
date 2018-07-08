@@ -59,6 +59,7 @@ namespace Intrim_fees_project.Controllers
             string facility_cafeteriaPosted = " ";
             string facility_room_telPosted = " ";
             string facility_generatorPosted = " ";
+            string sort_byPosted = " ";
 
             var obj = data;
             name_of_dormitoryPosted = obj.name_of_dormitory;
@@ -74,7 +75,7 @@ namespace Intrim_fees_project.Controllers
             facility_Wc_showerPosted = obj.facility_Wc_shower;
             facility_KitchenettePosted = obj.facility_Kitchenette;
             facility_bedPosted = obj.facility_bed;
-
+            sort_byPosted = obj.sort_by;
             facility_air_conditionPosted = obj.facility_air_condition;
             facility_central_acPosted = obj.facility_central_ac;
             facility_refrigeratorPosted = obj.facility_refrigerator;
@@ -82,6 +83,7 @@ namespace Intrim_fees_project.Controllers
             facility_cafeteriaPosted = obj.facility_cafeteria;
             facility_room_telPosted = obj.facility_room_tel;
             facility_generatorPosted = obj.facility_generator;
+            
 
             {
                 //    MemoryStream stream = new MemoryStream();
@@ -462,6 +464,13 @@ namespace Intrim_fees_project.Controllers
 
 
 
+                if(sort_byPosted== "Price")
+                query = query.OrderBy(s => s.price_of_room).ToList();
+                else if(sort_byPosted== "a-z")
+                query = query.OrderBy(s => s.name_of_dormitory).ToList();
+                 else if(sort_byPosted== "area")
+                query = query.OrderBy(s => s.room_area).ToList();
+
 
 
 
@@ -508,6 +517,7 @@ namespace Intrim_fees_project.Controllers
             public string facility_cafeteria { get; set; }
             public string facility_room_tel { get; set; }
             public string facility_generator { get; set; }
+            public string sort_by { get; set; }
 
         }
 
