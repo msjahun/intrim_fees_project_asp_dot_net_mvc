@@ -352,4 +352,16 @@
   <data name="static_text_fees_and_facilities" xml:space="preserve">
     <value>Özellikler ve Ücretler</value>
   </data>
+  <data name="sort_by" xml:space="preserve">
+    <value>Göre sırala</value>
+  </data>
+  <data name="sort_by_area" xml:space="preserve">
+    <value>Oda alanı</value>
+  </data>
+  <data name="sort_by_az" xml:space="preserve">
+    <value>A-Z</value>
+  </data>
+  <data name="sort_by_price" xml:space="preserve">
+    <value>Fiyat</value>
+  </data>
 </root>

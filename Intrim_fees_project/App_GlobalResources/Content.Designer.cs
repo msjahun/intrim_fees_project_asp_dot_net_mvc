@@ -727,6 +727,42 @@ namespace Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Sort by.
+        /// </summary>
+        internal static string sort_by {
+            get {
+                return ResourceManager.GetString("sort_by", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Room area.
+        /// </summary>
+        internal static string sort_by_area {
+            get {
+                return ResourceManager.GetString("sort_by_area", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to A-Z.
+        /// </summary>
+        internal static string sort_by_az {
+            get {
+                return ResourceManager.GetString("sort_by_az", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Price.
+        /// </summary>
+        internal static string sort_by_price {
+            get {
+                return ResourceManager.GetString("sort_by_price", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to EMU Dormitories.
         /// </summary>
         internal static string static_text_emu_dormitories {
